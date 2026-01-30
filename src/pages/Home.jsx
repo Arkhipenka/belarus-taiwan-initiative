@@ -34,21 +34,21 @@ function Home() {
   const articles = [
   {
     id: 1,
-    image: '/images/taiwan1.jpg',
+    image: '/images/article1.jpg',
     alt: 'Taiwan democracy',
     title: 'articles.article1Title',
     excerpt: 'articles.article1Excerpt'
   },
   {
     id: 2,
-    image: '/images/taiwan2.jpg',
+    image: '/images/article2.jpg',
     alt: 'Taiwan culture',
     title: 'articles.article2Title',
     excerpt: 'articles.article2Excerpt'
   },
   {
     id: 3,
-    image: '/images/taiwan3.jpg',
+    image: '/images/article3.jpg',
     alt: 'Belarus-Taiwan',
     title: 'articles.article3Title',
     excerpt: 'articles.article3Excerpt'

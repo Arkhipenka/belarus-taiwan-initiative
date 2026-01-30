@@ -7,8 +7,14 @@ function ArticleCard({ article }) {
   const navigate = useNavigate()
 
   return (
-    <div className="article-card" onClick={() => navigate(`/${lang}/articles/${article.id}`)}>
-      <img src={article.image} alt={article.alt} />
+    <div
+      className="article-card"
+      onClick={() => navigate(`/${lang}/articles/${article.id}`)}
+      role="button"
+      tabIndex={0}
+    >
+      <img src={article.image} alt={article.alt || ''} />
+
       <div className="article-text">
         <h3>{t(article.title)}</h3>
         <p>{t(article.excerpt)}</p>

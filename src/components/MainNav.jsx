@@ -23,6 +23,14 @@ function MainNav() {
         <NavLink to={`/${lang}/articles`}>
           {t('nav.articles')}
         </NavLink>
+
+        <NavLink to={`/${lang}/contacts`}>
+          {t('nav.contacts')}
+        </NavLink>
+
+        <NavLink to={`/${lang}/donate`}>
+          {t('nav.donate')}
+        </NavLink>
       </div>
     </nav>
   )
