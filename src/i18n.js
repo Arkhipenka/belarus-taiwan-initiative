@@ -28,7 +28,7 @@ i18n
       }
     },
 
-    lng: 'en',        // язык по умолчанию
+    lng: 'en',     
     fallbackLng: 'en',
 
     interpolation: {
