@@ -21,21 +21,21 @@ function Articles() {
       title: 'articles.article1Title',
       excerpt: 'articles.article1Excerpt',
       category: 'political',
-      image: '/images/article1.jpg'
+      image: '/belarus-taiwan-initiative/images/article1.jpg'
     },
     {
       id: 2,
       title: 'articles.article2Title',
       excerpt: 'articles.article2Excerpt',
       category: 'culture',
-      image: '/images/article2.jpg'
+      image: '/belarus-taiwan-initiative/images/article2.jpg'
     },
     {
       id: 3,
       title: 'articles.article3Title',
       excerpt: 'articles.article3Excerpt',
       category: 'belarus_taiwan',
-      image: '/images/article3.jpg'
+      image: '/belarus-taiwan-initiative/images/article3.jpg'
     }
   ]
 
