@@ -1,6 +1,7 @@
 import { useParams, useLocation, Link } from 'react-router-dom'
 import { LANGUAGES } from '../constants/languages'
 
+
 function LanguageSwitcher() {
   const { lang } = useParams()
   const location = useLocation()

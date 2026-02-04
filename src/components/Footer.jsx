@@ -1,33 +1,52 @@
-import { useTranslation } from 'react-i18next'
-import { useParams, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function Footer() {
-  const { t } = useTranslation()
-  const { lang } = useParams()
-
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-
+        {/* 1️⃣ Бренд */}
         <div className="footer-brand">
-          <h3>Taiwan and Asia Lens</h3>
-          <p>{t('footer.tagline')}</p>
+          <h3>Беларусь – 台灣</h3>
+          <p>
+            探索與促進白俄羅斯和台灣之間的民間交流與合作。
+          </p>
         </div>
 
+        {/* 2️⃣ Навигация */}
         <div className="footer-nav">
-          <h4>{t('footer.navigation')}</h4>
+          <h4>Навигация</h4>
           <ul>
-            <li><Link to={`/${lang}`}>{t('nav.home')}</Link></li>
-            <li><Link to={`/${lang}/about`}>{t('nav.about')}</Link></li>
-            <li><Link to={`/${lang}/articles`}>{t('nav.articles')}</Link></li>
+            <li><Link to="/by">Галоўная</Link></li>
+            <li><Link to="/by/about">Пра нас</Link></li>
+            <li><Link to="/by/articles">Артыкулы</Link></li>
+            <li><Link to="/by/contacts">Кантакты</Link></li>
+            <li><Link to="/by/donate">Падтрымка</Link></li>
           </ul>
         </div>
 
-        <div className="footer-meta">
-          <p>© {new Date().getFullYear()} Taiwan and Asia Lens</p>
-          <p>{t('footer.nonprofitNote')}</p>
+        {/* 3️⃣ Соцсети */}
+        <div className="footer-social">
+          <h4>Мы ў сацсетках</h4>
+          <div className="social-links">
+            {/* Беларусь */}
+            <div>
+              <p>Беларусь:</p>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><br/>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+            {/* Тайвань */}
+            <div>
+              <p>台灣:</p>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><br/>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+          </div>
         </div>
+      </div>
 
+      {/* 4️⃣ Мета */}
+      <div className="footer-meta">
+        &copy; 2026 Belarus–Taiwan. All rights reserved.
       </div>
     </footer>
   )

@@ -10,21 +10,21 @@ function Home() {
 
   const slides = [
     {
-      image: '/belarus-taiwan-initiative/images/taiwan1.jpg',
+      image: `${import.meta.env.BASE_URL}images/taiwan1.jpg`,
       alt: 'Taiwan street',
       title: 'hero.slide1Title',
       subtitle: 'hero.slide1Subtitle',
       button: { text: 'hero.slide1Button', link: '/articles' }
     },
     {
-      image: '/belarus-taiwan-initiative/images/taiwan2.jpg',
+      image: `${import.meta.env.BASE_URL}images/taiwan2.jpg`,
       alt: 'Taiwan night market',
       title: 'hero.slide2Title',
       subtitle: 'hero.slide2Subtitle',
       button: { text: 'hero.slide2Button', link: '/articles' }
     },
     {
-      image: '/belarus-taiwan-initiative/images/taiwan3.jpg',
+      image: `${import.meta.env.BASE_URL}images/taiwan3.jpg`,
       alt: 'Taiwan landscape',
       title: 'hero.slide3Title',
       subtitle: 'hero.slide3Subtitle',
@@ -34,21 +34,21 @@ function Home() {
   const articles = [
   {
     id: 1,
-    image: '/belarus-taiwan-initiative/images/article1.jpg',
+    image: `${import.meta.env.BASE_URL}images/article1.jpg`,
     alt: 'Taiwan democracy',
     title: 'articles.article1Title',
     excerpt: 'articles.article1Excerpt'
   },
   {
     id: 2,
-    image: '/belarus-taiwan-initiative/images/article2.jpg',
+    image: `${import.meta.env.BASE_URL}images/article2.jpg`,
     alt: 'Taiwan culture',
     title: 'articles.article2Title',
     excerpt: 'articles.article2Excerpt'
   },
   {
     id: 3,
-    image: '/belarus-taiwan-initiative/images/article3.jpg',
+    image: `${import.meta.env.BASE_URL}/images/article3.jpg`,
     alt: 'Belarus-Taiwan',
     title: 'articles.article3Title',
     excerpt: 'articles.article3Excerpt'
@@ -71,16 +71,20 @@ function Home() {
         </button>
       </section>
       <section className="featured-articles">
-  <h2>{t('home.featuredTitle')}</h2>
+<section className="featured-articles">
+  <h2 className="section-title">{t('home.featuredTitle')}</h2>
 
-  <div className="articles-grid">
-    {articles.map(article => (
+  <div className="articles-showcase">
+    {articles.map((article, index) => (
       <ArticleCard
         key={article.id}
         article={article}
+        featured={index === 0} // первая статья — большая
       />
     ))}
   </div>
+</section>
+
 </section>
     </div>
   )
