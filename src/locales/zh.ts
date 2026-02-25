@@ -51,9 +51,28 @@ articles: {
 },
 footer: {
   tagline: '一個關注台灣、亞洲與民主連結的獨立倡議。',
-  navigation: '網站導覽',
-  nonprofitNote: '獨立倡議'
+  nonprofitNote: '獨立非營利倡議',
+
+  sections: {
+    navigation: '網站導覽',
+    belarusCn: '白俄羅斯（中文）',
+    taiwanByRu: '台灣（白俄文／俄文）'
+  },
+
+  links: {
+    about: '關於我們',
+    articles: '文章',
+    contacts: '聯絡方式',
+    donate: '捐款'
+  },
+
+  socials: {
+    instagram: 'Instagram',
+    facebook: 'Facebook',
+    tiktok: 'TikTok'
+  }
 },
+
 
 donate: {
   title: '支持我們',

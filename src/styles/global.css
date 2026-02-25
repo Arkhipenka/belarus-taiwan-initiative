@@ -220,6 +220,7 @@ a{
 .articles-showcase {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  
   gap: 24px;
 }
 
@@ -297,68 +298,106 @@ a{
 .site-footer {
   background: #111;
   color: #eee;
-  padding: 32px 16px;
-  margin-top: 48px;
+  padding: 64px 24px 40px;
+  margin-top: 96px;
+  font-family: "LINE Seed JP", sans-serif;
 }
 
-.footer-inner {
+.footer-grid {
   max-width: 1200px;
   margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "brand nav belarus taiwan"
+    "meta  meta meta   initiative";
+  gap: 32px 24px;
 }
+
+/* ===== блоки ===== */
+
+.footer-brand {
+  grid-area: brand;
+}
+
+.footer-nav {
+  grid-area: nav;
+}
+
+.footer-belarus {
+  grid-area: belarus;
+}
+
+.footer-taiwan {
+  grid-area: taiwan;
+}
+
+.footer-meta {
+  grid-area: meta;
+  margin-top: 32px;
+  padding-top: 16px;
+  font-size: 12px;
+  color: #aaa;
+}
+.footer-meta-initiative{
+  grid-area: initiative;
+  margin-top: 32px;
+  padding-top: 16px;
+  font-size: 12px;
+  color: #aaa;
+}
+/* ===== тексты ===== */
 
 .footer-brand h3 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.footer-nav ul {
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 320px;
+}
+
+.footer-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+/* ===== списки ===== */
+
+.footer-nav ul,
+.footer-belarus ul,
+.footer-taiwan ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-nav li {
-  margin-bottom: 6px;
+.footer-nav li,
+.footer-belarus li,
+.footer-taiwan li {
+  margin-bottom: 8px;
 }
 
-.footer-nav a {
-  color: #ccc;
-  text-decoration: none;
-}
+/* ===== ссылки ===== */
 
-.footer-nav a:hover {
-  color: #fff;
-}
-
-.footer-meta {
-  font-size: 12px;
-  color: #aaa;
-}
-.footer-social {
-  display: flex;
-  gap: 32px;
-  margin-top: 12px;
+.site-footer a {
+  color: #bbb;
   font-size: 14px;
-}
-
-.footer-social p {
-  margin: 0 0 4px 0;
-  font-weight: 500;
-  color: #ccc;
-}
-
-.social-links a {
-  display: inline-block;
-  margin-bottom: 6px;
-  color: #ccc;
   text-decoration: none;
-  transition: color 0.25s;
+  transition: color 0.2s ease;
 }
 
-.social-links a:hover {
-  color: var(--accent);
+.site-footer a:hover {
+  color: #fff;
 }
 
 @media (max-width: 768px) {
