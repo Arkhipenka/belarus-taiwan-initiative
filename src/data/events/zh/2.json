@@ -1,0 +1,45 @@
+{
+  "id": "event-002",
+  "slug": "belarus-cultural-lecture",
+  "title": "白俄羅斯文化講座",
+  "type": "lecture",
+
+  "description": "歡迎參加關於白俄羅斯文化、飲食與歷史的講座。",
+
+  "date": "2025-12-26T11:00:00Z",
+  "endDate": "2025-12-26T13:00:00Z",
+
+  "location": {
+    "name": "National Chung Hsing University",
+    "city": "Taichung",
+    "country": "Taiwan (ROC)",
+    "link": "https://maps.app.goo.gl/55AkuEwtfbKiAtVH7"
+  },
+
+  "categories": ["culture", "belarus", "history"],
+  "tags": ["history", "belarus", "culture"],
+
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "社會活動家",
+      "photo": "/belarus-taiwan-initiative/images/speakers/arkhipenka.jpg"
+    }
+  ],
+
+  "partners": [
+    {
+      "name": "Student Government NCHU",
+      "logo": "/belarus-taiwan-initiative/images/partners/bhw.png"
+    }
+  ],
+
+  "image": "/belarus-taiwan-initiative/images/events/event001/main.jpg",
+
+  "gallery": [
+    "/belarus-taiwan-initiative/images/events/event001/photo1.jpg",
+    "/belarus-taiwan-initiative/images/events/event001/photo2.jpg"
+  ],
+
+  "registration_url": "https://eventbrite.com/...."
+}

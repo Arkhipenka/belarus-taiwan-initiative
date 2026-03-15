@@ -23,14 +23,14 @@ hero: {
 
 home: {
   aboutTitle: 'O nas',
-  aboutText1: 'Taiwan and Asia Lens to platforma łącząca Białoruś, Tajwan i Azję.',
-  aboutText2: 'Skupiamy się na badaniach, kulturze oraz praktycznych przewodnikach.',
-  aboutText3: 'Naszym celem jest tworzenie możliwości współpracy i wymiany doświadczeń.',
-  aboutText4: 'Poprzez edukację i działania rzecznicze dążymy do budowania trwałych partnerstw.',
+  aboutText1: 'Belarus–Taiwan & East Asia Platform to niezależna inicjatywa non-profit, której celem jest rozwój współpracy między Białorusią, Tajwanem i Azją Wschodnią w obszarze badań, edukacji oraz społeczeństwa obywatelskiego.',
+  aboutText2: 'Badamy i promujemy doświadczenia transformacji demokratycznej, rozwoju instytucjonalnego oraz samoorganizacji społecznej.',
+  aboutText3: 'Poprzez działalność analityczną, programy edukacyjne oraz współpracę międzynarodową budujemy długofalową infrastrukturę współpracy.',
+  aboutText4: 'Poprzez edukację i rzecznictwo staramy się przybliżać Białoruś Tajwanowi oraz Tajwan Białorusinom.',
   aboutButton: 'Dowiedz się więcej',
-  featuredTitle: 'Polecane artykuły'
 },
 articles: {
+  featuredTitle: 'Polecane artykuły',
   title: 'Artykuły',
   search: 'Szukaj artykułów...',
   categories: {
@@ -69,7 +69,14 @@ donate: {
 footer: {
   tagline: 'Niezależna inicjatywa poświęcona Tajwanowi, Azji i powiązaniom demokratycznym.',
   navigation: 'Nawigacja',
-  nonprofitNote: 'Niezależna inicjatywa'
+nonprofitNote: 'Niezależna inicjatywa',
+belarusCn: 'O Białorusi po mandaryńsku',
+taiwanByRu: 'O Tajwanie po białorusku',
+  socials: {
+    instagram: 'Instagram',
+    facebook: 'Facebook',
+    tiktok: 'TikTok'
+  }
 },
 
 
@@ -115,7 +122,14 @@ contacts: {
   subtitle: "Otwarci na współpracę, badania i inicjatywy kulturalne.",
   languages: "Języki"
 },
-
+events:{
+  title:"Events",
+  subtitle:"Lecture, meetup, conference and other events",
+  search:"search events",
+  showPast:"Past Events", 
+  searchButton:"Search",
+  noResults: "No events"
+}
 }
 
 export default pl

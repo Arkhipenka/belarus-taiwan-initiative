@@ -6,6 +6,9 @@ function Donate() {
   return (
     <div className="donate-page">
       <h1>{t('donate.title')}</h1>
+      <p className="donate-description">
+        {t('donate.description')}
+      </p>
       <p className="donate-subtitle">{t('donate.subtitle')}</p>
 
       <div className="donate-options">
@@ -22,7 +25,18 @@ function Donate() {
             {t('donate.support')}
           </a>
         </div>
-
+        <div className="donate-card">
+          <h3>💳 PayPal</h3>
+          <p>{t('donate.paypal')}</p>
+          <a
+            href="https://paypal.me/yourname"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="donate-button"
+  >
+          {t('donate.donate')}
+          </a>
+        </div>
         <div className="donate-card">
           <h3>❤️ Patreon / Boosty</h3>
           <p>{t('donate.patreon')}</p>

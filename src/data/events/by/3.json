@@ -1,0 +1,43 @@
+{
+  "id": "event-003",
+  "slug": "belarus-taiwan-cultural-meetup",
+  "title": "Belarus-Taiwan Cultural Meetup",
+  "type": "lecture",
+
+  "description": "Join us for an evening of Belarusian and Taiwanese culture, food, and music.",
+
+  "date": "2026-04-20T18:30:00",
+
+  "location": {
+    "name": "European Solidarity Centre",
+    "city": "Gdansk",
+    "country": "Poland"
+  },
+
+  "categories": ["culture", "belarus_taiwan"],
+  "tags": ["taiwan", "belarus", "culture"],
+
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "Journalist",
+      "photo": "/images/speakers/arkhipenka.jpg"
+    }
+  ],
+
+  "partners": [
+    {
+      "name": "Belarusian House Warsaw",
+      "logo": "/images/partners/bhw.png"
+    }
+  ],
+
+  "image": "/images/events/event001/main.jpg",
+
+  "gallery": [
+    "/images/events/event001/photo1.jpg",
+    "/images/events/event001/photo2.jpg"
+  ],
+
+  "registration_url": "https://eventbrite.com/...."
+}

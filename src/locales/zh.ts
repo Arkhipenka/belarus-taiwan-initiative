@@ -22,14 +22,14 @@ hero: {
 },
 home: {
   aboutTitle: '關於我們',
-  aboutText1: 'Taiwan and Asia Lens 是一個連結白俄羅斯、台灣與亞洲的平台。',
-  aboutText2: '我們專注於研究、文化以及實用指南。',
-  aboutText3: '我們的目標是創造合作與經驗交流的機會。',
-  aboutText4: '透過教育與倡議，我們致力於建立穩固且長久的夥伴關係。',
+  aboutText1: 'Belarus–Taiwan & East Asia Platform 是一個獨立的非營利倡議，旨在促進白俄羅斯、台灣與東亞地區在研究、教育與公民社會領域的合作。',
+  aboutText2: '我們研究並推動民主轉型、制度發展以及公民自我組織的經驗。',
+  aboutText3: '透過分析研究、教育項目與國際交流，我們建立長期合作的基礎架構。',
+  aboutText4: '透過教育與倡議，我們致力於向台灣介紹白俄羅斯，並向白俄羅斯社會介紹台灣。',
   aboutButton: '了解更多',
-  featuredTitle: '精選文章'
 },
 articles: {
+  featuredTitle: '精選文章',
   title: '文章',
   search: '搜尋文章...',
   categories: {
@@ -47,17 +47,17 @@ articles: {
   article2Title: '台灣文化',
   article2Excerpt: '探索在地傳統與文化。',
   article3Title: '白俄羅斯－台灣關係',
-  article3Excerpt: '白俄羅斯與台灣在文化與研究上的合作。'
+  article3Excerpt: '白俄羅斯與台灣在文化與研究上的合作。',
+  showMore:"Более"
 },
 footer: {
   tagline: '一個關注台灣、亞洲與民主連結的獨立倡議。',
-  nonprofitNote: '獨立非營利倡議',
 
-  sections: {
-    navigation: '網站導覽',
-    belarusCn: '白俄羅斯（中文）',
-    taiwanByRu: '台灣（白俄文／俄文）'
-  },
+  
+navigation: '導覽',
+nonprofitNote: '獨立倡議',
+belarusCn: '以中文（普通話）介紹白俄羅斯',
+taiwanByRu: '以白俄羅斯語介紹台灣',
 
   links: {
     about: '關於我們',
@@ -131,7 +131,14 @@ contacts: {
   subtitle: "歡迎合作、研究及文化倡議。",
   languages: "語言"
 },
-
+events:{
+  title:"Events",
+  subtitle:"Lecture, meetup, conference and other events",
+  search:"search events",
+  showPast:"Past Events", 
+  searchButton:"Search",
+  noResults: "No events"
+}
 }
 
 export default zh

@@ -1,51 +1,56 @@
 import { Link } from 'react-router-dom'
-
 import { useTranslation } from 'react-i18next'
 
 function Footer() {
   const { t } = useTranslation()
 
   return (
+    <div className='wrapper-footer'>
     <footer className="site-footer">
       <div className="footer-grid">
 
         <div className="footer-brand">
-          <h3 className='footer-site'>Belarus–Taiwan</h3>
-          <span className='footer-site_small'>& East Asia Platform</span>
+          <a href="/">
+          <img src="/belarus-taiwan-initiative/images/logo.png" alt="logo" className='logo'/>
+        </a>
         </div>
 
         <nav className="footer-nav">
+          <h4>{t('footer.navigation')}</h4>
           <ul>
-            <li>{t('nav.about')}</li>
-            <li>{t('nav.articles')}</li>
-            <li>{t('nav.contacts')}</li>
-            <li>{t('nav.donate')}</li>
+            <li><Link to="/about">{t('nav.about')}</Link></li>
+            <li><Link to="/articles">{t('nav.articles')}</Link></li>
+            <li><Link to="/events">{t('nav.events')}</Link></li>
+            <li><Link to="/contacts">{t('nav.contacts')}</Link></li>
+            <li><Link to="/donate">{t('nav.donate')}</Link></li>
           </ul>
         </nav>
-        <div>
-          <h4>{t('footer.sections.belarusCn')}</h4>
-          <a>{t('footer.socials.instagram')}</a>
-          <a>{t('footer.socials.facebook')}</a>
-        </div>
-        <div>
-          <h4>{t('footer.sections.taiwanByRu')}</h4>
-          <a>{t('footer.socials.instagram')}</a>
-          <a>{t('footer.socials.tiktok')}</a>
+
+        <div className="footer-section">
+          <h4>{t('footer.belarusCn')}</h4>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">{t('footer.socials.instagram')}</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">{t('footer.socials.facebook')}</a></li>
+          </ul>
         </div>
 
-        
-
+        <div className="footer-section">
+          <h4>{t('footer.taiwanByRu')}</h4>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">{t('footer.socials.instagram')}</a></li>
+            <li><a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">{t('footer.socials.tiktok')}</a></li>
+          </ul>
+        </div>
 
         <div className="footer-meta">
-          © 2026 Belarus–Taiwan Platform
+          <p>© 2026 Belarus–Taiwan Platform</p>
+          <p>{t('footer.nonprofitNote')}</p>
         </div>
-        <div className="footer-meta-initiative">
-          Independent initiative
-        </div>
+
       </div>
     </footer>
+    </div>
   )
 }
 
 export default Footer
-

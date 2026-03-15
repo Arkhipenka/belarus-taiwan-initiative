@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useParams, useNavigate } from 'react-router-dom'
+import {  useNavigate } from 'react-router-dom'
 
 function HeroBanner({ slides, interval = 10000 }) {
   const { t } = useTranslation()
-  const { lang } = useParams()
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
 
@@ -26,7 +25,7 @@ function HeroBanner({ slides, interval = 10000 }) {
         <h2>{t(slide.title)}</h2>
         {slide.subtitle && <p>{t(slide.subtitle)}</p>}
         {slide.button && (
-          <button onClick={() => navigate(`/${lang}${slide.button.link}`)}>
+          <button onClick={() => navigate(`${slide.button.link}`)}>
             {t(slide.button.text)}
           </button>
         )}

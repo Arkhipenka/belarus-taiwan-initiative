@@ -1,0 +1,45 @@
+{
+  "id": "event-003",
+  "slug": "taiwan-cultural-lecture",
+  "title": "Taiwan Cultural lecture",
+  "type": "lecture",
+  
+
+  "description": "Join us for an lecture about Taiwanese culture, food, and history.",
+
+  "date": "2026-04-20T18:30:00",
+
+  "location": {
+    "name": "European Solidarity Centre",
+    "city": "Gdansk",
+    "country": "Poland",
+    "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
+  },
+
+  "categories": ["culture", "taiwan", "history"],
+  "tags": ["taiwan", "history", "culture"],
+
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "Activist",
+      "photo": "/belarus-taiwan-initiative/images/speakers/arkhipenka.jpg"
+    }
+  ],
+
+  "partners": [
+    {
+      "name": "Belarusian House Warsaw",
+      "logo": "/belarus-taiwan-initiative/images/partners/bhw.png"
+    }
+  ],
+
+  "image": "/belarus-taiwan-initiative/images/events/event001/main.jpg",
+
+  "gallery": [
+    "/belarus-taiwan-initiative/images/events/event001/photo1.jpg",
+    "/belarus-taiwan-initiative/images/events/event001/photo2.jpg"
+  ],
+
+  "registration_url": "https://eventbrite.com/...."
+}

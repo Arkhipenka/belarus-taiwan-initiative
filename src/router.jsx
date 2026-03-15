@@ -6,6 +6,9 @@ import Articles from './pages/Articles'
 import ArticlePage from './pages/ArticlePage'
 import Contacts from './pages/Contacts'
 import Footer from './components/Footer'
+import Donate from './pages/Donate'
+import Events from './pages/Events'
+
 
 function Router() {
   return (
@@ -18,7 +21,11 @@ function Router() {
           <Route path="about" element={<About />} />
           <Route path="articles" element={<Articles />} />
           <Route path="articles/:id" element={<ArticlePage />} />
+          <Route path="events" element={<Events />} />
+          <Route path="events/:id" element={<EventDetail />} />
           <Route path="contacts" element={<Contacts />} />
+          <Route path="donate" element={<Donate />} />
+
         </Route>
       </Routes>
 

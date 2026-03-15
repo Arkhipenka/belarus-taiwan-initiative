@@ -3,6 +3,7 @@ const en = {
       home: 'Home',
       about: 'About',
       articles: 'Articles',
+      events:'Events',
       contacts: 'Contacts',
       donate: 'Donate'
     },
@@ -22,18 +23,21 @@ const en = {
     },
 
 
-    home: {
-      aboutTitle: 'About us',
-      aboutText1: 'Taiwan and Asia Lens is a platform connecting Belarus, Taiwan, and Asia.',
-      aboutText2: 'We focus on research, culture, and practical guides.',
-      aboutText3: 'Our goal is to create opportunities for cooperation and the exchange of experience.',
-      aboutText4: 'Through education and advocacy, we aim to build strong and lasting partnerships.',
-      aboutButton: 'Learn more',
-      featuredTitle: 'Featured articles'
-    },
-    articles: {
+home: {
+  aboutTitle: 'About Us',
+  aboutText1: 'Belarus–Taiwan & East Asia Platform is an independent non-profit initiative aimed at fostering cooperation between Belarus, Taiwan, and East Asia in the fields of research, education, and civil society.',
+  aboutText2: 'We study and promote the experience of democratic transformation, institutional development, and civic self-organization.',
+  aboutText3: 'Through analytical work, educational programs, and international engagement, we build long-term cooperation infrastructure.',
+  aboutText4: 'Through education and advocacy, we seek to present Belarus to Taiwan and Taiwan to Belarusians.',
+  aboutButton: 'Learn More',
+},
+articles: {
+  featuredTitle: 'Featured Articles',
   title: 'Articles',
+  subtitle: 'Research, analysis and guides on Taiwan, Belarus and Asia.',
   search: 'Search articles...',
+  searchButton: "Search",
+  noResults: "No articles found.",
   categories: {
     all: 'All',
     history: 'History',
@@ -41,7 +45,8 @@ const en = {
     belarus_taiwan: 'Belarus – Taiwan',
     political: 'Politics',
     food: 'Food',
-    guide: 'Guides'
+    guide: 'Guides',
+    featuredTitle: 'Featured articles'
   },
 
   article1Title: 'Democracy in Taiwan',
@@ -54,7 +59,14 @@ const en = {
 footer: {
   tagline: 'An independent initiative on Taiwan, Asia, and democratic connections.',
   navigation: 'Navigation',
-  nonprofitNote: 'Independent initiative'
+  nonprofitNote: 'Independent initiative',
+  belarusCn: 'Пра Беларусь на мандарыне',
+  taiwanByRu: 'Пра Тайвань на беларускай мове',
+  socials: {
+    instagram: 'Instagram',
+    facebook: 'Facebook',
+    tiktok: 'TikTok'
+  }
 },
 donate: {
   title: 'Support us',
@@ -72,6 +84,14 @@ donate: {
 about: {
   title: 'About the Initiative',
   subtitle: 'Connecting Belarusian and Taiwanese civil societies.',
+
+  aboutTitle: 'About the Initiative',
+  aboutText1: 'Belarus–Taiwan Platform was founded in 2026 by independent researchers and activists to connect Belarus, Taiwan, and Asia.',
+  aboutText2: 'We focus on research, culture, advocacy, practical guides, and educational resources.',
+  aboutText3: 'Our goal is to create opportunities for collaboration, experience exchange, and the promotion of civic initiatives.',
+  aboutText4: 'Through advocacy, education, and content sharing, we aim to build sustainable partnerships. Think of us also as a blog and a learning platform.',
+  aboutButton: 'Learn More',
+  
 
   missionTitle: 'Mission',
   missionText1:
@@ -113,7 +133,14 @@ contacts: {
   languages: "Languages"
 },
 
-
+events:{
+  title:"Events",
+  subtitle:"Lecture, meetup, conference and other events",
+  search:"search events",
+  showPast:"Past Events", 
+  searchButton:"Search",
+  noResults: "No events"
+}
 
   }
 

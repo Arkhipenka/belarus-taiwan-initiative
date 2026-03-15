@@ -7,7 +7,8 @@ import Footer from './components/Footer'
 import Contacts from './pages/Contacts'
 import ArticlePage from './pages/ArticlePage'
 import Donate from './pages/Donate'
-
+import Events from './pages/Events'
+import EventDetail from './pages/EventDetail'
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           <Route path="articles" element={<Articles />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="articles/:id" element={<ArticlePage />} />
+          <Route path="events" element={<Events />} />
+          <Route path="events/:id" element={<EventDetail />} />
           <Route path="donate" element={<Donate />} />
         </Route>
       </Routes>

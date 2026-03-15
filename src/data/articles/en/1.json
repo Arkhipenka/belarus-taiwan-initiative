@@ -1,9 +1,10 @@
 {
-  "id": "democracy-in-taiwan",
+  "id": "taiwan",
   "title": "How Taiwan Built a Democracy",
-  "category": "democracy",
+  "excerpt": "The story of Taiwan’s transition from authoritarian rule to democracy.",
+  "categories": ["democracy", "history"],
   "date": "2025-01-10",
-  "image": "/images/article1.jpg",
+  "image": "/belarus-taiwan-initiative/images/article1.jpg",
   "content": [
     "Taiwan's path to democracy was neither quick nor painless.",
     "The lifting of martial law in 1987 became a turning point.",

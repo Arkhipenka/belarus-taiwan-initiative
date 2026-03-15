@@ -1,35 +1,48 @@
-import { useParams } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from 'react';
 
-const articles = import.meta.glob('../data/articles/**/**/*.json')
+// Загружаем все JSON статьи
+const articles = import.meta.glob('../data/articles/**/*.json');
 
 function ArticlePage() {
-  const { id } = useParams()
-  const { i18n } = useTranslation()
-  const [article, setArticle] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const { id } = useParams();
+  const { i18n } = useTranslation();
+  const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true)
+    const loadArticle = async () => {
+      setLoading(true);
+      const lang = i18n.language.split('-')[0];
 
-    const lang = i18n.language.split('-')[0]
-    const path = `../data/articles/${lang}/${id}.json`
+      // Ищем ключ по id и языку
+      const key = Object.keys(articles).find(p =>
+        p.endsWith(`/${lang}/${id}.json`)
+      );
 
-    if (!articles[path]) {
-      setArticle(null)
-      setLoading(false)
-      return
-    }
+      if (!key) {
+        setArticle(null);
+        setLoading(false);
+        return;
+      }
 
-    articles[path]().then(module => {
-      setArticle(module.default)
-      setLoading(false)
-    })
-  }, [id, i18n.language])
+      try {
+        const module = await articles[key]();
+        setArticle(module.default);
+      } catch (err) {
+        console.error('Ошибка при загрузке статьи', err);
+        setArticle(null);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (loading) return <p>Loading...</p>
-  if (!article) return <p>Article not found</p>
+    loadArticle();
+  }, [id, i18n.language]);
+
+  if (loading) return <p>Loading...</p>;
+  if (!article) return <p>Article not found</p>;
 
   return (
     <article className="article-page">
@@ -43,11 +56,12 @@ function ArticlePage() {
         <img src={article.image} alt={article.title} />
       )}
 
-      {article.content.map((p, i) => (
-        <p key={i}>{p}</p>
-      ))}
+      {Array.isArray(article.content) &&
+        article.content.map((p, i) => (
+          <p key={i}>{p}</p>
+        ))}
     </article>
-  )
+  );
 }
 
-export default ArticlePage
+export default ArticlePage;

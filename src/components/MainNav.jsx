@@ -23,10 +23,12 @@ function MainNav() {
     setIsOpen(false)
   }
   return (
+    <div className='wrapper-header'>
     <nav className="main-nav">
       <div className="site-title">
-        <h1 className='head-site'>Belarus–Taiwan</h1>
-        <span className='head-site_small'>& East Asia Platform</span>
+        <a href="/">
+          <img src="/belarus-taiwan-initiative/images/logo.png" alt="logo" className='logo'/>
+        </a>
       </div>
 
       <div className={`burger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
@@ -45,6 +47,9 @@ function MainNav() {
         <NavLink to={`/${lang}/articles`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={handleLinkClick}>
           {t('nav.articles')}
         </NavLink>
+        <NavLink to={`/${lang}/events`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={handleLinkClick}>
+          {t('nav.events')}
+        </NavLink>
         <NavLink to={`/${lang}/contacts`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={handleLinkClick}>
           {t('nav.contacts')}
         </NavLink>
@@ -56,6 +61,7 @@ function MainNav() {
       {/* затемнённый фон при открытом меню */}
       {isOpen && <div className="overlay" onClick={toggleMenu}></div>}
     </nav>
+    </div>
   )
 }
 
