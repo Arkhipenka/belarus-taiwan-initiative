@@ -1,111 +1,161 @@
-import { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import ArticleCard from '../components/ArticleCard';
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import ArticleCard from "../components/ArticleCard";
+
+const articleModules = import.meta.glob("../data/articles/*/*.json", {
+  eager: true,
+  import: "default"
+});
 
 function Articles() {
+
   const { t, i18n } = useTranslation();
-  const lang = i18n.language || 'en';
+  const lang = i18n.language.split("-")[0];
 
-  const [searchInput, setSearchInput] = useState('');
-  const [search, setSearch] = useState('');
-  const [category, setCategory] = useState('all');
+  const [searchInput, setSearchInput] = useState("");
+  const [search, setSearch] = useState("");
+  const [category, setCategory] = useState("all");
+
   const [allArticles, setAllArticles] = useState([]);
+  const [categories, setCategories] = useState(["all"]);
+
   const [visibleCount, setVisibleCount] = useState(6);
-  const [categories, setCategories] = useState(['all']);
 
-
+  // загрузка статей при смене языка
   useEffect(() => {
-  const fetchArticles = async () => {
-    try {
-      const lang = i18n.language.split('-')[0];
-      const modules = import.meta.glob(`../data/events/${lang}/*.json`, { eager: true, import: 'default' });
 
-      const loadedArticles = Object.values(modules);
-      setAllArticles(loadedArticles);
+    const loadedArticles = Object.entries(articleModules)
+      .filter(([path]) => path.includes(`/articles/${lang}/`))
+      .map(([, data]) => data)
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-      const allCategories = new Set();
-        loadedArticles.forEach(article => {
-          article.categories?.forEach(cat => allCategories.add(cat));
-        });
-        setCategories(['all', ...Array.from(allCategories)]);
-    } catch (err) {
-      console.error('Ошибка загрузки статей', err);
-    }
-  };
+    setAllArticles(loadedArticles);
 
-  fetchArticles();
-}, [lang]);
+    // категории
+    const categorySet = new Set(["all"]);
 
+    loadedArticles.forEach(article => {
+      article.categories?.forEach(cat => categorySet.add(cat));
+    });
 
+    setCategories(Array.from(categorySet));
 
-  // фильтрация статей
+    // сброс фильтров при смене языка
+    setSearch("");
+    setSearchInput("");
+    setCategory("all");
+    setVisibleCount(6);
+
+  }, [lang]);
+
+  // сброс showMore при фильтрах
+  useEffect(() => {
+    setVisibleCount(6);
+  }, [category, search]);
+
+  // фильтрация
   const filteredArticles = allArticles.filter(article => {
-    const matchesCategory = category === 'all' || article.categories.includes(category);
+
+    const matchesCategory =
+      category === "all" || article.categories?.includes(category);
+
+    const title = article.title?.toLowerCase() || "";
+    const text = article.content?.join(" ").toLowerCase() || "";
+
     const matchesSearch =
-      article.title?.toLowerCase().includes(search.toLowerCase()) ||
-      (Array.isArray(article.content) &&
-        article.content.some(p => p.toLowerCase().includes(search.toLowerCase())));
+      title.includes(search.toLowerCase()) ||
+      text.includes(search.toLowerCase());
+
     return matchesCategory && matchesSearch;
+
   });
 
   const visibleArticles = filteredArticles.slice(0, visibleCount);
 
   return (
     <div className="articles-page">
+
       <section className="articles-header">
         <div className="articles-text">
-          <h1>{t('articles.title')}</h1>
-          <p className="articles-subtitle">{t('articles.subtitle')}</p>
+          <h1>{t("articles.title")}</h1>
+          <p className="articles-subtitle">{t("articles.subtitle")}</p>
         </div>
       </section>
 
       <div className="articles-controls">
+
+        {/* поиск */}
         <div className="articles-search-box">
+
           <input
             type="text"
-            placeholder={t('articles.search')}
+            placeholder={t("articles.search")}
             value={searchInput}
-            onChange={e => setSearchInput(e.target.value)}
+            onChange={(e) => setSearchInput(e.target.value)}
             className="articles-search"
           />
-          <button className="search-button" onClick={() => setSearch(searchInput)}>
-            {t('articles.searchButton')}
+
+          <button
+            className="search-button"
+            onClick={() => setSearch(searchInput)}
+          >
+            {t("articles.searchButton")}
           </button>
+
         </div>
 
+        {/* категории */}
         <div className="articles-categories">
+
           {categories.map(cat => (
+
             <button
               key={cat}
-              className={`category-btn ${cat === category ? 'active' : ''}`}
+              className={`category-btn ${cat === category ? "active" : ""}`}
               onClick={() => setCategory(cat)}
             >
               {t(`articles.categories.${cat}`, cat)}
-              {/* Если нет перевода, отображаем имя категории */}
             </button>
+
           ))}
+
         </div>
+
       </div>
+
+      {/* статьи */}
 
       <div className="articles-grid">
+
         {visibleArticles.map(article => (
-          <ArticleCard key={article.id} article={article} />
+          <ArticleCard
+            key={article.slug || article.id}
+            article={article}
+          />
         ))}
+
       </div>
 
+      {/* показать ещё */}
+
       {visibleCount < filteredArticles.length && (
+
         <button
           className="search-button"
-          style={{ marginBottom: '40px' }}
+          style={{ marginBottom: "40px" }}
           onClick={() => setVisibleCount(prev => prev + 6)}
         >
-          {t('articles.showMore')}
+          {t("articles.showMore")}
         </button>
+
       )}
 
+      {/* нет результатов */}
+
       {filteredArticles.length === 0 && (
-        <p className="no-results">{t('articles.noResults')}</p>
+        <p className="no-results">{t("articles.noResults")}</p>
       )}
+
     </div>
   );
 }

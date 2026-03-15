@@ -3,6 +3,7 @@ const zh = {
   home: '首頁',
   about: '關於我們',
   articles: '文章',
+  events: '活動',
   contacts: '聯絡方式',
   donate: '捐款'
 },
@@ -131,13 +132,13 @@ contacts: {
   subtitle: "歡迎合作、研究及文化倡議。",
   languages: "語言"
 },
-events:{
-  title:"Events",
-  subtitle:"Lecture, meetup, conference and other events",
-  search:"search events",
-  showPast:"Past Events", 
-  searchButton:"Search",
-  noResults: "No events"
+events: {
+  title: "活動",
+  subtitle: "講座、聚會、會議及其他活動",
+  search: "搜尋活動",
+  showPast: "過去的活動",
+  searchButton: "搜尋",
+  noResults: "沒有活動"
 }
 }
 

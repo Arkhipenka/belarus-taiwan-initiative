@@ -3,6 +3,7 @@ const pl = {
   home: 'Strona główna',
   about: 'O nas',
   articles: 'Artykuły',
+  events: "Wydarzenia",
   contacts: 'Kontakt',
   donate: 'Wesprzyj'
 },
@@ -122,13 +123,13 @@ contacts: {
   subtitle: "Otwarci na współpracę, badania i inicjatywy kulturalne.",
   languages: "Języki"
 },
-events:{
-  title:"Events",
-  subtitle:"Lecture, meetup, conference and other events",
-  search:"search events",
-  showPast:"Past Events", 
-  searchButton:"Search",
-  noResults: "No events"
+events: {
+  title: "Wydarzenia",
+  subtitle: "Wykłady, spotkania, konferencje i inne wydarzenia",
+  search: "szukaj wydarzeń",
+  showPast: "Minione wydarzenia",
+  searchButton: "Szukaj",
+  noResults: "Brak wydarzeń"
 }
 }
 

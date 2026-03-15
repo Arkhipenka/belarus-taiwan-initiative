@@ -3,7 +3,7 @@ const by = {
     home: 'Галоўная',
     about: 'Пра нас',
     articles: 'Артыкулы',
-    events: 'Мерапрыемства',
+    events: 'Падзеі',
     contacts: 'Кантакты',
     donate:'Падтрымаць' 
   },
@@ -128,13 +128,13 @@ contacts: {
   subtitle: "Адкрытыя да супрацоўніцтва, даследаванняў і культурных ініцыятыў.",
   languages: "Мовы"
 },
-events:{
-  title:"Events",
-  subtitle:"Lecture, meetup, conference and other events",
-  search:"search events",
-  showPast:"Past Events", 
-  searchButton:"Search",
-  noResults: "No events"
+events: {
+  title: "Падзеі",
+  subtitle: "Лекцыі, сустрэчы, канферэнцыі і іншыя мерапрыемствы",
+  search: "пошук падзей",
+  showPast: "Мінулыя падзеі",
+  searchButton: "Пошук",
+  noResults: "Няма падзей"
 }
 }
 

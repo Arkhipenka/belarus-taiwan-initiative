@@ -3,6 +3,7 @@ const ru = {
       home: 'Главная',
       about: 'О нас',
       articles: 'Статьи',
+      events: 'События',
       contacts: 'Контакты',
       donate: 'Поддержать'
     },
@@ -124,13 +125,13 @@ contacts: {
   subtitle: "Открыты к сотрудничеству, исследованиям и культурным инициативам.",
   languages: "Языки"
 },
-events:{
-  title:"Events",
-  subtitle:"Lecture, meetup, conference and other events",
-  search:"search events",
-  showPast:"Past Events", 
-  searchButton:"Search",
-  noResults: "No events"
+events: {
+  title: "События",
+  subtitle: "Лекции, встречи, конференции и другие мероприятия",
+  search: "поиск событий",
+  showPast: "Прошедшие события",
+  searchButton: "Поиск",
+  noResults: "Нет событий"
 }
 
   }
