@@ -9,6 +9,7 @@ import ArticlePage from './pages/ArticlePage'
 import Donate from './pages/Donate'
 import Events from './pages/Events'
 import EventDetail from './pages/EventDetail'
+import AuthorPage from './pages/AuthorPage'
 
 
 function App() {
@@ -22,10 +23,11 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="articles" element={<Articles />} />
           <Route path="contacts" element={<Contacts />} />
-          <Route path="articles/:id" element={<ArticlePage />} />
+          <Route path="articles/:slug" element={<ArticlePage />} />
           <Route path="events" element={<Events />} />
-          <Route path="events/:id" element={<EventDetail />} />
+          <Route path="event/:slug" element={<EventDetail />} />
           <Route path="donate" element={<Donate />} />
+          <Route path="author/:author" element={<AuthorPage />} />
         </Route>
       </Routes>
 

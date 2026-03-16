@@ -1,10 +1,10 @@
 {
   "id": "event-001",
-  "slug": "Taiwan Cultural lecture",
+  "slug": "taiwan-cultural-lecture",
   "title": "Taiwan Cultural lecture",
   "type": "lecture",
 
-  "description": "Join us for an lecture about Taiwanese culture, food, and history.",
+  "description": "Join us for an lecture about Taiwanese culture, food, and history 1.",
 
   "date": "2025-02-20T15:30:00Z",
   "endDate": "2025-02-20T18:30:00Z",

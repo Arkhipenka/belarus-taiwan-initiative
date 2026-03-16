@@ -1120,6 +1120,75 @@ a{
   line-height: 1.4;
 }
 
+.article-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.article-page h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.article-meta {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.article-main-image {
+  width: 100%;
+  border-radius: 8px;
+  margin: 20px 0 0;
+}
+
+.article-page h2 {
+  font-size: 26px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.article-page p {
+  margin-bottom: 18px;
+}
+
+.article-page a {
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+.article-page a:hover {
+  text-decoration: underline;
+}
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-item img {
+  width: 100%;
+  max-height: 70vh; /* крупное изображение на экране */
+  object-fit: contain; /* сохраняем пропорции */
+  border-radius: 5px;
+}
+
+.image-caption {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+.article-source {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #666;
+}
+
 @media (max-width: 768px) {
   .about-section{
     display: flex;
@@ -1139,4 +1208,285 @@ a{
 .articles-categories{
   padding: 0;
 }
+}
+
+/* EventPage.css */
+
+/* Общая обёртка */
+.event-page {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Inter', 'Arial', sans-serif;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Заголовок */
+.event-page h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.event-meta span {
+  margin-right: 0.5rem;
+}
+
+.event-meta a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.event-meta a:hover {
+  text-decoration: underline;
+}
+
+/* Основное изображение */
+.event-image img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* Описание события */
+.event-description {
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+/* Галерея */
+.event-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 2rem;
+}
+
+.event-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Кнопка регистрации */
+.event-registration {
+  margin-top: 2.5rem;
+}
+
+.event-registration a {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background-color: #0077cc;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out, transform 0.2s;
+}
+
+.event-registration a:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* Спикеры */
+.event-speakers {
+  margin-top: 3rem;
+}
+
+.event-speakers h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.event-speaker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.event-speaker img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0077cc;
+}
+
+.event-speaker-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-speaker-info span:first-child {
+  font-weight: 600;
+  color: #0077cc;
+  font-size: 1.05rem;
+}
+
+.event-speaker-info span:last-child {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Партнёры */
+.event-partners {
+  margin-top: 3rem;
+}
+
+.event-partners h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.event-partner {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.event-partner img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+/* Дополнительные метки и категории */
+.event-categories {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.event-categories span {
+  background-color: #eef6fb;
+  color: #0077cc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Ссылки на локацию */
+.event-location a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.event-location a:hover {
+  text-decoration: underline;
+}
+.article-main-image-block {
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+.image-caption {
+  font-size: 0.875rem;
+  color: #555;
+  margin-top: 5px;
+  text-align: center;
+}
+/* Мобильные улучшения */
+@media (max-width: 768px) {
+  .event-page {
+    padding: 0 1rem;
+  }
+
+  .event-speaker {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* EventCard.css */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+.event-card:hover {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.event-card .event-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.event-card .event-content {
+  padding: 1rem;
+}
+
+.event-card .event-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.event-card .event-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-card .event-location {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.event-card .event-categories {
+  margin-bottom: 0.5rem;
+}
+
+.event-card .event-category {
+  font-size: 0.8rem;
+  color: #0077cc;
+  margin-right: 0.5rem;
+}
+
+.event-card .event-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.2s ease-in-out;
+}
+
+.event-card .event-button:hover {
+  background-color: #005fa3;
 }

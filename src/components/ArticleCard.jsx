@@ -1,23 +1,29 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 function ArticleCard({ article, featured }) {
-  const { lang } = useParams()
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { i18n } = useTranslation();
+  const lang = i18n.language.split('-')[0];
 
   const categoriesText = Array.isArray(article.categories)
     ? article.categories.join(' / ')
-    : ''
+    : '';
 
-  const excerptText = article.excerpt
-    ? article.excerpt
+  const excerptText = article.lead
+    ? article.lead
     : Array.isArray(article.content)
-      ? article.content[0]
-      : ''
+      ? article.content[0].replace(/<[^>]+>/g, '')
+      : '';
+
+  const formattedDate = article.date
+    ? new Date(article.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })
+    : '';
 
   return (
     <div
       className={featured ? 'article-card featured' : 'article-card'}
-      onClick={() => navigate(`/${lang}/articles/${article.id}`)}
+      onClick={() => navigate(`/${lang}/articles/${article.slug}`)}
       role="button"
       tabIndex={0}
     >
@@ -30,14 +36,9 @@ function ArticleCard({ article, featured }) {
       {featured ? (
         <div className="article-overlay">
           <h3>{article.title}</h3>
-          
           <div className="article-meta">
             <span className="article-category">{categoriesText}</span>
-            <span className="article-date">
-              {article.date
-                ? new Date(article.date).toLocaleDateString()
-                : ''}
-            </span>
+            <span className="article-date">{formattedDate}</span>
           </div>
           <p>{excerptText}</p>
         </div>
@@ -46,17 +47,13 @@ function ArticleCard({ article, featured }) {
           <h3>{article.title}</h3>
           <div className="article-meta">
             <span className="article-category">{categoriesText}</span>
-            <span className="article-date">
-              {article.date
-                ? new Date(article.date).toLocaleDateString()
-                : ''}
-            </span>
+            <span className="article-date">{formattedDate}</span>
           </div>
           <p>{excerptText}</p>
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default ArticleCard
+export default ArticleCard;

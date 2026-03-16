@@ -2,75 +2,103 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 
-// Загружаем все JSON событий
-const events = import.meta.glob('../data/events/**/*.json');
+// Подгрузка всех JSON с событиями
+const eventModules = import.meta.glob('../data/events/*/*.json', { eager: true, import: 'default' });
 
-function EventDetail() {
-  const { id } = useParams();
+function EventPage() {
+  const { slug } = useParams();
   const { i18n } = useTranslation();
+  const lang = i18n.language.split('-')[0]; // en, ru, by и т.д.
+
   const [event, setEvent] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [views, setViews] = useState(0);
 
   useEffect(() => {
-    const loadEvent = async () => {
-      setLoading(true);
-      const lang = i18n.language.split('-')[0];
+    // Загружаем все события нужного языка
+    const loadedEvents = Object.entries(eventModules)
+      .filter(([path]) => path.includes(`/events/${lang}/`))
+      .map(([, data]) => data);
 
-      // Ищем нужный файл по id и языку
-      const key = Object.keys(events).find(p =>
-        p.endsWith(`/${lang}/${id}.json`)
-      );
+    const foundEvent = loadedEvents.find(e => e.slug === slug);
+    setEvent(foundEvent);
 
-      if (!key) {
-        setEvent(null);
-        setLoading(false);
-        return;
-      }
+    if (foundEvent) {
+      const viewKey = `views-event-${lang}-${slug}`;
+      const storedViews = localStorage.getItem(viewKey);
+      const newViews = storedViews ? parseInt(storedViews) + 1 : 1;
+      localStorage.setItem(viewKey, newViews);
+      setViews(newViews);
+    }
+  }, [slug, lang]);
 
-      try {
-        const module = await events[key]();
-        setEvent(module.default);
-      } catch (err) {
-        console.error('Ошибка при загрузке мероприятия', err);
-        setEvent(null);
-      } finally {
-        setLoading(false);
-      }
-    };
+  if (!event) return <p>Loading event...</p>;
 
-    loadEvent();
-  }, [id, i18n.language]);
-
-  if (loading) return <p>Loading...</p>;
-  if (!event) return <p>Event not found</p>;
+  const startDate = new Date(event.date);
+  const endDate = event.endDate ? new Date(event.endDate) : null;
 
   return (
-    <div className="event-detail-page">
+    <article className="event-page">
       <h1>{event.title}</h1>
 
-      <p className="event-meta">
-        <span>{event.date}</span> · <span>{event.categories?.join(', ')}</span>
-      </p>
+      {event.image && <img src={event.image} alt={event.title} className="event-main-image" />}
 
-      {event.image && (
-        <img src={event.image} alt={event.title} className="event-image" />
-      )}
+      <p className="event-date">
+        {startDate.toLocaleString(lang)}
+        {endDate && <> - {endDate.toLocaleString(lang)}</>}
+        {' '}· 👁 {views}
+      </p>
 
       {event.location && (
         <p className="event-location">
-          <strong>Location:</strong> {event.location}
+          <a href={event.location.link} target="_blank" rel="noopener noreferrer">
+            {event.location.name}, {event.location.city}, {event.location.country}
+          </a>
         </p>
       )}
 
-      {event.description && (
-        <div className="event-description">
-          {Array.isArray(event.description)
-            ? event.description.map((p, i) => <p key={i}>{p}</p>)
-            : <p>{event.description}</p>}
+      <p className="event-description">{event.description}</p>
+
+      {event.speakers && event.speakers.length > 0 && (
+        <div className="event-speakers">
+          <h3>Speakers:</h3>
+          {event.speakers.map((s, i) => (
+            <div key={i} className="speaker">
+              {s.photo && <img src={s.photo} alt={s.name} className="speaker-photo" />}
+              <p>{s.name} — {s.role}</p>
+            </div>
+          ))}
         </div>
       )}
-    </div>
+
+      {event.partners && event.partners.length > 0 && (
+        <div className="event-partners">
+          <h3>Partners:</h3>
+          {event.partners.map((p, i) => (
+            <div key={i} className="partner">
+              {p.logo && <img src={p.logo} alt={p.name} />}
+              <p>{p.name}</p>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {event.registration_url && (
+        <p>
+          <a href={event.registration_url} target="_blank" rel="noopener noreferrer">
+            Register for this event
+          </a>
+        </p>
+      )}
+
+      {event.gallery && event.gallery.length > 0 && (
+        <div className="event-gallery">
+          {event.gallery.map((img, i) => (
+            <img key={i} src={img} alt={`gallery ${i + 1}`} />
+          ))}
+        </div>
+      )}
+    </article>
   );
 }
 
-export default EventDetail;
+export default EventPage;

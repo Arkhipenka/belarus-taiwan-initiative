@@ -20,10 +20,11 @@ function Router() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="articles" element={<Articles />} />
-          <Route path="articles/:id" element={<ArticlePage />} />
+          <Route path="articles/:slug" element={<ArticlePage />} />
           <Route path="events" element={<Events />} />
-          <Route path="events/:id" element={<EventDetail />} />
+          <Route path="events/:slug" element={<EventDetail />} />
           <Route path="contacts" element={<Contacts />} />
+          <Route path="author/:author" element={<AuthorPage />} />
           <Route path="donate" element={<Donate />} />
 
         </Route>
