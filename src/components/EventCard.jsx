@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { getAssetUrl } from '../utils/assets';
 
 function EventCard({ event }) {
   const { i18n, t } = useTranslation();
@@ -16,7 +17,7 @@ function EventCard({ event }) {
     <div className="event-card">
       {event.image && (
         <div className="event-image">
-          <img src={event.image} alt={event.title} />
+          <img src={getAssetUrl(event.image)} alt={event.title} />
         </div>
       )}
 

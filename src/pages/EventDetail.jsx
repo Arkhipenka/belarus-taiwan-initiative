@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import { translateEvent } from '../data/materialTranslations';
+import { getAssetUrl } from '../utils/assets';
 
 const eventModules = import.meta.glob('../data/events/*/*.json', {
   eager: true,
@@ -45,18 +46,6 @@ const eventLabels = {
     notFound: '找不到活動。'
   }
 };
-
-function getAssetUrl(src) {
-  if (!src || src.startsWith('http') || src.startsWith(import.meta.env.BASE_URL)) {
-    return src;
-  }
-
-  if (src.startsWith('/images/')) {
-    return `${import.meta.env.BASE_URL}${src.slice(1)}`;
-  }
-
-  return src;
-}
 
 function EventDetail() {
   const { slug } = useParams();
