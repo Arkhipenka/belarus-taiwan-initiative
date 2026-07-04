@@ -1,65 +1,60 @@
-import HeroBanner from '../components/HeroBanner'
-import ArticleCard from '../components/ArticleCard'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useParams, useNavigate } from 'react-router-dom'
+import HeroBanner from '../components/HeroBanner'
+import ArticleCard from '../components/ArticleCard'
+import { translateArticle, uniqueMaterials } from '../data/materialTranslations'
+
+const articlesModules = import.meta.glob(
+  '../data/articles/*/*.json',
+  { eager: true }
+)
 
 function Home() {
   const { t } = useTranslation()
   const { lang } = useParams()
   const navigate = useNavigate()
 
-  /* ---------------- HERO ---------------- */
-
   const slides = [
     {
-      image: `${import.meta.env.BASE_URL}images/taiwan1.jpg`,
-      alt: 'Taiwan street',
+      image: `${import.meta.env.BASE_URL}images/hero-taiwan-protest.webp`,
+      alt: 'Taiwan civic protest',
       title: 'hero.slide1Title',
       subtitle: 'hero.slide1Subtitle',
       button: { text: 'hero.slide1Button', link: `/${lang}/articles` }
     },
     {
-      image: `${import.meta.env.BASE_URL}images/taiwan2.jpg`,
-      alt: 'Taiwan night market',
+      image: `${import.meta.env.BASE_URL}images/hero-taipei-mrt.jpg`,
+      alt: 'Taipei MRT and city streets',
       title: 'hero.slide2Title',
       subtitle: 'hero.slide2Subtitle',
       button: { text: 'hero.slide2Button', link: `/${lang}/articles` }
     },
     {
-      image: `${import.meta.env.BASE_URL}images/taiwan3.jpg`,
-      alt: 'Taiwan landscape',
+      image: `${import.meta.env.BASE_URL}images/hero-presidential-meeting.jpg`,
+      alt: 'Public meeting with the president of Taiwan',
       title: 'hero.slide3Title',
       subtitle: 'hero.slide3Subtitle',
-      button: { text: 'hero.slide3Button', link: `/${lang}/articles` }
+      button: { text: 'hero.slide3Button', link: `/${lang}/about` }
     }
   ]
 
-  /* ---------------- ARTICLES ---------------- */
+  const allArticles = useMemo(() => {
+    const articles = Object.entries(articlesModules)
+      .filter(([path]) => path.includes(`/data/articles/${lang}/`))
+      .map(([, mod]) => translateArticle(mod.default, lang))
 
-  // Загружаем ВСЕ статьи всех языков
-  const articlesModules = import.meta.glob(
-    '../data/articles/*/*.json',
-    { eager: true }
-  )
-
-  // Фильтруем по текущему языку
-  const allArticles = Object.entries(articlesModules)
-    .filter(([path]) => path.includes(`/data/articles/${lang}/`))
-    .map(([, mod]) => mod.default)
-    .sort((a, b) => new Date(b.date) - new Date(a.date)) // новые сверху
+    return uniqueMaterials(articles)
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+  }, [lang])
 
   const featuredArticle = allArticles[0] || null
   const secondaryArticles = allArticles.slice(1, 3)
 
-  /* ---------------- RENDER ---------------- */
-
   return (
     <div className="home-container">
-
-      {/* Hero */}
       <HeroBanner slides={slides} />
 
-      {/* About */}
       <section className="about-initiative">
         <img
           src={`${import.meta.env.BASE_URL}images/Flag_of_Formosa_1895.svg`}
@@ -80,11 +75,15 @@ function Home() {
         </div>
       </section>
 
-      {/* Articles */}
       <section className="featured-articles">
-        <h2 className="section-title">
-          {t('articles.featuredTitle')}
-        </h2>
+        <div className="section-heading">
+          <h2 className="section-title">
+            {t('articles.featuredTitle')}
+          </h2>
+          <button className="text-button" onClick={() => navigate(`/${lang}/articles`)}>
+            {t('nav.articles')}
+          </button>
+        </div>
 
         <div className="articles-showcase">
           {featuredArticle && (
@@ -104,7 +103,6 @@ function Home() {
           ))}
         </div>
       </section>
-
     </div>
   )
 }

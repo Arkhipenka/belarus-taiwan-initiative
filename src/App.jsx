@@ -10,6 +10,7 @@ import Donate from './pages/Donate'
 import Events from './pages/Events'
 import EventDetail from './pages/EventDetail'
 import AuthorPage from './pages/AuthorPage'
+import ScrollToTopButton from './components/ScrollToTopButton'
 
 
 function App() {
@@ -25,13 +26,14 @@ function App() {
           <Route path="contacts" element={<Contacts />} />
           <Route path="articles/:slug" element={<ArticlePage />} />
           <Route path="events" element={<Events />} />
-          <Route path="event/:slug" element={<EventDetail />} />
+          <Route path="events/:slug" element={<EventDetail />} />
           <Route path="donate" element={<Donate />} />
           <Route path="author/:author" element={<AuthorPage />} />
         </Route>
       </Routes>
 
       <Footer />
+      <ScrollToTopButton />
     </HashRouter>
   )
 }

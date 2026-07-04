@@ -1,37 +1,80 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-function ArticleCard({ article, featured }) {
+function stripHtml(value) {
+  return value.replace(/<[^>]+>/g, '').trim();
+}
+
+function getBlockText(block) {
+  if (typeof block === 'string') {
+    return stripHtml(block);
+  }
+
+  if (block && typeof block === 'object') {
+    return block.text || block.caption || block.alt || '';
+  }
+
+  return '';
+}
+
+function getAssetUrl(src) {
+  if (!src || src.startsWith('http') || src.startsWith(import.meta.env.BASE_URL)) {
+    return src;
+  }
+
+  if (src.startsWith('/images/')) {
+    return `${import.meta.env.BASE_URL}${src.slice(1)}`;
+  }
+
+  return src;
+}
+
+function ArticleCard({ article, featured, compact }) {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const lang = i18n.language.split('-')[0];
+  const articleUrl = `/${lang}/articles/${article.slug}`;
 
   const categoriesText = Array.isArray(article.categories)
     ? article.categories.join(' / ')
     : '';
 
-  const excerptText = article.lead
-    ? article.lead
-    : Array.isArray(article.content)
-      ? article.content[0].replace(/<[^>]+>/g, '')
-      : '';
+  const firstTextBlock = Array.isArray(article.content)
+    ? article.content.find(block => getBlockText(block))
+    : null;
+
+  const excerptText = article.lead || getBlockText(firstTextBlock);
 
   const formattedDate = article.date
     ? new Date(article.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })
     : '';
 
+  const openArticle = () => navigate(articleUrl);
+
   return (
     <div
-      className={featured ? 'article-card featured' : 'article-card'}
-      onClick={() => navigate(`/${lang}/articles/${article.slug}`)}
+      className={[
+        'article-card',
+        featured ? 'featured' : '',
+        compact ? 'compact' : ''
+      ].filter(Boolean).join(' ')}
+      onClick={openArticle}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openArticle();
+        }
+      }}
       role="button"
       tabIndex={0}
     >
-      <img
-        src={article.image}
-        alt={article.title}
-        className={featured ? 'article-image-full' : 'article-image'}
-      />
+      {!compact && (
+        <img
+          src={getAssetUrl(article.image)}
+          alt={article.title}
+          className={featured ? 'article-image-full' : 'article-image'}
+        />
+      )}
 
       {featured ? (
         <div className="article-overlay">

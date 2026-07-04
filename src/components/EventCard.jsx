@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 function EventCard({ event }) {
-  const { i18n } = useTranslation();
-  const lang = i18n.language.split('-')[0]; // en, ru, zh и т.д.
+  const { i18n, t } = useTranslation();
+  const lang = i18n.language.split('-')[0];
 
   const date = new Date(event.date);
   const formattedDate = date.toLocaleDateString(lang, {
@@ -14,7 +14,6 @@ function EventCard({ event }) {
 
   return (
     <div className="event-card">
-
       {event.image && (
         <div className="event-image">
           <img src={event.image} alt={event.title} />
@@ -22,7 +21,6 @@ function EventCard({ event }) {
       )}
 
       <div className="event-content">
-
         <div className="event-date">{formattedDate}</div>
 
         <h3 className="event-title">{event.title}</h3>
@@ -43,10 +41,9 @@ function EventCard({ event }) {
           </div>
         )}
 
-        <Link to={`/${lang}/event/${event.slug}`} className="event-button">
-          View Event
+        <Link to={`/${lang}/events/${event.slug}`} className="event-button">
+          {t('events.viewEvent')}
         </Link>
-
       </div>
     </div>
   );

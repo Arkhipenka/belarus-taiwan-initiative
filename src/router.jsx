@@ -8,6 +8,8 @@ import Contacts from './pages/Contacts'
 import Footer from './components/Footer'
 import Donate from './pages/Donate'
 import Events from './pages/Events'
+import EventDetail from './pages/EventDetail'
+import AuthorPage from './pages/AuthorPage'
 
 
 function Router() {

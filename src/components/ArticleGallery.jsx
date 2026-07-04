@@ -1,12 +1,7 @@
-// ArticleGallery.jsx
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import SwiperCore, { Navigation } from 'swiper';
-
-
-// Инициализация модулей Swiper
-SwiperCore.use([Navigation]);
 
 export default function ArticleGallery({ gallery }) {
   if (!gallery || gallery.length === 0) return null;
@@ -14,6 +9,7 @@ export default function ArticleGallery({ gallery }) {
   return (
     <div className="article-gallery-container">
       <Swiper
+        modules={[Navigation]}
         navigation
         spaceBetween={20}
         slidesPerView={1}

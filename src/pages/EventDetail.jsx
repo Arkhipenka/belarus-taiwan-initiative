@@ -1,37 +1,90 @@
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { translateEvent } from '../data/materialTranslations';
 
-// Подгрузка всех JSON с событиями
-const eventModules = import.meta.glob('../data/events/*/*.json', { eager: true, import: 'default' });
+const eventModules = import.meta.glob('../data/events/*/*.json', {
+  eager: true,
+  import: 'default'
+});
 
-function EventPage() {
+const eventLabels = {
+  by: {
+    views: 'прагляды',
+    speakers: 'Спікеры',
+    partners: 'Партнёры',
+    register: 'Зарэгістравацца на падзею',
+    notFound: 'Падзея не знойдзена.'
+  },
+  ru: {
+    views: 'просмотры',
+    speakers: 'Спикеры',
+    partners: 'Партнёры',
+    register: 'Зарегистрироваться на событие',
+    notFound: 'Событие не найдено.'
+  },
+  en: {
+    views: 'views',
+    speakers: 'Speakers',
+    partners: 'Partners',
+    register: 'Register for this event',
+    notFound: 'Event not found.'
+  },
+  pl: {
+    views: 'wyświetlenia',
+    speakers: 'Prelegenci',
+    partners: 'Partnerzy',
+    register: 'Zarejestruj się na wydarzenie',
+    notFound: 'Nie znaleziono wydarzenia.'
+  },
+  zh: {
+    views: '瀏覽',
+    speakers: '講者',
+    partners: '合作夥伴',
+    register: '報名參加活動',
+    notFound: '找不到活動。'
+  }
+};
+
+function getAssetUrl(src) {
+  if (!src || src.startsWith('http') || src.startsWith(import.meta.env.BASE_URL)) {
+    return src;
+  }
+
+  if (src.startsWith('/images/')) {
+    return `${import.meta.env.BASE_URL}${src.slice(1)}`;
+  }
+
+  return src;
+}
+
+function EventDetail() {
   const { slug } = useParams();
   const { i18n } = useTranslation();
-  const lang = i18n.language.split('-')[0]; // en, ru, by и т.д.
-
-  const [event, setEvent] = useState(null);
+  const lang = i18n.language.split('-')[0];
+  const labels = eventLabels[lang] || eventLabels.en;
   const [views, setViews] = useState(0);
 
-  useEffect(() => {
-    // Загружаем все события нужного языка
-    const loadedEvents = Object.entries(eventModules)
+  const event = useMemo(() => {
+    return Object.entries(eventModules)
       .filter(([path]) => path.includes(`/events/${lang}/`))
-      .map(([, data]) => data);
-
-    const foundEvent = loadedEvents.find(e => e.slug === slug);
-    setEvent(foundEvent);
-
-    if (foundEvent) {
-      const viewKey = `views-event-${lang}-${slug}`;
-      const storedViews = localStorage.getItem(viewKey);
-      const newViews = storedViews ? parseInt(storedViews) + 1 : 1;
-      localStorage.setItem(viewKey, newViews);
-      setViews(newViews);
-    }
+      .map(([, data]) => translateEvent(data, lang))
+      .find(item => item.slug === slug);
   }, [slug, lang]);
 
-  if (!event) return <p>Loading event...</p>;
+  useEffect(() => {
+    if (!event) return;
+
+    const viewKey = `views-event-${lang}-${slug}`;
+    const storedViews = Number.parseInt(localStorage.getItem(viewKey), 10);
+    const newViews = Number.isNaN(storedViews) ? 1 : storedViews + 1;
+    localStorage.setItem(viewKey, String(newViews));
+    const timer = window.setTimeout(() => setViews(newViews), 0);
+
+    return () => window.clearTimeout(timer);
+  }, [event, slug, lang]);
+
+  if (!event) return <p>{labels.notFound}</p>;
 
   const startDate = new Date(event.date);
   const endDate = event.endDate ? new Date(event.endDate) : null;
@@ -40,12 +93,12 @@ function EventPage() {
     <article className="event-page">
       <h1>{event.title}</h1>
 
-      {event.image && <img src={event.image} alt={event.title} className="event-main-image" />}
+      {event.image && <img src={getAssetUrl(event.image)} alt={event.title} className="event-main-image" />}
 
       <p className="event-date">
         {startDate.toLocaleString(lang)}
         {endDate && <> - {endDate.toLocaleString(lang)}</>}
-        {' '}· 👁 {views}
+        {' '}| {labels.views}: {views}
       </p>
 
       {event.location && (
@@ -60,11 +113,11 @@ function EventPage() {
 
       {event.speakers && event.speakers.length > 0 && (
         <div className="event-speakers">
-          <h3>Speakers:</h3>
-          {event.speakers.map((s, i) => (
-            <div key={i} className="speaker">
-              {s.photo && <img src={s.photo} alt={s.name} className="speaker-photo" />}
-              <p>{s.name} — {s.role}</p>
+          <h3>{labels.speakers}:</h3>
+          {event.speakers.map((speaker, index) => (
+            <div key={`${speaker.name}-${index}`} className="speaker">
+              {speaker.photo && <img src={getAssetUrl(speaker.photo)} alt={speaker.name} className="speaker-photo" />}
+              <p>{speaker.name} - {speaker.role}</p>
             </div>
           ))}
         </div>
@@ -72,11 +125,11 @@ function EventPage() {
 
       {event.partners && event.partners.length > 0 && (
         <div className="event-partners">
-          <h3>Partners:</h3>
-          {event.partners.map((p, i) => (
-            <div key={i} className="partner">
-              {p.logo && <img src={p.logo} alt={p.name} />}
-              <p>{p.name}</p>
+          <h3>{labels.partners}:</h3>
+          {event.partners.map((partner, index) => (
+            <div key={`${partner.name}-${index}`} className="partner">
+              {partner.logo && <img src={getAssetUrl(partner.logo)} alt={partner.name} />}
+              <p>{partner.name}</p>
             </div>
           ))}
         </div>
@@ -85,15 +138,15 @@ function EventPage() {
       {event.registration_url && (
         <p>
           <a href={event.registration_url} target="_blank" rel="noopener noreferrer">
-            Register for this event
+            {labels.register}
           </a>
         </p>
       )}
 
       {event.gallery && event.gallery.length > 0 && (
         <div className="event-gallery">
-          {event.gallery.map((img, i) => (
-            <img key={i} src={img} alt={`gallery ${i + 1}`} />
+          {event.gallery.map((img, index) => (
+            <img key={`${img}-${index}`} src={getAssetUrl(img)} alt={`gallery ${index + 1}`} />
           ))}
         </div>
       )}
@@ -101,4 +154,4 @@ function EventPage() {
   );
 }
 
-export default EventPage;
+export default EventDetail;

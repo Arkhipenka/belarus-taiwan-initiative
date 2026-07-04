@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { LANGUAGES } from '../constants/languages'
 import MainNav from '../components/MainNav'
-import LanguageSwitcher from '../components/LanguageSwitcher'
 
 function LanguageLayout() {
   const { lang } = useParams()
@@ -22,7 +21,6 @@ function LanguageLayout() {
   return (
     <>
       <MainNav />
-      <LanguageSwitcher />
       <Outlet />
     </>
   )

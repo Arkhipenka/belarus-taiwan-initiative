@@ -1,0 +1,17 @@
+.logo {
+  display: block;
+  height: 64px;
+  width: auto;
+}
+
+.site-title {
+  flex: 0 0 auto;
+  font-family: "LXGW WenKai TC", cursive;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 54px;
+  }
+}
