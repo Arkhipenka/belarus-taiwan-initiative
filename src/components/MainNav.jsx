@@ -2,6 +2,7 @@ import { Link, NavLink, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
+import { getAssetUrl } from '../utils/assets'
 import '../styles/main-nav.css'
 
 function MainNav() {
@@ -48,7 +49,7 @@ function MainNav() {
       <nav className="main-nav">
         <div className="site-title">
           <Link to={`/${lang}`} onClick={closeMenu}>
-            <img src="/belarus-taiwan-initiative/images/logo.png" alt="logo" className="logo" />
+            <img src={getAssetUrl('/images/logo.png')} alt="logo" className="logo" />
           </Link>
         </div>
 

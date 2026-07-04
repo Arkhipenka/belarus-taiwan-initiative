@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { translateArticle, uniqueMaterials } from '../data/materialTranslations';
+import { getAssetUrl } from '../utils/assets';
 
 const articleModules = import.meta.glob('../data/articles/*/*.json', {
   eager: true,
@@ -18,18 +19,6 @@ function getBlockText(block) {
   }
 
   return '';
-}
-
-function getAssetUrl(src) {
-  if (!src || src.startsWith('http') || src.startsWith(import.meta.env.BASE_URL)) {
-    return src;
-  }
-
-  if (src.startsWith('/images/')) {
-    return `${import.meta.env.BASE_URL}${src.slice(1)}`;
-  }
-
-  return src;
 }
 
 function ArticleIndexCard({ article, lang, variant = 'grid' }) {

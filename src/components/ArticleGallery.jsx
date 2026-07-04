@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { getAssetUrl } from '../utils/assets';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -18,7 +19,7 @@ export default function ArticleGallery({ gallery }) {
         {gallery.map((img, idx) => (
           <SwiperSlide key={idx}>
             <div className="slide-item">
-              <img src={img.src || img} alt={img.caption || `gallery ${idx + 1}`} className="slide-image" />
+              <img src={getAssetUrl(img.src || img)} alt={img.caption || `gallery ${idx + 1}`} className="slide-image" />
               {img.caption && <p className="slide-caption">{img.caption}</p>}
             </div>
           </SwiperSlide>

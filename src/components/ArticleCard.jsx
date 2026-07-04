@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { getAssetUrl } from '../utils/assets';
 
 function stripHtml(value) {
   return value.replace(/<[^>]+>/g, '').trim();
@@ -15,18 +16,6 @@ function getBlockText(block) {
   }
 
   return '';
-}
-
-function getAssetUrl(src) {
-  if (!src || src.startsWith('http') || src.startsWith(import.meta.env.BASE_URL)) {
-    return src;
-  }
-
-  if (src.startsWith('/images/')) {
-    return `${import.meta.env.BASE_URL}${src.slice(1)}`;
-  }
-
-  return src;
 }
 
 function ArticleCard({ article, featured, compact }) {

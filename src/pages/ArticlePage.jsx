@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import ArticleGallery from '../components/ArticleGallery';
 import ArticleCard from '../components/ArticleCard';
 import { translateArticle, uniqueMaterials } from '../data/materialTranslations';
+import { getAssetUrl } from '../utils/assets';
 
 const articleModules = import.meta.glob('../data/articles/*/*.json', {
   eager: true,
@@ -42,18 +43,6 @@ const articleLabels = {
     allArticles: '所有文章'
   }
 };
-
-function getAssetUrl(src) {
-  if (!src || src.startsWith('http') || src.startsWith(import.meta.env.BASE_URL)) {
-    return src;
-  }
-
-  if (src.startsWith('/images/')) {
-    return `${import.meta.env.BASE_URL}${src.slice(1)}`;
-  }
-
-  return src;
-}
 
 function getStoredJson(key, fallback) {
   try {

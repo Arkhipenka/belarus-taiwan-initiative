@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { getAssetUrl } from '../utils/assets'
 
 function Footer() {
   const { t } = useTranslation()
@@ -19,7 +20,7 @@ function Footer() {
       <footer className="site-footer">
         <div className="footer-topline">
           <Link to={`/${lang}`} className="footer-logo-link">
-            <img src="/belarus-taiwan-initiative/images/logo.png" alt="logo" className="logo" />
+            <img src={getAssetUrl('/images/logo.png')} alt="logo" className="logo" />
           </Link>
         </div>
 
