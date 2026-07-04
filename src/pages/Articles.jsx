@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { translateArticle, uniqueMaterials } from '../data/materialTranslations';
+import { isPublishedArticle, translateArticle, uniqueMaterials } from '../data/materialTranslations';
 import { getAssetUrl } from '../utils/assets';
 
 const articleModules = import.meta.glob('../data/articles/*/*.json', {
@@ -65,7 +65,8 @@ function Articles() {
   const allArticles = useMemo(() => {
     const articles = Object.entries(articleModules)
       .filter(([path]) => path.includes(`/articles/${lang}/`))
-      .map(([, data]) => translateArticle(data, lang));
+      .map(([, data]) => translateArticle(data, lang))
+      .filter(isPublishedArticle);
 
     return uniqueMaterials(articles)
       .sort((a, b) => new Date(b.date) - new Date(a.date));

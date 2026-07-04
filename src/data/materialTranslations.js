@@ -25,6 +25,8 @@ const baseArticleAssets = {
   }
 };
 
+const publishedArticleIds = new Set(['pobeda-nad-aes-2025']);
+
 const articleTranslations = {
   by: {
     'pobeda-nad-aes-2025': {
@@ -735,6 +737,10 @@ export function translateArticle(article, lang) {
     : translated?.content;
 
   return translated ? { ...article, ...translated, content } : article;
+}
+
+export function isPublishedArticle(article) {
+  return publishedArticleIds.has(getArticleTranslationKey(article));
 }
 
 export function translateEvent(event, lang) {

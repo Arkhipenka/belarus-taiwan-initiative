@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import ArticleGallery from '../components/ArticleGallery';
 import ArticleCard from '../components/ArticleCard';
-import { translateArticle, uniqueMaterials } from '../data/materialTranslations';
+import { isPublishedArticle, translateArticle, uniqueMaterials } from '../data/materialTranslations';
 import { getAssetUrl } from '../utils/assets';
 
 const articleModules = import.meta.glob('../data/articles/*/*.json', {
@@ -64,13 +64,15 @@ function ArticlePage() {
     return Object.entries(articleModules)
       .filter(([path]) => path.includes(`/articles/${lang}/`))
       .map(([, data]) => translateArticle(data, lang))
+      .filter(isPublishedArticle)
       .find(item => item.slug === slug);
   }, [lang, slug]);
 
   const relatedArticles = useMemo(() => {
     const articles = Object.entries(articleModules)
       .filter(([path]) => path.includes(`/articles/${lang}/`))
-      .map(([, data]) => translateArticle(data, lang));
+      .map(([, data]) => translateArticle(data, lang))
+      .filter(isPublishedArticle);
 
     return uniqueMaterials(articles)
       .filter(item => item.slug !== slug)
