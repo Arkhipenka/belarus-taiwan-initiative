@@ -11,6 +11,7 @@ import Events from './pages/Events'
 import EventDetail from './pages/EventDetail'
 import AuthorPage from './pages/AuthorPage'
 import ScrollToTopButton from './components/ScrollToTopButton'
+import SeoManager from './components/SeoManager'
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
 
       <Footer />
       <ScrollToTopButton />
+      <SeoManager />
     </HashRouter>
   )
 }
