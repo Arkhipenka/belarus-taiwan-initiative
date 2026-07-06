@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-const CONTACT_EMAIL = 'contact@taiwanasialens.org'
+const CONTACT_EMAIL = 'belarus.taiwan.platform@gmail.com'
 const CONTACT_FORM_ENDPOINT =
   import.meta.env.VITE_CONTACT_FORM_ENDPOINT || 'https://formspree.io/f/xvzjddvq'
 

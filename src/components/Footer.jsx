@@ -55,7 +55,7 @@ function Footer() {
           <div className="footer-section footer-contact">
             <h4>Contact</h4>
             <ul>
-              <li><a href="mailto:contact@taiwanasialens.org">contact@taiwanasialens.org</a></li>
+              <li><a href="mailto:belarus.taiwan.platform@gmail.com">belarus.taiwan.platform@gmail.com</a></li>
               <li><Link to={`/${lang}/donate`}>{t('nav.donate')}</Link></li>
             </ul>
           </div>
