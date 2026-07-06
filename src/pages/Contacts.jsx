@@ -104,15 +104,15 @@ function Contacts() {
 
             <p>
               <strong>Telegram:</strong>{' '}
-              <a href="https://t.me/yourtelegram" target="_blank" rel="noopener noreferrer">
-                @yourtelegram
+              <a href="https://t.me/student1938" target="_blank" rel="noopener noreferrer">
+                @student1938
               </a>
             </p>
 
             <p>
               <strong>Line:</strong>{' '}
-              <a href="https://line.me/ti/p/yourlineid" target="_blank" rel="noopener noreferrer">
-                @yourlineid
+              <a href="https://line.me/ti/p/Arkhipenka" target="_blank" rel="noopener noreferrer">
+                Arkhipenka
               </a>
             </p>
 
