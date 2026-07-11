@@ -3621,10 +3621,18 @@ a,
   color: var(--flag-white);
 }
 
+.article-page .article-reactions .reaction-button.is-active {
+  background: var(--flag-blue-soft);
+  border-color: var(--flag-blue-soft);
+  color: var(--flag-white);
+}
+
 .article-page .article-reactions .reaction-love:hover,
 .article-page .article-reactions .reaction-love:focus-visible,
+.article-page .article-reactions .reaction-love.is-active,
 .article-page .article-reactions .reaction-fire:hover,
-.article-page .article-reactions .reaction-fire:focus-visible {
+.article-page .article-reactions .reaction-fire:focus-visible,
+.article-page .article-reactions .reaction-fire.is-active {
   background: var(--flag-red);
   border-color: var(--flag-red);
 }

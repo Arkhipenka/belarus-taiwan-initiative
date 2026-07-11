@@ -6,6 +6,14 @@ import ArticleCard from '../components/ArticleCard';
 import { getArticleBySlug, getArticles } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
 import { formatLongDate } from '../utils/date';
+import {
+  fetchArticleReactions,
+  readSelectedReaction,
+  readLocalReactions,
+  toggleArticleReaction,
+  toggleLocalReaction,
+  writeSelectedReaction
+} from '../utils/reactions';
 
 const articleLabels = {
   by: {
@@ -39,15 +47,6 @@ const articleLabels = {
     allArticles: '所有文章'
   }
 };
-
-function getStoredJson(key, fallback) {
-  try {
-    const value = localStorage.getItem(key);
-    return value ? JSON.parse(value) : fallback;
-  } catch {
-    return fallback;
-  }
-}
 
 function getImageFrameStyle(src) {
   return {
@@ -98,6 +97,8 @@ function ArticlePage() {
     love: 0,
     fire: 0
   });
+  const [selectedReaction, setSelectedReaction] = useState(null);
+  const [reactionStatus, setReactionStatus] = useState('idle');
 
   useEffect(() => {
     if (!article) return;
@@ -105,29 +106,51 @@ function ArticlePage() {
     const viewKey = `views-${lang}-${slug}`;
     const storedViews = Number.parseInt(localStorage.getItem(viewKey), 10);
     const newViews = Number.isNaN(storedViews) ? 1 : storedViews + 1;
-    const storedReactions = getStoredJson(`reactions-${lang}-${slug}`, {
-      like: 0,
-      love: 0,
-      fire: 0
-    });
+    const storedReactions = readLocalReactions(slug, lang);
 
     localStorage.setItem(viewKey, String(newViews));
     const timer = window.setTimeout(() => {
       setViews(newViews);
       setReactions(storedReactions);
+      setSelectedReaction(readSelectedReaction(slug));
     }, 0);
+
+    fetchArticleReactions(slug)
+      .then(({ reactions: serverReactions, selected }) => {
+        setReactions(serverReactions);
+        setSelectedReaction(selected);
+        setReactionStatus('idle');
+      })
+      .catch(() => {
+        setReactionStatus('offline');
+      });
 
     return () => window.clearTimeout(timer);
   }, [article, lang, slug]);
 
-  function addReaction(type) {
-    const newReactions = {
-      ...reactions,
-      [type]: reactions[type] + 1
-    };
+  async function addReaction(type) {
+    if (reactionStatus === 'saving') return;
 
-    setReactions(newReactions);
-    localStorage.setItem(`reactions-${lang}-${slug}`, JSON.stringify(newReactions));
+    const previousReactions = reactions;
+    const previousSelectedReaction = selectedReaction;
+    const optimistic = toggleLocalReaction(reactions, selectedReaction, type);
+
+    setReactions(optimistic.reactions);
+    setSelectedReaction(optimistic.selected);
+    setReactionStatus('saving');
+    writeSelectedReaction(slug, optimistic.selected);
+
+    try {
+      const result = await toggleArticleReaction(slug, type);
+      setReactions(result.reactions);
+      setSelectedReaction(result.selected);
+      setReactionStatus(result.action);
+    } catch {
+      setReactions(previousReactions);
+      setSelectedReaction(previousSelectedReaction);
+      writeSelectedReaction(slug, previousSelectedReaction);
+      setReactionStatus('offline');
+    }
   }
 
   function renderContentBlock(block, index) {
@@ -261,18 +284,33 @@ function ArticlePage() {
 
       <footer className="article-footer">
         <div className="article-reactions">
-          <button className="reaction-button reaction-like" onClick={() => addReaction('like')} aria-label="Like">
-            <span className="reaction-icon" aria-hidden="true">↑</span>
+          <button
+            className={`reaction-button reaction-like ${selectedReaction === 'like' ? 'is-active' : ''}`}
+            onClick={() => addReaction('like')}
+            aria-label="Like"
+            aria-pressed={selectedReaction === 'like'}
+          >
+            <span className="reaction-icon" aria-hidden="true">+</span>
             <span className="reaction-count">{reactions.like}</span>
           </button>
 
-          <button className="reaction-button reaction-love" onClick={() => addReaction('love')} aria-label="Love">
-            <span className="reaction-icon" aria-hidden="true">♥</span>
+          <button
+            className={`reaction-button reaction-love ${selectedReaction === 'love' ? 'is-active' : ''}`}
+            onClick={() => addReaction('love')}
+            aria-label="Love"
+            aria-pressed={selectedReaction === 'love'}
+          >
+            <span className="reaction-icon" aria-hidden="true">{'\u2665'}</span>
             <span className="reaction-count">{reactions.love}</span>
           </button>
 
-          <button className="reaction-button reaction-fire" onClick={() => addReaction('fire')} aria-label="Fire">
-            <span className="reaction-icon" aria-hidden="true">★</span>
+          <button
+            className={`reaction-button reaction-fire ${selectedReaction === 'fire' ? 'is-active' : ''}`}
+            onClick={() => addReaction('fire')}
+            aria-label="Fire"
+            aria-pressed={selectedReaction === 'fire'}
+          >
+            <span className="reaction-icon" aria-hidden="true">*</span>
             <span className="reaction-count">{reactions.fire}</span>
           </button>
         </div>
