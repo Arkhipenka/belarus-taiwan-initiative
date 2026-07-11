@@ -5979,3 +5979,104 @@ a,
     font-size: 3.6rem;
   }
 }
+
+/* Final media width rules */
+.home-container {
+  overflow-x: clip;
+}
+
+.home-container > .hero-banner {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.home-container > .hero-banner img {
+  width: 100vw;
+  max-width: none;
+}
+
+.page-hero-split {
+  width: min(100%, 1260px);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.page-hero-split .articles-text {
+  padding-left: 48px;
+}
+
+.page-hero-media {
+  margin: 0;
+  padding: 0;
+}
+
+.page-hero-media img {
+  width: 100%;
+  min-width: 100%;
+}
+
+.article-page .article-cover-block {
+  width: min(100%, 1320px);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article-page .article-gallery-container,
+.article-page .related-articles {
+  width: min(100%, 1320px);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article-page .article-cover-block .image-caption,
+.article-page .article-body .article-main-image-block .image-caption {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+@media (max-width: 900px) {
+  .page-hero-split {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page-hero-split .articles-text {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .article-page .article-cover-block,
+  .article-page .article-gallery-container,
+  .article-page .related-articles {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .article-page .article-cover-block .image-caption,
+  .article-page .article-body .article-main-image-block .image-caption {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-hero-split .articles-text {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .article-page .article-cover-block,
+  .article-page .article-gallery-container,
+  .article-page .related-articles {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .article-page .article-cover-block .image-caption,
+  .article-page .article-body .article-main-image-block .image-caption {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
