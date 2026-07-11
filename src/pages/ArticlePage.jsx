@@ -49,6 +49,34 @@ function getStoredJson(key, fallback) {
   }
 }
 
+function getImageFrameStyle(src) {
+  return {
+    '--article-image': `url("${getAssetUrl(src)}")`
+  };
+}
+
+function ArticleImage({ src, alt, imageClassName, frameClassName }) {
+  const [isNarrow, setIsNarrow] = useState(false);
+  const resolvedSrc = getAssetUrl(src);
+
+  return (
+    <div
+      className={`article-image-frame ${frameClassName} ${isNarrow ? 'is-narrow-image' : ''}`}
+      style={getImageFrameStyle(src)}
+    >
+      <img
+        src={resolvedSrc}
+        alt={alt}
+        className={imageClassName}
+        onLoad={(event) => {
+          const image = event.currentTarget;
+          setIsNarrow(image.naturalWidth < image.clientWidth * 1.08);
+        }}
+      />
+    </div>
+  );
+}
+
 function ArticlePage() {
   const { slug } = useParams();
   const { i18n } = useTranslation();
@@ -137,10 +165,11 @@ function ArticlePage() {
       case 'image':
         return (
           <figure key={index} className="article-main-image-block">
-            <img
-              src={getAssetUrl(block.src)}
+            <ArticleImage
+              src={block.src}
               alt={block.alt || ''}
-              className="article-inline-image"
+              imageClassName="article-inline-image"
+              frameClassName="article-inline-frame"
             />
             {block.caption && (
               <figcaption className="image-caption">{block.caption}</figcaption>
@@ -207,7 +236,12 @@ function ArticlePage() {
 
       {article.image && (
         <figure className="article-main-image-block article-cover-block">
-          <img src={getAssetUrl(article.image)} alt={article.title} className="article-main-image" />
+          <ArticleImage
+            src={article.image}
+            alt={article.title}
+            imageClassName="article-main-image"
+            frameClassName="article-cover-frame"
+          />
           {article.imageCaption && (
             <figcaption className="image-caption">{article.imageCaption}</figcaption>
           )}
