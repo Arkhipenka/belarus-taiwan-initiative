@@ -12,7 +12,7 @@ const defaultImage = '/images/hero-presidential-meeting.jpg';
 const seoCopy = {
   en: {
     homeTitle: 'Belarus-Taiwan & East Asia Platform',
-    homeDescription: 'Research, culture, education, and civic dialogue between Belarus, Taiwan, and East Asia.',
+    homeDescription: 'Independent research, culture, education, and civic dialogue connecting Belarus, Taiwan, and East Asia.',
     aboutDescription: 'An independent platform connecting Belarusian and Taiwanese civil societies through research, culture, and advocacy.',
     articlesDescription: 'Articles, research, analysis, and guides on Taiwan, Belarus, East Asia, democracy, culture, and civil society.',
     eventsDescription: 'Lectures, meetings, conferences, and public programs about Belarus, Taiwan, and East Asia.',
@@ -21,7 +21,7 @@ const seoCopy = {
   },
   by: {
     homeTitle: 'Belarus-Taiwan & East Asia Platform',
-    homeDescription: 'Даследаванні, культура, адукацыя і грамадзянскі дыялог паміж Беларуссю, Тайванем і Усходняй Азіяй.',
+    homeDescription: 'Незалежныя даследаванні, культура, адукацыя і грамадзянскі дыялог паміж Беларуссю, Тайванем і Усходняй Азіяй.',
     aboutDescription: 'Незалежная платформа, якая злучае беларускую і тайваньскую грамадзянскія супольнасці праз даследаванні, культуру і адвакатаванне.',
     articlesDescription: 'Артыкулы, даследаванні, аналітыка і гайды пра Тайвань, Беларусь, Усходнюю Азію, дэмакратыю, культуру і грамадзянскую супольнасць.',
     eventsDescription: 'Лекцыі, сустрэчы, канферэнцыі і публічныя праграмы пра Беларусь, Тайвань і Усходнюю Азію.',
@@ -30,7 +30,7 @@ const seoCopy = {
   },
   ru: {
     homeTitle: 'Belarus-Taiwan & East Asia Platform',
-    homeDescription: 'Исследования, культура, образование и гражданский диалог между Беларусью, Тайванем и Восточной Азией.',
+    homeDescription: 'Независимые исследования, культура, образование и гражданский диалог между Беларусью, Тайванем и Восточной Азией.',
     aboutDescription: 'Независимая платформа, соединяющая беларусское и тайваньское гражданские общества через исследования, культуру и адвокацию.',
     articlesDescription: 'Статьи, исследования, аналитика и гайды о Тайване, Беларуси, Восточной Азии, демократии, культуре и гражданском обществе.',
     eventsDescription: 'Лекции, встречи, конференции и публичные программы о Беларуси, Тайване и Восточной Азии.',
@@ -39,7 +39,7 @@ const seoCopy = {
   },
   pl: {
     homeTitle: 'Belarus-Taiwan & East Asia Platform',
-    homeDescription: 'Badania, kultura, edukacja i dialog obywatelski między Białorusią, Tajwanem i Azją Wschodnią.',
+    homeDescription: 'Niezależne badania, kultura, edukacja i dialog obywatelski między Białorusią, Tajwanem i Azją Wschodnią.',
     aboutDescription: 'Niezależna platforma łącząca białoruskie i tajwańskie społeczeństwa obywatelskie poprzez badania, kulturę i rzecznictwo.',
     articlesDescription: 'Artykuły, badania, analizy i przewodniki o Tajwanie, Białorusi, Azji Wschodniej, demokracji, kulturze i społeczeństwie obywatelskim.',
     eventsDescription: 'Wykłady, spotkania, konferencje i programy publiczne o Białorusi, Tajwanie i Azji Wschodniej.',
@@ -48,7 +48,7 @@ const seoCopy = {
   },
   zh: {
     homeTitle: 'Belarus-Taiwan & East Asia Platform',
-    homeDescription: '白俄羅斯、台灣與東亞之間的研究、文化、教育與公民對話。',
+    homeDescription: '連結白俄羅斯、台灣與東亞的獨立研究、文化、教育與公民對話平台。',
     aboutDescription: '一個透過研究、文化與倡議連結白俄羅斯和台灣公民社會的獨立平台。',
     articlesDescription: '關於台灣、白俄羅斯、東亞、民主、文化與公民社會的文章、研究、分析和指南。',
     eventsDescription: '關於白俄羅斯、台灣與東亞的講座、聚會、會議和公共活動。',
@@ -204,6 +204,7 @@ export default function SeoManager() {
     upsertMeta('meta[property="og:description"]', { property: 'og:description', content: seo.description });
     upsertMeta('meta[property="og:url"]', { property: 'og:url', content: seo.url });
     upsertMeta('meta[property="og:image"]', { property: 'og:image', content: seo.image });
+    upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: siteName });
     upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
     upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: seo.title });
     upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: seo.description });

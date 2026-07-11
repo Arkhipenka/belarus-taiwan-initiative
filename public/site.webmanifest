@@ -1,0 +1,21 @@
+{
+  "name": "Belarus-Taiwan & East Asia Platform",
+  "short_name": "BTEA Platform",
+  "description": "Research, culture, education, and civic dialogue connecting Belarus, Taiwan, and East Asia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f2ed",
+  "theme_color": "#071638",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
