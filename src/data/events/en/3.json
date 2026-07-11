@@ -1,28 +1,28 @@
 {
   "id": "event-003",
-  "slug": "belarus-taiwan-cultural-meetup",
-  "title": "Taiwan Cultural lecture",
+  "slug": "taiwan-lecture-ecs",
+  "title": "Taiwan Lecture: Personal Experience",
   "type": "lecture",
   
 
-  "description": "Join us for an lecture about Taiwanese culture, food, and history.",
+  "description": "A lecture at the European Solidarity Centre about Taiwan, its society and culture, and Andrei Arkhipenka's personal experience of living and working in Taiwan.",
 
-  "date": "2026-04-20T18:30:00",
+  "date": "2026-04-26T18:30:00",
 
   "location": {
-    "name": "European Solidarity Centre",
+    "name": "European Solidarity Centre (ECS)",
     "city": "Gdansk",
     "country": "Poland",
     "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
   },
 
-  "categories": ["culture", "taiwan", "history"],
-  "tags": ["taiwan", "history", "culture"],
+  "categories": ["culture", "taiwan", "lecture"],
+  "tags": ["taiwan", "personal experience", "ECS"],
 
   "speakers": [
     {
       "name": "Andrei Arkhipenka",
-      "role": "Activist",
+      "role": "Researcher and activist",
       "photo": "/belarus-taiwan-initiative/images/speakers/arkhipenka.jpg"
     }
   ],

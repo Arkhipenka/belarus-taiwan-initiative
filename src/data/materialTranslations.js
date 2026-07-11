@@ -744,7 +744,7 @@ export function isPublishedArticle(article) {
 }
 
 export function translateEvent(event, lang) {
-  const translated = eventTranslations[lang]?.[event.id];
+  const translated = event.id === 'event-003' ? null : eventTranslations[lang]?.[event.id];
   if (!translated) return event;
 
   return {

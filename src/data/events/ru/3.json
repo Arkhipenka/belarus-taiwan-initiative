@@ -1,42 +1,43 @@
 {
   "id": "event-003",
-  "slug": "belarus-taiwan-cultural-meetup",
-  "title": "Belarus-Taiwan Cultural Meetup",
+  "slug": "taiwan-lecture-ecs",
+  "title": "Лекция о Тайване и личном опыте",
   "type": "lecture",
 
-  "description": "Join us for an evening of Belarusian and Taiwanese culture, food, and music.",
+  "description": "Лекция в Европейском центре солидарности о Тайване, его обществе и культуре, а также личном опыте Андрея Архипенко во время жизни и работы на Тайване.",
 
-  "date": "2026-04-20T18:30:00",
+  "date": "2026-04-26T18:30:00",
 
   "location": {
-    "name": "European Solidarity Centre",
-    "city": "Gdansk",
-    "country": "Poland"
+    "name": "European Solidarity Centre (ECS)",
+    "city": "Гданьск",
+    "country": "Польша",
+    "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
   },
 
-  "categories": ["culture", "belarus_taiwan"],
-  "tags": ["taiwan", "belarus", "culture"],
+  "categories": ["культура", "Тайвань", "лекция"],
+  "tags": ["Тайвань", "личный опыт", "ECS"],
 
   "speakers": [
     {
       "name": "Andrei Arkhipenka",
-      "role": "Journalist",
-      "photo": "/images/speakers/arkhipenka.jpg"
+      "role": "Исследователь и активист",
+      "photo": "/belarus-taiwan-initiative/images/speakers/arkhipenka.jpg"
     }
   ],
 
   "partners": [
     {
       "name": "Belarusian House Warsaw",
-      "logo": "/images/partners/bhw.png"
+      "logo": "/belarus-taiwan-initiative/images/partners/bhw.png"
     }
   ],
 
   "image": "/belarus-taiwan-initiative/images/events/event001/main.jpg",
 
   "gallery": [
-    "/images/events/event001/photo1.jpg",
-    "/images/events/event001/photo2.jpg"
+    "/belarus-taiwan-initiative/images/events/event001/photo1.jpg",
+    "/belarus-taiwan-initiative/images/events/event001/photo2.jpg"
   ],
 
   "registration_url": "https://eventbrite.com/...."
