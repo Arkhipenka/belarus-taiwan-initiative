@@ -4,18 +4,19 @@
   "title": "台灣講座：個人經驗",
   "type": "lecture",
 
-  "description": "在歐洲團結中心舉辦的台灣講座，分享台灣社會與文化，以及 Andrei Arkhipenka 在台灣生活和工作的個人經驗。",
+  "description": "在歐洲團結中心舉辦的台灣講座，從個人經驗分享台灣的歷史、文化、政治與日常生活。",
 
-  "date": "2026-04-26T18:30:00",
+  "date": "2026-04-26T16:00:00",
 
   "location": {
     "name": "European Solidarity Centre (ECS)",
     "city": "格但斯克",
     "country": "波蘭",
+    "room": "sala 3.19",
     "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
   },
 
-  "categories": ["文化", "台灣", "講座"],
+  "categories": ["政治", "文化", "歷史"],
   "tags": ["台灣", "個人經驗", "ECS"],
 
   "speakers": [
@@ -33,7 +34,7 @@
     }
   ],
 
-  "image": "/belarus-taiwan-initiative/images/events/event001/main.jpg",
+  "image": "/images/events/event003/taiwan-lecture.jpg",
 
   "gallery": [
     "/belarus-taiwan-initiative/images/events/event001/photo1.jpg",

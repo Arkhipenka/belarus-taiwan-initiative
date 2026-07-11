@@ -28,7 +28,7 @@ function EventCard({ event }) {
 
         {event.location && (
           <p className="event-location">
-            {event.location.city}, {event.location.country}
+            {[event.location.city, event.location.country, event.location.room].filter(Boolean).join(', ')}
           </p>
         )}
 

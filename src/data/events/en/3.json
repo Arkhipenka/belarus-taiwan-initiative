@@ -5,18 +5,19 @@
   "type": "lecture",
   
 
-  "description": "A lecture at the European Solidarity Centre about Taiwan, its society and culture, and Andrei Arkhipenka's personal experience of living and working in Taiwan.",
+  "description": "A lecture about Taiwan at the European Solidarity Centre: history, culture, politics, and how Taiwan lives, based on Andrei Arkhipenka's personal experience.",
 
-  "date": "2026-04-26T18:30:00",
+  "date": "2026-04-26T16:00:00",
 
   "location": {
     "name": "European Solidarity Centre (ECS)",
     "city": "Gdansk",
     "country": "Poland",
+    "room": "sala 3.19",
     "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
   },
 
-  "categories": ["culture", "taiwan", "lecture"],
+  "categories": ["politics", "culture", "history"],
   "tags": ["taiwan", "personal experience", "ECS"],
 
   "speakers": [
@@ -34,7 +35,7 @@
     }
   ],
 
-  "image": "/belarus-taiwan-initiative/images/events/event001/main.jpg",
+  "image": "/images/events/event003/taiwan-lecture.jpg",
 
   "gallery": [
     "/belarus-taiwan-initiative/images/events/event001/photo1.jpg",

@@ -4,18 +4,19 @@
   "title": "Wykład o Tajwanie i osobistym doświadczeniu",
   "type": "lecture",
 
-  "description": "Wykład w Europejskim Centrum Solidarności o Tajwanie, jego społeczeństwie i kulturze oraz osobistym doświadczeniu Andreia Arkhipenki z życia i pracy na Tajwanie.",
+  "description": "Wykład o Tajwanie w Europejskim Centrum Solidarności: historia, kultura, polityka i życie na Tajwanie na podstawie osobistego doświadczenia Andreia Arkhipenki.",
 
-  "date": "2026-04-26T18:30:00",
+  "date": "2026-04-26T16:00:00",
 
   "location": {
     "name": "European Solidarity Centre (ECS)",
     "city": "Gdańsk",
     "country": "Polska",
+    "room": "sala 3.19",
     "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
   },
 
-  "categories": ["kultura", "Tajwan", "wykład"],
+  "categories": ["polityka", "kultura", "historia"],
   "tags": ["Tajwan", "osobiste doświadczenie", "ECS"],
 
   "speakers": [
@@ -33,7 +34,7 @@
     }
   ],
 
-  "image": "/belarus-taiwan-initiative/images/events/event001/main.jpg",
+  "image": "/images/events/event003/taiwan-lecture.jpg",
 
   "gallery": [
     "/belarus-taiwan-initiative/images/events/event001/photo1.jpg",

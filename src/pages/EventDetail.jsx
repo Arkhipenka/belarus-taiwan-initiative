@@ -93,7 +93,7 @@ function EventDetail() {
       {event.location && (
         <p className="event-location">
           <a href={event.location.link} target="_blank" rel="noopener noreferrer">
-            {event.location.name}, {event.location.city}, {event.location.country}
+            {[event.location.name, event.location.city, event.location.country, event.location.room].filter(Boolean).join(', ')}
           </a>
         </p>
       )}

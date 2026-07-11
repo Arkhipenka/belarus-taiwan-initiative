@@ -4,18 +4,19 @@
   "title": "Лекция о Тайване и личном опыте",
   "type": "lecture",
 
-  "description": "Лекция в Европейском центре солидарности о Тайване, его обществе и культуре, а также личном опыте Андрея Архипенко во время жизни и работы на Тайване.",
+  "description": "Лекция про Тайвань в Европейском центре солидарности: история, культура, политика и то, как живет Тайвань, на основе личного опыта Андрея Архипенко.",
 
-  "date": "2026-04-26T18:30:00",
+  "date": "2026-04-26T16:00:00",
 
   "location": {
     "name": "European Solidarity Centre (ECS)",
     "city": "Гданьск",
     "country": "Польша",
+    "room": "sala 3.19",
     "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
   },
 
-  "categories": ["культура", "Тайвань", "лекция"],
+  "categories": ["политика", "культура", "история"],
   "tags": ["Тайвань", "личный опыт", "ECS"],
 
   "speakers": [
@@ -33,7 +34,7 @@
     }
   ],
 
-  "image": "/belarus-taiwan-initiative/images/events/event001/main.jpg",
+  "image": "/images/events/event003/taiwan-lecture.jpg",
 
   "gallery": [
     "/belarus-taiwan-initiative/images/events/event001/photo1.jpg",
