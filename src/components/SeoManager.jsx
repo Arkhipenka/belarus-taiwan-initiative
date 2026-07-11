@@ -1,22 +1,13 @@
 import { useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { isPublishedArticle, translateArticle, translateEvent } from '../data/materialTranslations';
+import { getArticleBySlug, getEventBySlug } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
+import { getMaterialExcerpt, stripHtml } from '../utils/text';
 
 const siteUrl = 'https://belarus-taiwan.org';
 const siteName = 'Belarus-Taiwan & East Asia Platform';
 const defaultImage = '/images/hero-presidential-meeting.jpg';
-
-const articleModules = import.meta.glob('../data/articles/*/*.json', {
-  eager: true,
-  import: 'default'
-});
-
-const eventModules = import.meta.glob('../data/events/*/*.json', {
-  eager: true,
-  import: 'default'
-});
 
 const seoCopy = {
   en: {
@@ -102,17 +93,10 @@ function upsertLink(rel, href, extra = {}) {
   });
 }
 
-function stripHtml(value = '') {
-  return String(value).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
-}
-
 function extractDescription(item, fallback) {
   if (!item) return fallback;
 
-  const content = Array.isArray(item.content) ? item.content : [];
-  const firstTextBlock = content.find(block => typeof block === 'string' && stripHtml(block));
-
-  return stripHtml(item.lead || item.excerpt || firstTextBlock) || fallback;
+  return stripHtml(getMaterialExcerpt(item)) || fallback;
 }
 
 export default function SeoManager() {
@@ -145,11 +129,7 @@ export default function SeoManager() {
     }
 
     if (page === 'articles' && slug) {
-      const article = Object.entries(articleModules)
-        .filter(([path]) => path.includes(`/articles/${currentLang}/`))
-        .map(([, data]) => translateArticle(data, currentLang))
-        .filter(isPublishedArticle)
-        .find(item => item.slug === slug);
+      const article = getArticleBySlug(currentLang, slug);
 
       if (article) {
         return {
@@ -172,10 +152,7 @@ export default function SeoManager() {
     }
 
     if (page === 'events' && slug) {
-      const event = Object.entries(eventModules)
-        .filter(([path]) => path.includes(`/events/${currentLang}/`))
-        .map(([, data]) => translateEvent(data, currentLang))
-        .find(item => item.slug === slug);
+      const event = getEventBySlug(currentLang, slug);
 
       if (event) {
         return {

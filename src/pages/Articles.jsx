@@ -1,39 +1,18 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { isPublishedArticle, translateArticle, uniqueMaterials } from '../data/materialTranslations';
+import { getArticles } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
-
-const articleModules = import.meta.glob('../data/articles/*/*.json', {
-  eager: true,
-  import: 'default'
-});
-
-function getBlockText(block) {
-  if (typeof block === 'string') {
-    return block.replace(/<[^>]+>/g, ' ');
-  }
-
-  if (block && typeof block === 'object') {
-    return [block.text, block.caption, block.alt].filter(Boolean).join(' ');
-  }
-
-  return '';
-}
+import { getBlockText, getMaterialExcerpt } from '../utils/text';
+import { formatLongDate, formatShortDate } from '../utils/date';
 
 function ArticleIndexCard({ article, lang, variant = 'grid' }) {
   const categoriesText = Array.isArray(article.categories)
     ? article.categories.join(' / ')
     : '';
 
-  const firstTextBlock = Array.isArray(article.content)
-    ? article.content.find(block => getBlockText(block))
-    : null;
-
-  const excerptText = article.lead || getBlockText(firstTextBlock);
-  const formattedDate = article.date
-    ? new Date(article.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })
-    : '';
+  const excerptText = getMaterialExcerpt(article);
+  const formattedDate = formatLongDate(article.date, lang);
 
   return (
     <Link
@@ -62,15 +41,7 @@ function Articles() {
   const [category, setCategory] = useState('all');
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const allArticles = useMemo(() => {
-    const articles = Object.entries(articleModules)
-      .filter(([path]) => path.includes(`/articles/${lang}/`))
-      .map(([, data]) => translateArticle(data, lang))
-      .filter(isPublishedArticle);
-
-    return uniqueMaterials(articles)
-      .sort((a, b) => new Date(b.date) - new Date(a.date));
-  }, [lang]);
+  const allArticles = useMemo(() => getArticles(lang), [lang]);
 
   const categories = useMemo(() => {
     const categorySet = new Set(['all']);
@@ -217,7 +188,7 @@ function Articles() {
                   to={`/${lang}/articles/${article.slug}`}
                   className="articles-latest-link"
                 >
-                  <span>{article.date ? new Date(article.date).toLocaleDateString(lang, { day: 'numeric', month: 'short', year: 'numeric' }) : ''}</span>
+                  <span>{formatShortDate(article.date, lang)}</span>
                   <strong>{article.title}</strong>
                 </Link>
               ))}

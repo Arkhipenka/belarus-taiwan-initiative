@@ -1,12 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import EventCard from '../components/EventCard';
-import { translateEvent } from '../data/materialTranslations';
-
-const eventModules = import.meta.glob('../data/events/*/*.json', {
-  eager: true,
-  import: 'default'
-});
+import { getEvents } from '../data/materials';
 
 function Events() {
   const { i18n, t } = useTranslation();
@@ -18,11 +13,7 @@ function Events() {
   const [showPast, setShowPast] = useState(true);
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const allEvents = useMemo(() => {
-    return Object.entries(eventModules)
-      .filter(([path]) => path.includes(`/events/${lang}/`))
-      .map(([, data]) => translateEvent(data, lang));
-  }, [lang]);
+  const allEvents = useMemo(() => getEvents(lang), [lang]);
 
   const allCategories = useMemo(() => {
     const categoriesSet = new Set(['all']);

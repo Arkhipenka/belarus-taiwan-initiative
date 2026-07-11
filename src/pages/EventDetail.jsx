@@ -1,13 +1,9 @@
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
-import { translateEvent } from '../data/materialTranslations';
+import { getEventBySlug } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
-
-const eventModules = import.meta.glob('../data/events/*/*.json', {
-  eager: true,
-  import: 'default'
-});
+import { formatDateTime } from '../utils/date';
 
 const eventLabels = {
   by: {
@@ -54,12 +50,7 @@ function EventDetail() {
   const labels = eventLabels[lang] || eventLabels.en;
   const [views, setViews] = useState(0);
 
-  const event = useMemo(() => {
-    return Object.entries(eventModules)
-      .filter(([path]) => path.includes(`/events/${lang}/`))
-      .map(([, data]) => translateEvent(data, lang))
-      .find(item => item.slug === slug);
-  }, [slug, lang]);
+  const event = useMemo(() => getEventBySlug(lang, slug), [slug, lang]);
 
   useEffect(() => {
     if (!event) return;
@@ -85,8 +76,8 @@ function EventDetail() {
       {event.image && <img src={getAssetUrl(event.image)} alt={event.title} className="event-main-image" />}
 
       <p className="event-date">
-        {startDate.toLocaleString(lang)}
-        {endDate && <> - {endDate.toLocaleString(lang)}</>}
+        {formatDateTime(startDate, lang)}
+        {endDate && <> - {formatDateTime(endDate, lang)}</>}
         {' '}| {labels.views}: {views}
       </p>
 

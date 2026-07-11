@@ -3,12 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useParams, useNavigate } from 'react-router-dom'
 import HeroBanner from '../components/HeroBanner'
 import ArticleCard from '../components/ArticleCard'
-import { isPublishedArticle, translateArticle, uniqueMaterials } from '../data/materialTranslations'
-
-const articlesModules = import.meta.glob(
-  '../data/articles/*/*.json',
-  { eager: true }
-)
+import { getArticles } from '../data/materials'
 
 function Home() {
   const { t } = useTranslation()
@@ -39,15 +34,7 @@ function Home() {
     }
   ]
 
-  const allArticles = useMemo(() => {
-    const articles = Object.entries(articlesModules)
-      .filter(([path]) => path.includes(`/data/articles/${lang}/`))
-      .map(([, mod]) => translateArticle(mod.default, lang))
-      .filter(isPublishedArticle)
-
-    return uniqueMaterials(articles)
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
-  }, [lang])
+  const allArticles = useMemo(() => getArticles(lang), [lang])
 
   const featuredArticle = allArticles[0] || null
   const secondaryArticles = allArticles.slice(1, 3)

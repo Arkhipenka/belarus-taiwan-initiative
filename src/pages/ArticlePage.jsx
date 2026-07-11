@@ -3,13 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import ArticleGallery from '../components/ArticleGallery';
 import ArticleCard from '../components/ArticleCard';
-import { isPublishedArticle, translateArticle, uniqueMaterials } from '../data/materialTranslations';
+import { getArticleBySlug, getArticles } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
-
-const articleModules = import.meta.glob('../data/articles/*/*.json', {
-  eager: true,
-  import: 'default'
-});
+import { formatLongDate } from '../utils/date';
 
 const articleLabels = {
   by: {
@@ -60,23 +56,11 @@ function ArticlePage() {
   const lang = i18n.language.split('-')[0];
   const labels = articleLabels[lang] || articleLabels.en;
 
-  const article = useMemo(() => {
-    return Object.entries(articleModules)
-      .filter(([path]) => path.includes(`/articles/${lang}/`))
-      .map(([, data]) => translateArticle(data, lang))
-      .filter(isPublishedArticle)
-      .find(item => item.slug === slug);
-  }, [lang, slug]);
+  const article = useMemo(() => getArticleBySlug(lang, slug), [lang, slug]);
 
   const relatedArticles = useMemo(() => {
-    const articles = Object.entries(articleModules)
-      .filter(([path]) => path.includes(`/articles/${lang}/`))
-      .map(([, data]) => translateArticle(data, lang))
-      .filter(isPublishedArticle);
-
-    return uniqueMaterials(articles)
+    return getArticles(lang)
       .filter(item => item.slug !== slug)
-      .sort((a, b) => new Date(b.date) - new Date(a.date))
       .slice(0, 3);
   }, [lang, slug]);
 
@@ -171,11 +155,7 @@ function ArticlePage() {
 
   if (!article) return <p>Article not found.</p>;
 
-  const formattedDate = new Date(article.date).toLocaleDateString(lang, {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
+  const formattedDate = formatLongDate(article.date, lang);
 
   const categoriesText = article.categories?.length > 0
     ? article.categories.join(' / ')

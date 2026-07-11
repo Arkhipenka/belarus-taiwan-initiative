@@ -1,22 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getAssetUrl } from '../utils/assets';
-
-function stripHtml(value) {
-  return value.replace(/<[^>]+>/g, '').trim();
-}
-
-function getBlockText(block) {
-  if (typeof block === 'string') {
-    return stripHtml(block);
-  }
-
-  if (block && typeof block === 'object') {
-    return block.text || block.caption || block.alt || '';
-  }
-
-  return '';
-}
+import { getMaterialExcerpt } from '../utils/text';
+import { formatLongDate } from '../utils/date';
 
 function ArticleCard({ article, featured, compact }) {
   const navigate = useNavigate();
@@ -28,15 +14,8 @@ function ArticleCard({ article, featured, compact }) {
     ? article.categories.join(' / ')
     : '';
 
-  const firstTextBlock = Array.isArray(article.content)
-    ? article.content.find(block => getBlockText(block))
-    : null;
-
-  const excerptText = article.lead || getBlockText(firstTextBlock);
-
-  const formattedDate = article.date
-    ? new Date(article.date).toLocaleDateString(lang, { year: 'numeric', month: 'long', day: 'numeric' })
-    : '';
+  const excerptText = getMaterialExcerpt(article);
+  const formattedDate = formatLongDate(article.date, lang);
 
   const openArticle = () => navigate(articleUrl);
 

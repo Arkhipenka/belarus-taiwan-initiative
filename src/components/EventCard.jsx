@@ -1,17 +1,13 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getAssetUrl } from '../utils/assets';
+import { formatShortDate } from '../utils/date';
 
 function EventCard({ event }) {
   const { i18n, t } = useTranslation();
   const lang = i18n.language.split('-')[0];
 
-  const date = new Date(event.date);
-  const formattedDate = date.toLocaleDateString(lang, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric'
-  });
+  const formattedDate = formatShortDate(event.date, lang);
 
   return (
     <div className="event-card">
