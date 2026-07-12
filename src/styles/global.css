@@ -5893,7 +5893,22 @@ a,
   text-transform: uppercase;
 }
 
-.article-page .article-gallery-container,
+.article-page .article-gallery-container {
+  width: min(100% - 40px, 780px);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article-page .article-gallery-container .slide-item,
+.article-page .article-gallery-container .slide-image {
+  width: 100%;
+}
+
+.article-page .article-gallery-container .slide-image {
+  display: block;
+  height: auto;
+}
+
 .article-page .related-articles {
   width: min(100%, 1320px);
   padding-left: 48px;
@@ -5909,7 +5924,6 @@ a,
 @media (max-width: 900px) {
   .article-page .article-hero-header,
   .article-page .article-cover-block,
-  .article-page .article-gallery-container,
   .article-page .related-articles {
     padding-left: 28px;
     padding-right: 28px;
@@ -5920,7 +5934,7 @@ a,
   }
 
   .article-page .article-body .article-main-image-block {
-    width: calc(100vw - 56px);
+    width: 100%;
   }
 }
 
@@ -5931,7 +5945,6 @@ a,
 
   .article-page .article-hero-header,
   .article-page .article-cover-block,
-  .article-page .article-gallery-container,
   .article-page .related-articles {
     padding-left: 16px;
     padding-right: 16px;
@@ -6027,6 +6040,48 @@ a,
 
 .article-page .article-body .article-main-image-block .image-caption {
   max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article-page .article-cover-block {
+  width: min(100% - 40px, 780px);
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article-page .article-image-frame {
+  display: block;
+  min-height: 0;
+  border-top: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.article-page .article-image-frame::before {
+  display: none;
+}
+
+.article-page .article-cover-frame,
+.article-page .article-inline-frame {
+  min-height: 0;
+}
+
+.article-page .article-main-image,
+.article-page .article-inline-image,
+.article-page .article-image-frame.is-narrow-image .article-main-image,
+.article-page .article-image-frame.is-narrow-image .article-inline-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.article-page .article-cover-block .image-caption {
   padding-left: 0;
   padding-right: 0;
 }
