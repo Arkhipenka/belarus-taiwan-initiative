@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { getArticles } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
 import { getBlockText, getMaterialExcerpt } from '../utils/text';
@@ -35,9 +35,11 @@ function ArticleIndexCard({ article, lang, variant = 'grid' }) {
 function Articles() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language.split('-')[0];
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialSearch = searchParams.get('search') || '';
 
-  const [searchInput, setSearchInput] = useState('');
-  const [search, setSearch] = useState('');
+  const [searchInput, setSearchInput] = useState(initialSearch);
+  const [search, setSearch] = useState(initialSearch);
   const [category, setCategory] = useState('all');
   const [visibleCount, setVisibleCount] = useState(6);
 
@@ -82,8 +84,10 @@ function Articles() {
     .slice(0, 5);
 
   const applySearch = () => {
-    setSearch(searchInput);
+    const nextSearch = searchInput.trim();
+    setSearch(nextSearch);
     setVisibleCount(6);
+    setSearchParams(nextSearch ? { search: nextSearch } : {});
   };
 
   const selectCategory = (nextCategory) => {

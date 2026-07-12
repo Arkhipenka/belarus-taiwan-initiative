@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LanguageLayout from './layouts/LanguageLayout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -14,7 +14,7 @@ import AuthorPage from './pages/AuthorPage'
 
 function Router() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/en" replace />} />
 
@@ -33,7 +33,7 @@ function Router() {
       </Routes>
 
       <Footer />
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

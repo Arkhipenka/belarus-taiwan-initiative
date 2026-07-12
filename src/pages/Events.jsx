@@ -1,14 +1,17 @@
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router-dom';
 import EventCard from '../components/EventCard';
 import { getEvents } from '../data/materials';
 
 function Events() {
   const { i18n, t } = useTranslation();
   const lang = i18n.language.split('-')[0] || 'en';
+  const [searchParams, setSearchParams] = useSearchParams();
+  const initialSearch = searchParams.get('search') || '';
 
-  const [searchInput, setSearchInput] = useState('');
-  const [search, setSearch] = useState('');
+  const [searchInput, setSearchInput] = useState(initialSearch);
+  const [search, setSearch] = useState(initialSearch);
   const [category, setCategory] = useState('all');
   const [showPast, setShowPast] = useState(true);
   const [visibleCount, setVisibleCount] = useState(6);
@@ -44,8 +47,10 @@ function Events() {
   const visibleEvents = filteredEvents.slice(0, visibleCount);
 
   const applySearch = () => {
-    setSearch(searchInput);
+    const nextSearch = searchInput.trim();
+    setSearch(nextSearch);
     setVisibleCount(6);
+    setSearchParams(nextSearch ? { search: nextSearch } : {});
   };
 
   const selectCategory = (nextCategory) => {

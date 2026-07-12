@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LanguageLayout from './layouts/LanguageLayout'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -16,7 +16,7 @@ import SeoManager from './components/SeoManager'
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/en" replace />} />
 
@@ -36,7 +36,7 @@ function App() {
       <Footer />
       <ScrollToTopButton />
       <SeoManager />
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
