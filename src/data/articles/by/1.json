@@ -5,7 +5,6 @@
   "date": "2025-09-15T15:09:00Z",
   "categories": ["history", "taiwan", "anti-nuclear"],
   "image": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/main.jpg",
-  "imageCaption": "Фото: Андрей Архипенка / GreenBelarus.info",
   "lead": "Рассказываем о том, как аварии на ЧАЭС и «Фукусима-1» сыграли решающую роль в отказе Тайваня от ядерной энергетики.",
   "content": [
     { "type": "paragraph", "text": "Рассказываем о том, как аварии на Чернобыльской АЭС и «Фукусима‑1» сыграли решающую роль в отказе Тайваня от ядерной энергетики." },
@@ -32,8 +31,7 @@
     { "type": "paragraph", "text": "Акция под названием «430 подсолнухов» собрала сторонников зелёной энергетики со всего острова. Тема марша — «Улыбнитесь солнцу, берегитесь ядерных катастроф» — звучала как предупреждение." },
     { "type": "paragraph", "text": "В руках у некоторых участников были бумажные ветряки, символ будущей зелёной энергетики, и настоящие подсолнухи как знак надежды на жизнь без атомных угроз." },
     { "type": "image",
-    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo1.png",
-    "caption": "Фото: Андрей Архипенка"
+    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo1.png"
   },
     { "type": "paragraph", "text": "В 2013 году около 220 тысяч участников по всему острову образовали «человеческую цепь» протяжённостью более 200 км, требуя закрытия всех АЭС. А весной 2014 года бывший лидер DPP Линь И-сю объявил голодовку, требуя полной остановки проекта FNNP." },
     { "type": "paragraph", "text": "В январе 2015 года лидер DPP Цай Инвэнь объявила: её партия намерена полностью отказаться от ядерной энергетики к 2025 году. Обещание стало частью её президентской кампании." },
@@ -48,16 +46,13 @@
   "source": { "name": "GreenBelarus.info", "url": "https://greenbelarus.info/articles/15-09-2025/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno" },
   "gallery": [
   {
-    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo1.png",
-    "caption": "Фото: Андрей Архипенка"
+    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo1.png"
   },
   {
-    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo2.png",
-    "caption": "Фото: архив YASA"
+    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo2.png"
   },
   {
-    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo3.jpg",
-    "caption": "Фото: GreenBelarus.info"
+    "src": "/belarus-taiwan-initiative/images/articles/pobeda-nad-aes/photo3.jpg"
   }
 ]
 }

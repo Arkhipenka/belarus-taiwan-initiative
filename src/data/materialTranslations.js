@@ -35,7 +35,6 @@ const articleTranslations = {
       lead: 'Расказваем, як аварыі на Чарнобыльскай АЭС і «Фукусіме-1» паўплывалі на рашэнне Тайваня адмовіцца ад ядзернай энергетыкі.',
       excerpt: 'Гісторыя таго, як грамадзянскі ціск, Чарнобыль і Фукусіма змянілі энергетычны курс Тайваня.',
       author: 'Андрэй Архіпенка',
-      imageCaption: 'Фота: Андрэй Архіпенка / GreenBelarus.info',
       categories: ['гісторыя', 'Тайвань', 'антыядзерны рух'],
       content: [
         { type: 'paragraph', text: '17 мая 2025 года на Тайвані быў спынены апошні рэактар АЭС «Мааньшань». Гэтае рашэнне паставіла кропку ў шматгадовай дыскусіі пра атамную энергетыку на востраве.' },
@@ -89,7 +88,6 @@ const articleTranslations = {
       lead: 'Рассказываем о том, как аварии на Чернобыльской АЭС и «Фукусима-1» сыграли решающую роль в отказе Тайваня от ядерной энергетики.',
       excerpt: 'История о том, как гражданское давление, Чернобыль и Фукусима изменили энергетический курс Тайваня.',
       author: 'Андрей Архипенко',
-      imageCaption: 'Фото: Андрей Архипенко / GreenBelarus.info',
       categories: ['история', 'Тайвань', 'антиядерное движение'],
       content: [
         { type: 'paragraph', text: '17 мая 2025 года был остановлен последний реактор АЭС «Мааньшань» на Тайване. Этот шаг подвёл черту под многолетней дискуссией об атомной энергетике на острове.' },
@@ -143,7 +141,6 @@ const articleTranslations = {
       lead: 'How Chernobyl and Fukushima helped shape Taiwan’s decision to move away from nuclear energy.',
       excerpt: 'The story of civil pressure, nuclear accidents and Taiwan’s long road away from atomic power.',
       author: 'Andrei Arkhipenka',
-      imageCaption: 'Photo: Andrei Arkhipenka / GreenBelarus.info',
       categories: ['history', 'Taiwan', 'anti-nuclear'],
       content: [
         { type: 'paragraph', text: 'On May 17, 2025, Taiwan shut down the last reactor at the Maanshan Nuclear Power Plant. The decision closed a decades-long debate over the island’s nuclear future.' },
@@ -197,7 +194,6 @@ const articleTranslations = {
       lead: 'Opowiadamy, jak Czarnobyl i Fukushima wpłynęły na decyzję Tajwanu o odejściu od energetyki jądrowej.',
       excerpt: 'Historia presji społecznej, katastrof jądrowych i długiej drogi Tajwanu od atomu.',
       author: 'Andrei Arkhipenka',
-      imageCaption: 'Fot. Andrei Arkhipenka / GreenBelarus.info',
       categories: ['historia', 'Tajwan', 'ruch antyatomowy'],
       content: [
         { type: 'paragraph', text: '17 maja 2025 roku Tajwan zatrzymał ostatni reaktor elektrowni Maanshan. Ta decyzja zamknęła wieloletnią debatę o przyszłości energetyki jądrowej na wyspie.' },
@@ -251,7 +247,6 @@ const articleTranslations = {
       lead: '切爾諾貝利與福島如何影響台灣走向非核能源政策。',
       excerpt: '公民壓力、核災記憶與台灣漫長非核道路的故事。',
       author: 'Andrei Arkhipenka',
-      imageCaption: '照片：Andrei Arkhipenka / GreenBelarus.info',
       categories: ['歷史', '台灣', '反核運動'],
       content: [
         { type: 'paragraph', text: '2025年5月17日，台灣最後一座運轉中的核反應爐在馬鞍山核電廠停機。這一步為島內長達數十年的核能爭論畫下重要句點。' },

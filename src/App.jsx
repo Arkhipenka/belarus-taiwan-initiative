@@ -13,6 +13,16 @@ import AuthorPage from './pages/AuthorPage'
 import ScrollToTopButton from './components/ScrollToTopButton'
 import SeoManager from './components/SeoManager'
 
+function normalizeLegacyHashRoute() {
+  if (typeof window === 'undefined') return;
+
+  const { origin, hash } = window.location;
+  if (!hash.startsWith('#/')) return;
+
+  window.location.replace(`${origin}${hash.slice(1)}`);
+}
+
+normalizeLegacyHashRoute();
 
 function App() {
   return (
