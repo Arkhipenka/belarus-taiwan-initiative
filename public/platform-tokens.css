@@ -1,0 +1,11 @@
+/* Shared by the React platform and the standalone Taiwan experience. */
+:root {
+  --platform-paper: #f7f5f0;
+  --platform-surface: #ffffff;
+  --platform-ink: #202327;
+  --platform-muted: #62666b;
+  --platform-line: #dcd9d2;
+  --platform-red: #b83238;
+  --platform-red-hover: #94252c;
+  --platform-font: Arial, 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+}

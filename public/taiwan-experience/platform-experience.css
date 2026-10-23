@@ -1,0 +1,95 @@
+@import url('/platform-tokens.css');
+
+/* The atlas is part of the platform, including all four topic states. */
+html[data-page=taiwan], html[data-page=taiwan] body.taiwan-page[data-island-mode] {
+  --bg: var(--platform-paper); --paper: var(--platform-paper);
+  --surface: var(--platform-surface); --ink: var(--platform-ink);
+  --muted: var(--platform-muted); --line: var(--platform-line);
+  --accent: var(--platform-red); --red: var(--platform-red);
+  background: var(--platform-paper); background-image: none;
+  color: var(--platform-ink); color-scheme: light;
+  font-family: var(--platform-font);
+}
+html[data-page=taiwan] body::before { display: none; }
+.taiwan-page * { box-sizing: border-box; }
+.taiwan-page :is(h1,h2,h3,p,button,input,a,.eyebrow,.tw-title>div>p,.tw-title .tw-intro p) { font-family: var(--platform-font); }
+.taiwan-page :is(h1,h2,h3) { color: var(--platform-ink); font-weight: 700; letter-spacing: -.035em; }
+.taiwan-page a { color: var(--platform-red); text-shadow: none; }
+.taiwan-page a:hover { color: var(--platform-red-hover); opacity: 1; }
+.taiwan-page :focus-visible { outline: 2px solid var(--platform-red); outline-offset: 4px; }
+.taiwan-page .world-backdrop { position: absolute; top: 0; height: 720px; background: transparent; }
+.taiwan-page .world-backdrop::after { background: none; }
+.taiwan-page .tw-hero { padding: 28px 6% 0; max-width: 1400px; background: transparent; }
+.taiwan-page .tw-topline { padding-top: 0; color: var(--platform-muted); font-size: 11px; }
+.taiwan-page .tw-title { min-height: 610px; padding: 65px 0 85px; gap: 24px; }
+.taiwan-page .tw-title>div { max-width: 49%; }
+.taiwan-page .tw-title h1 { color: var(--platform-ink); font-size: clamp(68px,8vw,112px); letter-spacing: -.055em; }
+.taiwan-page .tw-title h1>span { color: var(--platform-red); border-color: var(--platform-line); }
+html[lang=zh-Hant] .taiwan-page .tw-title h1>span { display: none; }
+.taiwan-page .tw-title>div>p { font-size: 24px; line-height: 1.45; color: var(--platform-ink); }
+.taiwan-page .tw-title .tw-intro { max-width: 500px !important; }
+.taiwan-page .tw-title .tw-intro p { font-size: 16px; line-height: 1.75; color: var(--platform-muted); }
+.taiwan-page :is(.tw-kicker,.eyebrow,.culture-heading>span) { color: var(--platform-red); font-size: 11px; letter-spacing: .1em; }
+.taiwan-page .island-watermark { display: none; }
+.taiwan-page .island-atlas { background: #eeece6 !important; color: var(--platform-ink); border: 1px solid var(--platform-line); margin-top: 0; }
+.taiwan-page .atlas-copy h2 { font-family: var(--platform-font); font-size: clamp(32px,4vw,48px); letter-spacing: -.04em; }
+.taiwan-page .atlas-copy h2 em { font-family: inherit; font-size: inherit; font-style: normal; }
+.taiwan-page .atlas-copy p { color: var(--platform-muted); font-size: 14px; }
+.taiwan-page .atlas-caption { color: var(--platform-muted); font-size: 10px; }
+.taiwan-page .atlas-stamp { background: var(--platform-red); border-color: var(--platform-red); color: white; }
+.taiwan-page .island-fill { fill: #66766c; }
+.taiwan-page .relief-lines { stroke: #cad0c6; }
+.taiwan-page .map-labels { fill: #4b5054; }
+.taiwan-page .pin-dot { fill: var(--platform-red); stroke: #fff; }
+.taiwan-page .pin-ring { stroke: var(--platform-red); }
+.taiwan-page .map-pin[aria-pressed=true] .pin-dot { fill: #fff; stroke: var(--platform-red); }
+.taiwan-page .map-pin[aria-pressed=true] .pin-number { fill: var(--platform-red); }
+.taiwan-page :is(.map-detail,.island-tabs,#island-panel) { background: var(--platform-surface) !important; color: var(--platform-ink); border-color: var(--platform-line); }
+.taiwan-page .map-city-picker button { font-size: 13px; color: var(--platform-ink); padding: 9px 0; }
+.taiwan-page .map-city-picker button[aria-pressed=true] { color: var(--platform-red); }
+.taiwan-page .center-search, .taiwan-page #center-results, .taiwan-page .map-source { font-size: 12px; color: var(--platform-muted); }
+.taiwan-page .center-search input { background: var(--platform-paper); color: var(--platform-ink); font-size: 14px; padding: 12px; border-radius: 0; }
+.taiwan-page :is(.map-city-detail p,.map-project-article p) { font-size: 14px; line-height: 1.75; color: var(--platform-muted); }
+.taiwan-page :is(.map-city-detail>a,.map-project-article a>span,.map-all) { font-size: 13px; }
+.taiwan-page .map-city-detail h3 { font-size: 27px; font-family: var(--platform-font); }
+.taiwan-page .map-project-article h3 { font-size: 21px; }
+.taiwan-page .island-explorer { padding-top: 50px; }
+.taiwan-page .island-tabs button { color: var(--platform-ink); background: #fff; padding: 24px 18px; }
+.taiwan-page .island-tabs button:is(:hover,[aria-selected=true]) { background: #f4e9e7; }
+.taiwan-page .island-tabs button>span { color: var(--platform-red); }
+.taiwan-page .island-tabs strong { font-size: 15px; }
+.taiwan-page .island-tabs small { font-size: 11px; color: var(--platform-muted); }
+.taiwan-page #island-panel { padding: 32px 24px; gap: 28px; }
+.taiwan-page #island-panel h2 { font-size: clamp(25px,3vw,36px); line-height: 1.2; }
+.taiwan-page #island-panel p { font-size: 15px; color: var(--platform-muted); }
+.taiwan-page #island-panel a { font-size: 13px; }
+.taiwan-page .panel-number { color: var(--platform-red); opacity: 1; }
+.taiwan-page :is(.explorer-hint,.tw-jump) { font-size: 12px; }
+.taiwan-page main>.section { max-width: 1400px; margin: auto; padding: 72px 6%; min-height: 0; background: var(--platform-paper); color: var(--platform-ink); border-color: var(--platform-line); }
+.taiwan-page .section h2 { font-size: clamp(32px,4vw,52px); font-weight: 700; }
+.taiwan-page :is(.section p,.culture-grid article>p) { color: var(--platform-muted); font-size: 16px; line-height: 1.75; }
+.taiwan-page .culture-grid h3 { font-size: 25px; }
+.taiwan-page .culture-grid article { border-color: var(--platform-line); }
+.taiwan-page .platform-explore-links { background: var(--platform-paper); }
+.taiwan-page .platform-explore-links .text-link { font-size: 16px; }
+.taiwan-page footer { background: #202327; color: #f7f5f0; font-family: var(--platform-font); font-size: 12px; gap: 20px; flex-wrap: wrap; }
+.taiwan-page footer a { color: #f7f5f0; }
+@media(max-width:700px) {
+  .taiwan-page .world-backdrop { height: 890px; }
+  .taiwan-page .tw-title { min-height: 790px; padding: 40px 0 360px; }
+  .taiwan-page .tw-title>div { max-width: 100%; }
+  .taiwan-page .tw-title h1 { font-size: 68px; }
+  .taiwan-page .tw-title>div>p { font-size: 20px; }
+  .taiwan-page .tw-title .tw-intro p { font-size: 15px; }
+  .taiwan-page .tw-topline { font-size: 9px; gap: 20px; }
+  .taiwan-page .map-city-picker .center-list { grid-template-columns: 1fr; }
+  .taiwan-page #island-panel { grid-template-columns: 1fr; gap: 16px; min-height: 0; }
+  .taiwan-page #island-panel>div:last-child { grid-column: 1; }
+  .taiwan-page .panel-number { font-size: 28px; margin: 0; }
+  .taiwan-page .island-tabs { grid-template-columns: 1fr 1fr; }
+  .taiwan-page .island-tabs button { padding: 18px 12px; }
+  .taiwan-page .tw-jump { flex-wrap: wrap; gap: 16px; }
+  .taiwan-page .section-top { display: block; }
+  .taiwan-page main>.section { padding-block: 48px; }
+}
+@media(prefers-reduced-motion:reduce) { .taiwan-page * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

@@ -1,0 +1,72 @@
+@import url('/platform-tokens.css');
+
+/* One visual system across every language and page. */
+:root {
+  --bg: var(--platform-paper);
+  --text: var(--platform-ink);
+  --muted: var(--platform-muted);
+  --accent: var(--platform-red);
+  --flag-white: #fff;
+  --flag-paper: var(--platform-paper);
+  --flag-ink: var(--platform-ink);
+  --flag-red: var(--platform-red);
+  --flag-red-bright: var(--platform-red-hover);
+  --flag-blue: var(--platform-red);
+  --flag-blue-soft: var(--platform-red);
+  --font-ui: var(--platform-font);
+  --font-editorial: var(--platform-font);
+  color-scheme: light;
+}
+html { background: var(--platform-paper); scroll-padding-top: 100px; }
+body { background: var(--platform-paper); color: var(--platform-ink); font-family: var(--platform-font); line-height: 1.6; }
+button, input, textarea, select { font-family: inherit; }
+#root h1, #root h2, #root h3 { font-family: var(--platform-font); text-transform: none; letter-spacing: -.035em; line-height: 1.14; font-weight: 700; }
+#root h1 { font-size: clamp(2.5rem, 5.5vw, 5.2rem); }
+#root h2 { font-size: clamp(1.8rem, 3.4vw, 3.4rem); }
+#root h3 { letter-spacing: -.02em; }
+#root p { line-height: 1.7; }
+a { color: var(--platform-red); }
+a:hover { color: var(--platform-red-hover); }
+:focus-visible { outline: 2px solid var(--platform-red); outline-offset: 4px; }
+::selection { background: #b8323828; color: var(--platform-ink); }
+#root .wrapper-header { background: #fffffff5; border-bottom: 1px solid var(--platform-line); box-shadow: none; backdrop-filter: blur(16px); }
+#root .main-nav { background: transparent; }
+#root .nav-link { font-size: .94rem; font-weight: 500; color: var(--platform-ink); }
+#root .nav-link.active, #root .nav-link:hover { color: var(--platform-red); border-bottom-color: var(--platform-red); }
+#root .language-menu { border-color: var(--platform-line); border-radius: 0; }
+#root .language-option.active { background: #f1e5e3; }
+#root :is(.home-container,.about-page,.about-section,.about-initiative,.featured-articles,.articles-page,.events-page,.contacts-page,.donate-page,.author-page,.article-page,.event-page) { background: var(--platform-paper); color: var(--platform-ink); font-family: var(--platform-font); }
+#root :is(.page-hero,.articles-header,.events-header,.contacts-info) { border-color: var(--platform-line); }
+#root .page-hero-kicker, #root .article-kicker { color: var(--platform-red); font-size: .75rem; letter-spacing: .13em; }
+#root .hero-text { font-family: var(--platform-font); text-shadow: 0 2px 20px #0006; }
+#root .hero-text h2 { font-size: clamp(3rem, 6vw, 6rem); max-width: 900px; margin-inline: auto; }
+#root .hero-text p { font-size: 1.1rem; }
+#root :is(.search-button,.donate-button,.event-button,.contact-form button,.about-initiative button,.hero-text button) { border: 1px solid var(--platform-red); border-radius: 0; background: var(--platform-red); color: #fff; padding: 12px 22px; font-size: .94rem; line-height: 1.4; font-weight: 600; transition: background .2s, border-color .2s; }
+#root :is(.search-button,.donate-button,.event-button,.contact-form button,.about-initiative button,.hero-text button):hover { background: var(--platform-red-hover); border-color: var(--platform-red-hover); color: #fff; transform: none; }
+#root :is(.article-card,.event-card,.donate-card) { border: 1px solid var(--platform-line); border-radius: 0; box-shadow: none; background: var(--platform-surface); }
+#root :is(.article-card,.event-card):hover { box-shadow: none; }
+#root :is(.article-card,.event-card) h3 { font-size: clamp(1.35rem, 2.2vw, 2rem); }
+#root :is(.article-card.featured,.articles-editorial-block .article-card.featured) .article-overlay { background: linear-gradient(0deg,#171a20ed, #171a2070 65%,transparent); }
+#root .article-card.featured h3 { color: #fff; }
+#root :is(.category-btn,.events-categories button) { border: 1px solid var(--platform-line); border-radius: 0; background: #fff; color: var(--platform-ink); font-weight: 500; padding: 9px 14px; text-transform: none; letter-spacing: 0; }
+#root :is(.category-btn,.events-categories button):is(.active,:hover) { background: var(--platform-red); color: #fff; border-color: var(--platform-red); }
+#root :is(input:not([type=checkbox]),textarea,select) { border: 1px solid var(--platform-line); border-radius: 0; background: #fff; color: var(--platform-ink); font-size: 1rem; }
+#root :is(input,textarea,select):focus { border-color: var(--platform-red); }
+#root :is(.article-body,.event-description) { font-size: 1.08rem; line-height: 1.8; }
+#root :is(.article-body,.event-description) h2 { font-size: clamp(1.7rem, 3vw, 2.6rem); margin-top: 1.6em; }
+#root :is(.article-body,.event-description) h3 { font-size: 1.55rem; }
+#root .article-body blockquote { border-left: 3px solid var(--platform-red); background: #eeeae3; color: var(--platform-ink); }
+#root :is(.articles-index-sidebar,.articles-latest-link,.author-article-row,.about-feature,.donate-card,.footer-meta) { border-color: var(--platform-line); }
+#root .wrapper-footer { background: #202327; border-top: 3px solid var(--platform-red); }
+#root .site-footer { background: transparent; color: #f7f5f0; font-family: var(--platform-font); }
+#root .site-footer :is(h4,a) { color: #f7f5f0; }
+#root .site-footer h4 { font-size: .72rem; letter-spacing: .1em; font-weight: 600; }
+#root .site-footer a:hover { color: #e8a4a8; }
+#root .footer-meta { border-color: #ffffff26; color: #bfc1c3; }
+#root .scroll-to-top { background: var(--platform-red); border-radius: 0; border-color: var(--platform-red); }
+#root .about-hero-editorial::after { background: linear-gradient(0deg,#202327eb,#20232775 55%,#20232720); }
+#root .events-search-box button { border: 1px solid var(--platform-red); background: var(--platform-red); color: #fff; padding: 12px 22px; font-weight: 600; }
+#root .events-search-box button:hover { background: var(--platform-red-hover); }
+@media(max-width:1024px) { #root .nav-links { background: var(--platform-surface); } }
+@media(max-width:600px) { #root h1 { font-size: 2.7rem; } #root .hero-text h2 { font-size: 3rem; } #root .hero-text { width: 100%; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
