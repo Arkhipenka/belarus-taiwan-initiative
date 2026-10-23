@@ -1,3 +1,4 @@
+import TaiwanExplore from './pages/TaiwanExplore'
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LanguageLayout from './layouts/LanguageLayout'
 import Home from './pages/Home'
@@ -23,6 +24,7 @@ function App() {
         <Route path="/:lang" element={<LanguageLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="taiwan" element={<TaiwanExplore />} />
           <Route path="articles" element={<Articles />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="articles/:slug" element={<ArticlePage />} />

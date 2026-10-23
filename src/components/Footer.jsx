@@ -3,11 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { getAssetUrl } from '../utils/assets'
 
 function Footer() {
-  const { t } = useTranslation()
-  const { lang = 'en' } = useParams()
+  const { t, i18n } = useTranslation()
+  const { lang = i18n.language.split('-')[0] || 'en' } = useParams()
   const year = new Date().getFullYear()
 
   const navLinks = [
+    { to: `/${lang}/taiwan`, label: ({en:'Taiwan',by:'Тайвань',ru:'Тайвань',pl:'Tajwan',zh:'臺灣'})[lang]||'Taiwan' },
     { to: `/${lang}/about`, label: t('nav.about') },
     { to: `/${lang}/articles`, label: t('nav.articles') },
     { to: `/${lang}/events`, label: t('nav.events') },
