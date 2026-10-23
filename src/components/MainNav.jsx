@@ -60,6 +60,7 @@ function MainNav() {
           <NavLink to={`/${lang}/about`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.about')}
           </NavLink>
+          <NavLink to={`/${lang}/taiwan`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>{({en:'Taiwan',by:'Тайвань',ru:'Тайвань',pl:'Tajwan',zh:'臺灣'})[lang]||'Taiwan'}</NavLink>
           <NavLink to={`/${lang}/articles`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.articles')}
           </NavLink>

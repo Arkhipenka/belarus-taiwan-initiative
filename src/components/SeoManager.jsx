@@ -190,6 +190,11 @@ export default function SeoManager() {
       structuredData: []
     };
 
+    if (page === 'taiwan') {
+      const names={en:'Taiwan — geography, culture and memory',by:'Тайвань — геаграфія, культура і памяць',ru:'Тайвань — география, культура и память',pl:'Tajwan — geografia, kultura i pamięć',zh:'臺灣 — 地理、文化與記憶'};
+      return {...base,title:`${names[currentLang]||names.en} | ${siteName}`,description:copy.articlesDescription};
+    }
+
     if (page === 'about') {
       return {
         ...base,

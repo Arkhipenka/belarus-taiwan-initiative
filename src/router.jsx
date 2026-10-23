@@ -1,3 +1,4 @@
+import TaiwanExplore from './pages/TaiwanExplore'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LanguageLayout from './layouts/LanguageLayout'
 import Home from './pages/Home'
@@ -21,6 +22,7 @@ function Router() {
         <Route path="/:lang" element={<LanguageLayout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="taiwan" element={<TaiwanExplore />} />
           <Route path="articles" element={<Articles />} />
           <Route path="articles/:slug" element={<ArticlePage />} />
           <Route path="events" element={<Events />} />
