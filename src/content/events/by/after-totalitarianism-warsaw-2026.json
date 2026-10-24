@@ -1,0 +1,39 @@
+{
+  "id": "conference-warsaw-memory-2026",
+  "slug": "after-totalitarianism-warsaw-2026",
+  "published": true,
+  "title": "Пасля таталітарызму: музей, памяць і беларуская перспектыва",
+  "type": "conference",
+  "date": "2026-10-08",
+  "endDate": "2026-10-09",
+  "allDay": true,
+  "description": "Міжнародная навукова-практычная канферэнцыя ў Музеі Вольнай Беларусі, 8–9 кастрычніка 2026 года. Андрэй Архіпенка прадставіў платформу з дакладам пра культуру памяці Тайваня.",
+  "body": "<p>8–9 кастрычніка 2026 года ў Варшаве адбылася міжнародная канферэнцыя «Пасля таталітарызму: музей, памяць і беларуская перспектыва», арганізаваная Музеем Вольнай Беларусі.</p><p>Belarus–Taiwan & East Asia Platform прадставіў яе заснавальнік і даследчык Андрэй Архіпенка. Ён выступіў з дакладам пра культуру памяці Тайваня.</p><h2>Крыніцы</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Анонс арганізатараў</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Справаздача пра першы дзень</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">Праграма і ўдзельнікі</a></li></ul>",
+  "location": {
+    "name": "Музей Вольнай Беларусі",
+    "city": "Варшава",
+    "country": "Польшча",
+    "room": "Foksal 11/1",
+    "link": "https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva"
+  },
+  "categories": [
+    "канферэнцыя",
+    "гістарычная памяць",
+    "Тайвань",
+    "Беларусь"
+  ],
+  "tags": [
+    "канферэнцыя",
+    "гістарычная памяць",
+    "Тайвань",
+    "Беларусь"
+  ],
+  "speakers": [
+    {
+      "name": "Андрэй Архіпенка",
+      "role": "Заснавальнік платформы, даследчык"
+    }
+  ],
+  "image": "/images/events/warsaw-memory-2026/cover-by.svg",
+  "gallery": []
+}

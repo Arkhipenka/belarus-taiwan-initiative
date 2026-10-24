@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import { getEventBySlug } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
-import { formatDateTime } from '../utils/date';
+import { formatDateTime, formatLongDate } from '../utils/date';
 
 const eventLabels = {
   by: {
@@ -77,8 +77,8 @@ function EventDetail() {
       {event.image && <img src={getAssetUrl(event.image)} alt={event.title} className="event-main-image" />}
 
       <p className="event-date">
-        {formatDateTime(startDate, lang)}
-        {endDate && <> - {formatDateTime(endDate, lang)}</>}
+        {event.allDay ? formatLongDate(startDate, lang) : formatDateTime(startDate, lang)}
+        {endDate && <> – {event.allDay ? formatLongDate(endDate, lang) : formatDateTime(endDate, lang)}</>}
         {' '}| {labels.views}: {views}
       </p>
 

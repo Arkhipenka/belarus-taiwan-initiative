@@ -39,10 +39,10 @@ function Events() {
         return matchesCategory && matchesSearch;
       })
       .filter(event => {
-        const eventDate = new Date(event.date);
+        const eventDate = new Date(event.endDate || event.date);
         return showPast ? eventDate < now : eventDate >= now;
       })
-      .sort((a, b) => new Date(a.date) - new Date(b.date));
+      .sort((a, b) => showPast ? new Date(b.date) - new Date(a.date) : new Date(a.date) - new Date(b.date));
   }, [allEvents, category, search, showPast]);
 
   const visibleEvents = filteredEvents.slice(0, visibleCount);

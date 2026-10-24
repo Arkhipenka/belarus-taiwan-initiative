@@ -1,0 +1,39 @@
+{
+  "id": "conference-warsaw-memory-2026",
+  "slug": "after-totalitarianism-warsaw-2026",
+  "published": true,
+  "title": "Po totalitaryzmie: muzeum, pamięć i białoruska perspektywa",
+  "type": "conference",
+  "date": "2026-10-08",
+  "endDate": "2026-10-09",
+  "allDay": true,
+  "description": "Międzynarodowa konferencja naukowo-praktyczna w Muzeum Wolnej Białorusi, 8–9 października 2026 roku. Andrei Arkhipenka reprezentował platformę z wystąpieniem o kulturze pamięci Tajwanu.",
+  "body": "<p>8–9 października 2026 roku w Warszawie odbyła się międzynarodowa konferencja „Po totalitaryzmie: muzeum, pamięć i białoruska perspektywa”, zorganizowana przez Muzeum Wolnej Białorusi.</p><p>Belarus–Taiwan & East Asia Platform reprezentował jej założyciel i badacz Andrei Arkhipenka, który wygłosił referat o kulturze pamięci Tajwanu.</p><h2>Źródła</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Zapowiedź organizatorów</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Relacja z pierwszego dnia</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">Program i uczestnicy</a></li></ul>",
+  "location": {
+    "name": "Muzeum Wolnej Białorusi",
+    "city": "Warszawa",
+    "country": "Polska",
+    "room": "Foksal 11/1",
+    "link": "https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva"
+  },
+  "categories": [
+    "konferencja",
+    "pamięć historyczna",
+    "Tajwan",
+    "Białoruś"
+  ],
+  "tags": [
+    "konferencja",
+    "pamięć historyczna",
+    "Tajwan",
+    "Białoruś"
+  ],
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "Założyciel platformy i badacz"
+    }
+  ],
+  "image": "/images/events/warsaw-memory-2026/cover-pl.svg",
+  "gallery": []
+}

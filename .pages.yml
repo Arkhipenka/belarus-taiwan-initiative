@@ -463,6 +463,12 @@
               }
             },
             {
+              "name": "allDay",
+              "label": "Без указания времени (только даты)",
+              "type": "boolean",
+              "default": false
+            },
+            {
               "name": "image",
               "label": "Обложка",
               "type": "image"
@@ -1054,6 +1060,12 @@
                 "time": true,
                 "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
               }
+            },
+            {
+              "name": "allDay",
+              "label": "Без указания времени (только даты)",
+              "type": "boolean",
+              "default": false
             },
             {
               "name": "image",
@@ -1649,6 +1661,12 @@
               }
             },
             {
+              "name": "allDay",
+              "label": "Без указания времени (только даты)",
+              "type": "boolean",
+              "default": false
+            },
+            {
               "name": "image",
               "label": "Обложка",
               "type": "image"
@@ -2242,6 +2260,12 @@
               }
             },
             {
+              "name": "allDay",
+              "label": "Без указания времени (только даты)",
+              "type": "boolean",
+              "default": false
+            },
+            {
               "name": "image",
               "label": "Обложка",
               "type": "image"
@@ -2833,6 +2857,12 @@
                 "time": true,
                 "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
               }
+            },
+            {
+              "name": "allDay",
+              "label": "Без указания времени (только даты)",
+              "type": "boolean",
+              "default": false
             },
             {
               "name": "image",
