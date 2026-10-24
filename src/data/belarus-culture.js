@@ -1,77 +1,77 @@
 const copy = {
   "by": [
-    "Адчуваць месца",
-    "Беларусь — у людзях і краявідах.",
-    "Прырода і горад. Спадчына і сучаснасць. Мова і штодзённыя звычкі.",
+    "Беларусь праз дэталі",
+    "Беларусь — праз дэталі.",
+    "Краявіды, словы і месцы штодзённага жыцця. Праз невялікія дэталі знаёмімся з краінай і людзьмі.",
     [
-      "Азёры і лясы",
-      "Мова і культура",
-      "Жыццё ў гарадах"
+      "Лес і вада",
+      "Слова і арнамент",
+      "Двор і вуліца"
     ],
     [
-      "Азёрныя краявіды, лясы і рэкі Палесся — прастора, праз якую можна пазнаёміцца з Беларуссю.",
-      "Беларуская мова, ткацтва, літаратура і сучаснае мастацтва. Спадчына працягваецца ў тым, як людзі жывуць і ствараюць сёння.",
-      "Дворы, невялікія кавярні, гарадскія маршруты і сустрэчы. Штодзённае жыццё складаецца з людзей і іх сувязяў."
+      "Сцежкі сярод дрэў, азёрныя берагі і рэкі Палесся. Краявіды, якія фарміруюць адчуванне месца і застаюцца ў памяці.",
+      "Беларуская мова ў размовах і кнігах, рытм тканых узораў, літаратура і сучаснае мастацтва. Культура жыве ў словах, рэчах і творчасці людзей.",
+      "Дворы, невялікія кавярні, знаёмыя маршруты і выпадковыя сустрэчы. Горад раскрываецца праз штодзённыя звычкі і сувязі паміж людзьмі."
     ]
   ],
   "ru": [
-    "Чувствовать место",
-    "Беларусь — в людях и пейзажах.",
-    "Природа и город. Наследие и современность. Язык и повседневные привычки.",
+    "Беларусь через детали",
+    "Беларусь — через детали.",
+    "Пейзажи, слова и места повседневной жизни. Через небольшие детали знакомимся со страной и людьми.",
     [
-      "Озёра и леса",
-      "Язык и культура",
-      "Жизнь в городах"
+      "Лес и вода",
+      "Слово и орнамент",
+      "Двор и улица"
     ],
     [
-      "Озёрные пейзажи, леса и реки Полесья — пространство, через которое можно познакомиться с Беларусью.",
-      "Белорусский язык, ткачество, литература и современное искусство. Наследие продолжается в том, как люди живут и создают сегодня.",
-      "Дворы, небольшие кафе, городские маршруты и встречи. Повседневная жизнь складывается из людей и их связей."
+      "Тропинки среди деревьев, озёрные берега и реки Полесья. Пейзажи, которые формируют ощущение места и остаются в памяти.",
+      "Белорусский язык в разговорах и книгах, ритм тканых узоров, литература и современное искусство. Культура живёт в словах, вещах и творчестве людей.",
+      "Дворы, небольшие кафе, знакомые маршруты и случайные встречи. Город раскрывается через повседневные привычки и связи между людьми."
     ]
   ],
   "en": [
-    "A sense of place",
-    "Belarus — through people and landscapes.",
-    "Nature and city. Heritage and the present. Language and everyday habits.",
+    "Belarus through details",
+    "Belarus — through the details.",
+    "Landscapes, words and everyday places. Small details offer a way to discover the country and its people.",
     [
-      "Lakes and forests",
-      "Language and culture",
-      "Life in the cities"
+      "Forest and water",
+      "Words and patterns",
+      "Courtyard and street"
     ],
     [
-      "Lake landscapes, forests and the rivers of Polesia offer a way to discover Belarus through its natural surroundings.",
-      "The Belarusian language, weaving, literature and contemporary art. Heritage continues through how people live and create today.",
-      "Courtyards, small cafés, city routes and encounters. Everyday life takes shape through people and their connections."
+      "Woodland paths, lake shores and the rivers of Polesia. Landscapes that shape a sense of place and stay in memory.",
+      "Belarusian in conversation and books, the rhythm of woven patterns, literature and contemporary art. Culture lives in words, objects and people’s creativity.",
+      "Courtyards, small cafés, familiar routes and chance encounters. A city reveals itself through everyday habits and connections between people."
     ]
   ],
   "pl": [
-    "Poczucie miejsca",
-    "Białoruś — poprzez ludzi i krajobrazy.",
-    "Przyroda i miasto. Dziedzictwo i współczesność. Język i codzienne zwyczaje.",
+    "Białoruś poprzez detale",
+    "Białoruś — poprzez detale.",
+    "Krajobrazy, słowa i miejsca codzienności. Drobne szczegóły pozwalają poznać kraj i jego mieszkańców.",
     [
-      "Jeziora i lasy",
-      "Język i kultura",
-      "Życie w miastach"
+      "Las i woda",
+      "Słowo i ornament",
+      "Podwórko i ulica"
     ],
     [
-      "Jeziora, lasy i rzeki Polesia pozwalają poznawać Białoruś poprzez jej przyrodę.",
-      "Język białoruski, tkactwo, literatura i sztuka współczesna. Dziedzictwo trwa w tym, jak ludzie żyją i tworzą dzisiaj.",
-      "Podwórka, małe kawiarnie, miejskie trasy i spotkania. Codzienność tworzą ludzie i ich więzi."
+      "Leśne ścieżki, brzegi jezior i rzeki Polesia. Krajobrazy, które budują poczucie miejsca i pozostają w pamięci.",
+      "Białoruski w rozmowach i książkach, rytm tkanych wzorów, literatura i sztuka współczesna. Kultura żyje w słowach, przedmiotach i ludzkiej twórczości.",
+      "Podwórka, małe kawiarnie, znajome trasy i przypadkowe spotkania. Miasto odsłania się poprzez codzienne zwyczaje i więzi między ludźmi."
     ]
   ],
   "zh": [
-    "感受地方",
-    "透過人與風景，認識白羅斯。",
-    "自然與城市、傳承與當代、語言與日常習慣。",
+    "從細節認識白羅斯",
+    "從細節，認識白羅斯。",
+    "風景、話語與日常場所。透過微小的細節，認識這片土地與生活在其中的人們。",
     [
-      "湖泊與森林",
-      "語言與文化",
-      "城市日常"
+      "森林與水",
+      "文字與紋樣",
+      "庭院與街道"
     ],
     [
-      "湖泊、森林與波列西亞的河流，讓我們透過自然環境認識白羅斯。",
-      "白羅斯語、編織、文學與當代藝術。文化傳承延續於人們今日的生活與創作之中。",
-      "庭院、小咖啡館、城市路線與相遇。日常生活由人與人之間的連結構成。"
+      "林間小徑、湖岸與波列西亞的河流。這些風景形塑地方感，也留在人們的記憶中。",
+      "交談與書本中的白羅斯語、織紋的節奏、文學與當代藝術。文化存在於話語、物件與人們的創作之中。",
+      "庭院、小咖啡館、熟悉的路線與偶然的相遇。日常習慣與人際連結，讓城市逐漸展現它的樣貌。"
     ]
   ]
 };
