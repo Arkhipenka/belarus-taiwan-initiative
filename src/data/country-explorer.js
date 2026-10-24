@@ -5,5 +5,71 @@ const copy = {
   pl: { belarus:'Białoruś', taiwan:'Tajwan', label:'Wybierz kraj', title:'Poznaj Białoruś.', intro:'Od jezior i lasów po język, kulturę miejską i pamięć historyczną.', heading:'Białoruś.\nKultura. Pamięć. Opór.', lead:'Poznajemy Białoruś poprzez jej miasta, kulturę i doświadczenia społeczeństwa, które zachowuje swoją tożsamość i walczy o wolność.', select:'Wybierz miasto na mapie lub z listy.', cities:['Mińsk','Brześć','Grodno','Witebsk','Mohylew','Homel'], descriptions:['Stolica Białorusi. Kultura miejska, edukacja i przestrzenie pamięci społecznej.','Miasto na zachodniej granicy. Pogranicze, więzi kulturowe i pamięć o wojnie.','Miasto nad Niemnem. Dziedzictwo architektoniczne i przenikanie tradycji kulturowych.','Miasto nad Dźwiną. Sztuka, dziedzictwo miejskie i historie lokalnych społeczności.','Miasto nad Dnieprem. Historia miasta, dziedzictwo kulturowe i pamięć o przeszłości.','Miasto nad Sożem. Dziedzictwo pałacowo-parkowe i kultura południowego wschodu.'], themes:['Przyroda','Kultura','Pamięć'], themeTitles:['Jeziora. Lasy. Polesie.','Język, tradycje i współczesność.','Pamiętać. Świadczyć. Rozumieć.'], themeTexts:['Jeziora północy, lasy i rzeki Polesia ukazują różne oblicza Białorusi.','Język białoruski, tkactwo, literatura i sztuka współczesna — kultura, która żyje i zmienia się wraz z ludźmi.','Represje polityczne, opór i świadectwa ludzi są częścią rozmowy o przeszłości, teraźniejszości i wolności.'], materials:'Artykuły platformy', note:'Mapa schematyczna, nie do nawigacji. Kontur: Natural Earth.', reset:'Cała Białoruś', map:'Interaktywna mapa Białorusi' },
   zh: { belarus:'白羅斯', taiwan:'臺灣', label:'選擇國家', title:'認識白羅斯。', intro:'從湖泊與森林，到語言、城市文化與歷史記憶。', heading:'白羅斯。\n文化、記憶、抵抗。', lead:'透過城市、文化，以及一個維護自身認同、爭取自由的社會的經驗，認識白羅斯。', select:'在地圖或清單中選擇城市。', cities:['明斯克','布列斯特','格羅德諾','維捷布斯克','莫吉廖夫','戈梅利'], descriptions:['白羅斯首都：城市文化、教育與公共記憶空間。','西部邊境城市：邊境交流、文化連結與戰爭記憶。','尼曼河畔的城市：建築遺產與多元文化傳統。','西德維納河畔的城市：藝術、城市遺產與社群故事。','第聶伯河畔的城市：城市歷史、文化遺產與過往記憶。','索日河畔的城市：宮殿與公園遺產，以及東南部的文化生活。'], themes:['自然','文化','記憶'], themeTitles:['湖泊、森林與波列西亞。','語言、傳統與當代生活。','記住、見證、理解。'], themeTexts:['北方的湖泊、森林與波列西亞的河流，展現白羅斯不同的面貌。','白羅斯語、編織、文學與當代藝術：與人們一同生活、持續變化的文化。','政治迫害、抵抗與個人見證，構成關於過去、當下與自由的對話。'], materials:'平台文章', note:'示意地圖，不供導航。輪廓資料：Natural Earth。', reset:'白羅斯全圖', map:'白羅斯互動地圖' }
 };
-export const getCountryCopy = lang => copy[lang] || copy.en;
+const themeCopy = {
+  "by": {
+    "exploreThemes": "Даследуйце тэмы",
+    "research": "Даследаванні",
+    "researchTitle": "Беларусь у дыялогу з Тайванем.",
+    "researchText": "Гістарычная памяць, грамадзянскі ўдзел і дэмакратычныя пераўтварэнні — тэмы даследаванняў платформы.",
+    "themeHints": [
+      "Краявіды / прастора",
+      "Мова / штодзённасць",
+      "Рэпрэсіі / супраціў",
+      "Артыкулы / выступленні"
+    ]
+  },
+  "ru": {
+    "exploreThemes": "Исследуйте темы",
+    "research": "Исследования",
+    "researchTitle": "Беларусь в диалоге с Тайванем.",
+    "researchText": "Историческая память, гражданское участие и демократические преобразования — темы исследований платформы.",
+    "themeHints": [
+      "Пейзажи / пространство",
+      "Язык / повседневность",
+      "Репрессии / сопротивление",
+      "Статьи / выступления"
+    ]
+  },
+  "en": {
+    "exploreThemes": "Explore the themes",
+    "research": "Research",
+    "researchTitle": "Belarus in dialogue with Taiwan.",
+    "researchText": "Historical memory, civic participation and democratic transformation are themes explored by the platform.",
+    "themeHints": [
+      "Landscapes / space",
+      "Language / everyday life",
+      "Repression / resistance",
+      "Articles / talks"
+    ]
+  },
+  "pl": {
+    "exploreThemes": "Poznaj tematy",
+    "research": "Badania",
+    "researchTitle": "Białoruś w dialogu z Tajwanem.",
+    "researchText": "Pamięć historyczna, udział obywatelski i przemiany demokratyczne to tematy badań platformy.",
+    "themeHints": [
+      "Krajobrazy / przestrzeń",
+      "Język / codzienność",
+      "Represje / opór",
+      "Artykuły / wystąpienia"
+    ]
+  },
+  "zh": {
+    "exploreThemes": "探索主題",
+    "research": "研究",
+    "researchTitle": "白羅斯與臺灣的對話。",
+    "researchText": "歷史記憶、公民參與及民主轉型，是平台關注的研究主題。",
+    "themeHints": [
+      "景觀／空間",
+      "語言／日常生活",
+      "迫害／抵抗",
+      "文章／演講"
+    ]
+  }
+};
+export const getCountryCopy = lang => {
+ const base = copy[lang] || copy.en;
+ const extra = themeCopy[lang] || themeCopy.en;
+ return {...base,...extra,themes:[...base.themes,extra.research],themeTitles:[...base.themeTitles,extra.researchTitle],themeTexts:[...base.themeTexts,extra.researchText]};
+};
 export const cities = [[27.5615,53.9023],[23.6877,52.0976],[23.8258,53.6694],[30.2049,55.1904],[30.3449,53.9007],[30.9878,52.4345]];
