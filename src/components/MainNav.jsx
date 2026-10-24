@@ -88,7 +88,7 @@ function MainNav() {
                 event.preventDefault(); setPublicationsOpen(true)
                 requestAnimationFrame(() => publications.current?.querySelector('.publications-panel a')?.focus())
               }
-            }}>{publicationsLabel}<span className="publications-chevron" aria-hidden="true">⌄</span></button>
+            }}>{publicationsLabel}<svg className="publications-chevron" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 6 4 4 4-4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg></button>
             <div id="publications-links" className="publications-panel" hidden={!publicationsOpen}>
               <NavLink to={`/${lang}/articles`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>{getHomeCopy(lang).articlesTitle}</NavLink>
               <NavLink to={`/${lang}/news`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>{getHomeCopy(lang).newsTitle}</NavLink>
