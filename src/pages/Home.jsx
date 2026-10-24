@@ -22,7 +22,7 @@ export default function Home() {
   const c = getHomeCopy(lang);
   const [topic, setTopic] = useState(0);
   const root = useRef(null);
-  const articles = getArticles(lang).slice(0, 3);
+  const articles = getArticles(lang).slice(0, 1);
   const news = getNews(lang).slice(0, 3);
   const allEvents = getEvents(lang);
   const [now] = useState(() => Date.now());
