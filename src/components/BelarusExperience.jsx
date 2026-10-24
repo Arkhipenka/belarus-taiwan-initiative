@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import BelarusCulture from './BelarusCulture';
 import { Link } from 'react-router-dom';
 import outline from '../data/belarus-outline.json';
 import { cities, getCountryCopy } from '../data/country-explorer';
@@ -32,6 +33,7 @@ export default function BelarusExperience({ lang }) {
         <div><p>{c.themeTexts[theme]}</p><Link className="hub-text-link" to={'/'+lang+'/articles'}>{c.materials} ↗</Link></div>
       </div>
     </section>
+    <BelarusCulture lang={lang}/>
     <p className="belarus-map-credit">{c.note} <a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth ↗</a></p>
   </div>;
 }

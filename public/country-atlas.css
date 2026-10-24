@@ -61,3 +61,15 @@
 #root #belarus-theme-panel h3{font-size:clamp(25px,3vw,36px);line-height:1.2;margin:12px 0 0;font-weight:600}
 #root #belarus-theme-panel p:not(.hub-kicker){font-size:15px;line-height:1.75;margin:0 0 24px}
 @media(max-width:700px){#root .belarus-theme-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}#root .belarus-theme-tabs button{padding:16px 12px;min-height:90px;border-bottom:1px solid var(--platform-line)}#root #belarus-theme-panel{grid-template-columns:1fr;gap:18px;padding:26px 20px}#root #belarus-theme-panel .belarus-theme-number{font-size:28px}}
+
+.belarus-culture{padding-block:64px 24px}
+.belarus-culture-heading{display:grid;grid-template-columns:1.4fr 1fr;gap:8%;align-items:end;margin-bottom:40px}
+#root .belarus-culture-heading h2{font-size:clamp(32px,4vw,52px);font-weight:600;line-height:1.12;letter-spacing:-.035em;margin:20px 0 0}
+.belarus-culture-heading>p{font:16px/1.75 var(--platform-font);color:var(--platform-muted);max-width:400px;margin:0}
+.belarus-culture-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.belarus-culture-grid article{min-width:0}
+.belarus-culture-art{aspect-ratio:5/3;overflow:hidden;margin-bottom:24px}
+.belarus-culture-art svg{display:block;width:100%;height:100%}
+#root .belarus-culture-grid h3{font-size:25px;line-height:1.2;margin:14px 0 18px;font-weight:600}
+.belarus-culture-grid article>p:not(.hub-kicker){font-size:16px;line-height:1.75;color:var(--platform-muted);margin:0}
+@media(max-width:700px){.belarus-culture{padding-top:44px}.belarus-culture-heading{grid-template-columns:1fr;gap:22px;margin-bottom:28px}.belarus-culture-grid{grid-template-columns:1fr;gap:36px}}
