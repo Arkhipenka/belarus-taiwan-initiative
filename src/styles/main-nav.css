@@ -284,3 +284,17 @@ body.menu-open {
     padding: 24px 20px;
   }
 }
+
+.publications-dropdown{position:relative}
+.main-nav .publications-trigger{display:flex;align-items:center;gap:9px;background:transparent;border:0;border-bottom:2px solid transparent;border-radius:0;font:inherit;cursor:pointer;padding:8px 0 4px}
+.publications-chevron{display:inline-block;font-size:15px;transition:transform .18s ease}
+.publications-trigger[aria-expanded=true] .publications-chevron{transform:rotate(180deg)}
+.main-nav .publications-panel{position:absolute;top:calc(100% + 16px);left:-20px;min-width:255px;max-width:calc(100vw - 40px);padding:10px 20px;background:var(--platform-surface,#fcfaf6);border:1px solid var(--platform-line,#dedbd1);box-shadow:0 12px 25px #282a2712;animation:publications-in .16s ease both;z-index:1002}
+.main-nav .publications-panel[hidden]{display:none!important}
+#root .main-nav .publications-panel .nav-link{display:block;padding:14px 0;white-space:normal;border-bottom:1px solid var(--platform-line,#dedbd1);font-size:14px;line-height:1.5}
+#root .main-nav .publications-panel .nav-link:last-child{border-bottom:0}
+#root .main-nav .publications-panel .nav-link.active{color:var(--platform-red,#af363b)}
+.publications-trigger:focus-visible,.publications-panel a:focus-visible{outline:2px solid var(--platform-red,#af363b);outline-offset:4px}
+@keyframes publications-in{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
+@media(max-width:1024px){.publications-dropdown{width:100%}.main-nav .publications-trigger{width:100%;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--platform-line,#dedbd1)}.main-nav .publications-panel{position:static;min-width:0;max-width:none;margin:0;padding:0 0 0 18px;background:transparent;border:0;border-left:2px solid var(--platform-red,#af363b);box-shadow:none}#root .main-nav .publications-panel .nav-link{padding:13px 0;min-height:44px}}
+@media(prefers-reduced-motion:reduce){.publications-chevron{transition:none}.main-nav .publications-panel{animation:none}}

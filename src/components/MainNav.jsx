@@ -1,6 +1,6 @@
-import { Link, NavLink, useParams } from 'react-router-dom'
+import { Link, NavLink, useParams, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
 import { getAssetUrl } from '../utils/assets'
 import { getHomeCopy } from '../data/home'
@@ -11,9 +11,24 @@ function MainNav() {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [isFooterVisible, setIsFooterVisible] = useState(false)
+  const [publicationsOpen, setPublicationsOpen] = useState(false)
+  const publications = useRef(null)
+  const publicationsTrigger = useRef(null)
+  const { pathname } = useLocation()
+  const publicationsActive = pathname.startsWith(`/${lang}/articles`) || pathname.startsWith(`/${lang}/news`)
+  const publicationsLabel = ({by:'Публікацыі',ru:'Публикации',en:'Publications',pl:'Publikacje',zh:'出版與動態'})[lang] || 'Publications'
 
-  const toggleMenu = () => setIsOpen(!isOpen)
-  const closeMenu = () => setIsOpen(false)
+  const toggleMenu = () => { setIsOpen(!isOpen); setPublicationsOpen(false) }
+  const closeMenu = () => { setIsOpen(false); setPublicationsOpen(false) }
+
+  useEffect(() => {
+    if (!publicationsOpen) return
+    const outside = event => {
+      if (!publications.current?.contains(event.target)) setPublicationsOpen(false)
+    }
+    document.addEventListener('pointerdown', outside)
+    return () => document.removeEventListener('pointerdown', outside)
+  }, [publicationsOpen])
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
@@ -61,17 +76,29 @@ function MainNav() {
           <NavLink to={`/${lang}/about`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.about')}
           </NavLink>
-          <NavLink to={`/${lang}/articles`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
-            {t('nav.articles')}
-          </NavLink>
+          <div className="publications-dropdown" ref={publications} onBlur={event => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setPublicationsOpen(false)
+          }} onKeyDown={event => {
+            if (event.key === 'Escape' && publicationsOpen) {
+              event.preventDefault(); event.stopPropagation(); setPublicationsOpen(false); publicationsTrigger.current?.focus()
+            }
+          }}>
+            <button ref={publicationsTrigger} type="button" className={'nav-link publications-trigger'+(publicationsActive?' active':'')} aria-expanded={publicationsOpen} aria-controls="publications-links" onClick={() => setPublicationsOpen(!publicationsOpen)} onKeyDown={event => {
+              if (event.key === 'ArrowDown') {
+                event.preventDefault(); setPublicationsOpen(true)
+                requestAnimationFrame(() => publications.current?.querySelector('.publications-panel a')?.focus())
+              }
+            }}>{publicationsLabel}<span className="publications-chevron" aria-hidden="true">⌄</span></button>
+            <div id="publications-links" className="publications-panel" hidden={!publicationsOpen}>
+              <NavLink to={`/${lang}/articles`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>{getHomeCopy(lang).articlesTitle}</NavLink>
+              <NavLink to={`/${lang}/news`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>{getHomeCopy(lang).newsTitle}</NavLink>
+            </div>
+          </div>
           <NavLink to={`/${lang}/events`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.events')}
           </NavLink>
           <NavLink to={`/${lang}/contacts`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.contacts')}
-          </NavLink>
-          <NavLink to={`/${lang}/news`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
-            {getHomeCopy(lang).newsTitle}
           </NavLink>
           <NavLink to={`/${lang}/donate`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.donate')}
