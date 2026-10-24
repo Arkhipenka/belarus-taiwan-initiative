@@ -26,3 +26,14 @@
 .atlas-place-photo figcaption{display:flex;flex-direction:column;gap:4px;margin-top:9px;font:11px/1.5 var(--platform-font);color:var(--platform-muted)}
 .atlas-place-photo figcaption a{font:inherit!important;color:var(--platform-muted);overflow-wrap:anywhere}
 :is(.belarus-city-detail,.taiwan-page .map-city-detail){align-self:start}
+
+/* The city controls keep their own height instead of stretching to the photograph. */
+.taiwan-page .map-detail{align-items:start}
+.taiwan-page .map-city-picker{align-self:start;min-height:0;height:auto;padding-bottom:18px}
+.taiwan-page .map-city-picker .center-list{max-height:260px}
+.taiwan-page .map-city-picker .map-reset{margin-top:8px;margin-bottom:0;min-height:36px}
+.taiwan-page .map-city-detail{min-height:0}
+
+.taiwan-page .map-city-picker{display:flex;flex-direction:column;align-self:stretch}
+.taiwan-page .map-city-picker .center-list{flex:1;height:0;min-height:260px;max-height:none}
+@media(max-width:700px){.taiwan-page .map-city-picker .center-list{flex:none;height:auto;min-height:0;max-height:260px}}

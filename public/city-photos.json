@@ -230,5 +230,13 @@
     "license": "Public domain",
     "licenseUrl": "",
     "source": "https://commons.wikimedia.org/wiki/File:Green_Island_Human_Rights_Memorial_Park_2008.jpg"
+  },
+  "taiwan": {
+    "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Sun_Moon_Lake_Sentinel-2B_MSI_2024-04-04.jpg/960px-Sun_Moon_Lake_Sentinel-2B_MSI_2024-04-04.jpg",
+    "title": "Sun Moon Lake, Taiwan",
+    "author": "Original data: ESA Copernicus Sentinel-2\nProcessed by Tiouraren (Y.-C. Tsai)",
+    "license": "Attribution",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Sun_Moon_Lake_Sentinel-2B_MSI_2024-04-04.jpg"
   }
 }
