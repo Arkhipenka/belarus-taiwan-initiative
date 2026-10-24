@@ -26,7 +26,9 @@ function LanguageLayout() {
   return (
     <>
       <MainNav />
-      <Outlet />
+      <div className="platform-route" data-section={pathname.split('/')[2] || 'home'} key={pathname}>
+        <Outlet />
+      </div>
     </>
   )
 }

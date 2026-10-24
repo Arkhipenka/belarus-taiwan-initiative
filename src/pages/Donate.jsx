@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import PageIntro from '../components/PageIntro'
 
 function Donate() {
   const { t } = useTranslation()
@@ -19,13 +20,7 @@ function Donate() {
 
   return (
     <div className="donate-page">
-      <section className="page-hero page-hero-donate donate-intro">
-        <div className="page-hero-text">
-          <span className="page-hero-kicker">Independent platform</span>
-          <h1>{t('donate.title')}</h1>
-          <p>{t('donate.subtitle')}</p>
-        </div>
-      </section>
+      <PageIntro title={t('donate.title')} description={t('donate.subtitle')} />
 
       <div className="donate-options">
         {options.map(option => (

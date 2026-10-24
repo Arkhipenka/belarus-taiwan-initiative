@@ -1,0 +1,93 @@
+/* Shared page architecture: the same spacing, typography and surfaces as Home. */
+.platform-route{width:100%;background:var(--platform-paper)}
+.platform-page-intro{width:min(100%,1400px);margin:0 auto;padding:74px 6% 64px;min-height:330px;border-bottom:1px solid var(--platform-line);display:flex;align-items:center;gap:7%}
+.platform-page-intro-copy{flex:1;min-width:0}
+.platform-eyebrow{color:var(--platform-red);font-size:11px;letter-spacing:.13em;font-weight:600;text-transform:uppercase;margin:0 0 24px}
+#root .platform-page-intro h1{font-size:clamp(46px,5.7vw,82px);line-height:1.04;letter-spacing:-.05em;font-weight:600;margin:0 0 24px;max-width:950px}
+.platform-page-description{font-size:17px;color:var(--platform-muted);max-width:630px;margin:0;line-height:1.75}
+#root .platform-page-intro .platform-eyebrow{font-size:11px;font-weight:600;letter-spacing:.13em;color:var(--platform-red);text-align:left;line-height:1.7;margin:0 0 24px}
+#root .platform-page-intro .platform-page-description{font-size:17px;color:var(--platform-muted);text-align:left;line-height:1.75;margin:0}
+.platform-page-intro.has-media{min-height:440px}
+.platform-page-intro.has-media .platform-page-intro-copy{flex:1.15}
+.platform-page-media{flex:1;min-width:0;margin:0}
+.platform-page-media img{display:block;width:100%;aspect-ratio:1.5;object-fit:cover;border:1px solid var(--platform-line)}
+.platform-page-media figcaption{font-size:11px;line-height:1.6;color:var(--platform-muted);margin-top:12px}
+#root .platform-route:not([data-section=home]) :is(h1,h2,h3){font-weight:600;text-transform:none;letter-spacing:-.035em}
+#root .platform-route :is(.contacts-page,.donate-page,.events-page){display:block;max-width:none;width:100%;margin:0;padding:0;min-height:0}
+#root .platform-route .articles-page{align-items:stretch;min-height:65svh}
+#root .platform-route :is(.about-manifest,.about-feature-grid,.about-soft-diplomacy,.about-cta-editorial,.content-filter-panel,.events-filter-panel,.events-grid,.articles-index-shell,.contacts-page>.block-text,.donate-options,.author-hero,.author-materials){width:calc(100% - 12%);max-width:1232px;margin-left:auto;margin-right:auto;padding-left:0;padding-right:0}
+#root .platform-route :is(.about-manifest,.about-soft-diplomacy){padding-block:64px;gap:7%;border-color:var(--platform-line);border-width:1px}
+#root .platform-route .about-manifest{grid-template-columns:.4fr 1fr}
+#root .platform-route :is(.about-label,.author-eyebrow){font-size:11px;font-weight:600;letter-spacing:.13em;color:var(--platform-red)}
+#root .platform-route .about-manifest-text p{font-size:17px;color:var(--platform-muted);line-height:1.8}
+#root .platform-route .about-manifest-text .about-lead{font-size:22px;color:var(--platform-ink);font-weight:400}
+#root .platform-route .about-feature-grid{padding-block:56px;gap:40px}
+#root .platform-route .about-feature{border-color:var(--platform-line);border-width:1px;padding-top:24px}
+#root .platform-route .about-feature-large{display:block}
+#root .platform-route :is(.about-feature,.about-soft-diplomacy) h2{font-size:clamp(28px,3vw,42px);line-height:1.15;margin-bottom:22px}
+#root .platform-route :is(.about-feature,.about-soft-diplomacy) :is(p,li){font-size:16px;line-height:1.8;color:var(--platform-muted)}
+#root .platform-route .about-soft-diplomacy{background:transparent}
+#root .platform-route .about-soft-diplomacy img{border:1px solid var(--platform-line)}
+#root .platform-route .about-cta-editorial{background:transparent;color:var(--platform-ink);border-top:1px solid var(--platform-line);padding-block:40px 70px}
+#root .platform-route .about-cta-editorial p{color:var(--platform-ink);font-size:24px}
+#root .platform-route :is(.about-cta button,.event-registration a){background:var(--platform-red);border:1px solid var(--platform-red);color:white;border-radius:0;padding:13px 22px;font-size:14px;font-weight:600}
+#root .platform-route :is(.content-filter-panel,.events-filter-panel){padding-block:32px;margin-block:0 40px;border-bottom:1px solid var(--platform-line);background:transparent}
+#root .platform-route :is(.articles-search-box,.events-search-box){gap:10px}
+#root .platform-route .articles-index-shell{border-top:0;padding-top:0;padding-bottom:72px;gap:40px}
+#root .platform-route :is(.articles-index-card,.event-card){background:transparent;box-shadow:none;border:0;border-bottom:1px solid var(--platform-line);border-radius:0;color:var(--platform-ink);overflow:hidden}
+#root .platform-route :is(.articles-index-card,.event-card) img{border-radius:0;object-fit:cover;filter:none;transition:transform .6s}
+#root .platform-route :is(.articles-index-card,.event-card):hover{transform:none;box-shadow:none}
+#root .platform-route :is(.articles-index-card,.event-card):hover img{transform:scale(1.025)}
+#root .platform-route :is(.articles-index-card,.event-card) :is(h2,h3){font-size:clamp(25px,2.5vw,35px);line-height:1.15;margin:14px 0}
+#root .platform-route :is(.articles-index-card,.event-card) p{font-size:15px;line-height:1.75;color:var(--platform-muted)}
+#root .platform-route :is(.articles-index-meta,.event-date){font-weight:500;color:var(--platform-red);font-size:11px;letter-spacing:.05em;line-height:1.6}
+#root .platform-route .articles-latest-link strong{font-weight:600;line-height:1.4}
+#root .platform-route .articles-index-sidebar h2{font-size:30px}
+#root .platform-route .events-grid{padding-block:0 72px;gap:32px}
+#root .platform-route .event-card .event-content{padding-bottom:24px}
+#root .platform-route .event-card .event-button{border-radius:0;font-size:14px;font-weight:600}
+#root .platform-route .contacts-page>.block-text{padding-block:64px 80px;gap:7%}
+#root .platform-route .contact-details :is(p,a,strong){font-family:var(--platform-font);font-weight:400;font-size:15px}
+#root .platform-route .contact-details strong{font-weight:600}
+#root .platform-route .contact-form-section h2{font-size:36px;margin-top:0}
+#root .platform-route :is(.contact-form input,.contact-form textarea,.contact-modal-panel){border-radius:0;box-shadow:none}
+#root .platform-route .contact-form button{font-size:14px}
+#root .platform-route .donate-options{padding-block:56px 80px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-flow:row;gap:28px}
+#root .platform-route .donate-card{border:1px solid var(--platform-line);border-radius:0;background:var(--platform-surface);padding:28px}
+#root .platform-route .donate-card h3{font-size:27px}
+#root .platform-route .donate-card p{font-size:16px;color:var(--platform-muted)}
+#root .platform-route .crypto-address{background:var(--platform-paper);border-color:var(--platform-line);color:var(--platform-ink);overflow-wrap:anywhere}
+#root .platform-route .platform-news-page>.hub-section{padding-top:45px}
+#root .platform-route .author-page{padding-block:0 72px}
+#root .platform-route .author-hero{padding-block:74px 56px;border-bottom:1px solid var(--platform-line)}
+#root .platform-route .author-hero h1{font-size:clamp(45px,5.7vw,82px);line-height:1.04;margin-block:20px}
+#root .platform-route .author-note{color:var(--platform-muted);font-size:16px}
+#root .platform-route .author-tags span{background:transparent;color:var(--platform-muted);border:1px solid var(--platform-line);border-radius:0;font-size:12px}
+#root .platform-route .author-materials{padding-top:48px}
+#root .platform-route .author-section-line{display:none}
+#root .platform-route .author-article-row{border-color:var(--platform-line)}
+#root .platform-route :is(.article-page,.event-page){max-width:1400px;margin:auto;padding:64px 6% 80px;min-height:60svh}
+#root .platform-route .article-hero-header{padding:0 0 36px;margin-bottom:38px;border-color:var(--platform-line);border-width:1px}
+#root .platform-route :is(.article-page,.event-page)>h1,#root .platform-route .article-hero-header h1{font-size:clamp(38px,5.1vw,74px);line-height:1.08;letter-spacing:-.045em;max-width:1100px;margin-top:0}
+#root .platform-route .article-page .article-meta{font-size:12px;font-weight:500;text-transform:none;letter-spacing:0}
+#root .platform-route :is(.article-body,.event-description){font-family:var(--platform-font);font-size:18px;line-height:1.85;color:var(--platform-ink)}
+#root .platform-route :is(.article-body,.event-description) p{line-height:1.85}
+#root .platform-route .event-main-image{width:100%;max-height:550px;object-fit:cover;border-radius:0;margin-block:28px 32px}
+#root .platform-route :is(.event-speakers,.event-partners,.event-gallery,.related-articles){border-color:var(--platform-line)}
+.platform-route:not([data-section=home]){animation:platform-arrive .5s both}
+@keyframes platform-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:800px){
+ .platform-page-intro{padding-block:46px;min-height:0;align-items:flex-start}
+ .platform-page-intro.has-media{flex-direction:column;gap:30px;min-height:0}
+ .platform-page-media{width:100%}
+ #root .platform-page-intro h1{font-size:clamp(40px,8vw,60px)}
+ #root .platform-route .about-manifest{grid-template-columns:1fr;gap:25px}
+ #root .platform-route .about-feature-grid{grid-template-columns:1fr}
+ #root .platform-route .about-soft-diplomacy{grid-template-columns:1fr}
+ #root .platform-route .contacts-page>.block-text{display:grid;grid-template-columns:1fr;gap:40px}
+ #root .platform-route .donate-options{grid-template-columns:1fr}
+ #root .platform-route :is(.article-page,.event-page){padding-top:46px}
+ #root .platform-route :is(.article-page,.event-page)>h1,#root .platform-route .article-hero-header h1{font-size:clamp(36px,8vw,55px)}
+}
+@media(max-width:520px){.platform-page-description{font-size:16px}#root .platform-route .articles-index-shell{grid-template-columns:1fr}#root .platform-route .articles-index-sidebar{border-top:1px solid var(--platform-line);padding-top:25px}#root .platform-route .author-hero-grid{grid-template-columns:1fr;gap:24px}}
+@media(prefers-reduced-motion:reduce){.platform-route,.platform-page-intro{animation:none!important}.platform-route img{transition:none!important}}

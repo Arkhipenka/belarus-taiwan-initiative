@@ -1,3 +1,4 @@
+import PageIntro from '../components/PageIntro';
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -84,13 +85,7 @@ function Contacts() {
 
   return (
     <div className="contacts-page">
-      <section className="page-hero page-hero-contact">
-        <div className="page-hero-text">
-          <span className="page-hero-kicker">Contact</span>
-          <h1>{t('contacts.title')}</h1>
-          <p>{t('contacts.subtitle')}</p>
-        </div>
-      </section>
+      <PageIntro title={t('contacts.title')} description={t('contacts.subtitle')} />
 
       <div className="block-text">
         <section className="contacts-info">

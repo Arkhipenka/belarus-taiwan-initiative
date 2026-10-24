@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import PageIntro from '../components/PageIntro'
 import { useParams, useNavigate } from 'react-router-dom'
 
 function About() {
@@ -31,14 +32,7 @@ function About() {
 
   return (
     <div className="about-page">
-      <section className="about-hero about-hero-editorial">
-        <img src={`${base}images/hero-presidential-meeting.jpg`} alt="Belarus Taiwan civic dialogue" />
-        <div className="about-hero-text">
-          <h1>{t('about.title')}</h1>
-          <p>{t('about.subtitle')}</p>
-          <p className="about-photo-caption">{t('about.heroCaption')}</p>
-        </div>
-      </section>
+      <PageIntro title={t('about.title')} description={t('about.subtitle')} image={`${base}images/hero-presidential-meeting.jpg`} imageAlt="Belarus Taiwan civic dialogue" caption={t('about.heroCaption')} />
 
       <section className="about-manifest">
         <div className="about-label">{t('about.aboutTitle')}</div>

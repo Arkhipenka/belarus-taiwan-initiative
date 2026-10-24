@@ -4,14 +4,15 @@ import { getAssetUrl } from '../utils/assets';
 import { formatShortDate } from '../utils/date';
 import { getMaterialExcerpt } from '../utils/text';
 import { getHomeCopy } from '../data/home';
+import PageIntro from '../components/PageIntro';
 
 export default function News() {
   const { lang = 'en' } = useParams();
   const copy = getHomeCopy(lang);
   const news = getNews(lang);
   return <main className="platform-news-page home-hub">
-    <section className="hub-section"><p className="hub-kicker">Belarus–Taiwan & East Asia Platform</p>
-      <h1>{copy.newsTitle}</h1><p className="hub-intro">{copy.newsIntro}</p>
+    <PageIntro title={copy.newsTitle} description={copy.newsIntro} />
+    <section className="hub-section">
       <div className="hub-materials">{news.map(item => <Link key={item.slug} className="hub-material" to={'/' + lang + '/news/' + item.slug}>
         {item.image && <img src={getAssetUrl(item.image)} alt="" loading="lazy" />}
         <span className="hub-kicker">{formatShortDate(item.date, lang)}</span><h2>{item.title}</h2><p>{getMaterialExcerpt(item)}</p>

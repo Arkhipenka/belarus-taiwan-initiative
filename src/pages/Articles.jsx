@@ -1,3 +1,4 @@
+import PageIntro from '../components/PageIntro';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -97,13 +98,7 @@ function Articles() {
 
   return (
     <div className="articles-page">
-      <section className="articles-header page-hero page-hero-compact">
-        <div className="articles-text">
-          <span className="page-hero-kicker">Belarus-Taiwan Platform</span>
-          <h1>{t('articles.title')}</h1>
-          <p className="articles-subtitle">{t('articles.subtitle')}</p>
-        </div>
-      </section>
+      <PageIntro title={t('articles.title')} description={t('articles.subtitle')} />
 
       <section className="articles-controls content-filter-panel">
         <div className="content-filter-top">

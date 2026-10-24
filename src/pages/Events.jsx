@@ -1,3 +1,4 @@
+import PageIntro from '../components/PageIntro';
 import { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router-dom';
@@ -65,17 +66,7 @@ function Events() {
 
   return (
     <div className="articles-page events-page">
-      <section className="articles-header page-hero page-hero-split events-hero">
-        <div className="articles-text">
-          <span className="page-hero-kicker">Public program</span>
-          <h1>{t('events.title')}</h1>
-          <p className="articles-subtitle">{t('events.subtitle')}</p>
-        </div>
-
-        <div className="page-hero-media" aria-hidden="true">
-          <img src={`${import.meta.env.BASE_URL}images/hero-taipei-mrt.jpg`} alt="" />
-        </div>
-      </section>
+      <PageIntro title={t('events.title')} description={t('events.subtitle')} image={`${import.meta.env.BASE_URL}images/hero-taipei-mrt.jpg`} />
 
       <section className="events-filter-panel">
         <div className="events-filter-top">
