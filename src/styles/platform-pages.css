@@ -129,4 +129,5 @@
 .material-download>span:last-child{font-size:26px;color:var(--platform-red)}
 .material-download:hover{border-color:var(--platform-red)}
 .material-download:focus-visible{outline:2px solid var(--platform-red);outline-offset:4px}
+#root .platform-route :is(.material-download,.material-related-link){color:var(--platform-ink);text-decoration:none}
 @media(max-width:600px){.material-download{padding:18px;gap:14px}.material-download strong{font-size:18px}.material-file-type{padding:12px 5px;font-size:9px}}
