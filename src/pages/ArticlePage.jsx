@@ -4,7 +4,6 @@ import DOMPurify from 'dompurify';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import ArticleGallery from '../components/ArticleGallery';
-import ArticleCard from '../components/ArticleCard';
 import RelatedMaterial from '../components/RelatedMaterial';
 import { detailLabels } from '../data/detail-labels';
 import { getArticleBySlug, getArticles, getNews, getEventBySlug } from '../data/materials';
@@ -83,10 +82,21 @@ function ArticlePage() {
   const article = useMemo(() => getArticleBySlug(lang, slug), [lang, slug]);
 
   const relatedArticles = useMemo(() => {
-    return getArticles(lang)
+    if (!article) return [];
+    const topicsBySlug = {
+      'platform-at-warsaw-memory-conference-2026': ['historical-memory','political-repression','museums'],
+      'incident-228-white-terror-taiwan-2025': ['historical-memory','political-repression','transitional-justice'],
+      'pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1': ['nuclear-energy','environment','civic-activism']
+    };
+    const topics = item => item.topics || topicsBySlug[item.slug] || item.categories || [];
+    const currentTopics = new Set(topics(article));
+    return [...getArticles(lang), ...getNews(lang)]
       .filter(item => item.slug !== slug)
-      .slice(0, 3);
-  }, [lang, slug]);
+      .map(item => ({item,score:topics(item).filter(topic=>currentTopics.has(topic)).length}))
+      .filter(({score})=>score>0)
+      .sort((a,b)=>b.score-a.score)
+      .slice(0,3).map(({item})=>item);
+  }, [article, lang, slug]);
 
   const [views, setViews] = useState(0);
   useEffect(() => {
@@ -163,7 +173,7 @@ function ArticlePage() {
     : '';
 
   return (
-    <article className="article-page">
+    <article className={"article-page" + (relatedArticles.length ? " has-related-rail" : "")}>
       <header className="article-hero-header material-detail-header">
         <Link className="material-back-link" to={'/'+lang+'/'+(isNews?'news':'articles')}>← {isNews?detail.news:labels.allArticles}</Link>
         {categoriesText && (
@@ -247,28 +257,16 @@ function ArticlePage() {
         )}
       </footer>
 
-      {relatedArticles.length > 0 && (
-        <section className="related-articles">
-          <div className="section-heading">
-            <h2 className="section-title">{labels.readAlso}</h2>
-            <button
-              className="text-button"
-              onClick={() => navigate(`/${lang}/articles`)}
-            >
-              {labels.allArticles}
-            </button>
-          </div>
+      {relatedArticles.length > 0 && <aside className="article-related-rail" aria-label={({by:'Па тэме',ru:'По теме',en:'Related reading',pl:'Powiązane materiały',zh:'相關閱讀'})[lang] || 'Related reading'}>
+        <h2>{({by:'Па тэме',ru:'По теме',en:'Related reading',pl:'Powiązane materiały',zh:'相關閱讀'})[lang] || 'Related reading'}</h2>
+        <div className="article-rail-cards">{relatedArticles.map(item=><Link className="article-rail-card" key={item.slug} to={'/'+lang+'/'+(item.kind==='news'?'news':'articles')+'/'+item.slug}>
+          {item.image && <img src={getAssetUrl(item.image)} alt="" loading="lazy"/>}
+          <span className="article-rail-date">{formatLongDate(item.date,lang)}</span>
+          <h3>{item.title}</h3>
+        </Link>)}</div>
+        <Link className="article-rail-all" to={'/'+lang+'/articles'}>{labels.allArticles} ↗</Link>
+      </aside>}
 
-          <div className="related-articles-grid">
-            {relatedArticles.map(item => (
-              <ArticleCard
-                key={item.slug || item.id}
-                article={item}
-              />
-            ))}
-          </div>
-        </section>
-      )}
     </article>
   );
 }

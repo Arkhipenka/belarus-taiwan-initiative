@@ -229,3 +229,31 @@
 #root .platform-route .article-page .related-articles-grid .article-meta{display:flex;flex-wrap:wrap;gap:8px 15px;min-height:0;font-size:11px;line-height:1.6;margin:0 0 14px;color:var(--platform-muted)}
 #root .platform-route .article-page .related-articles-grid p{font-size:14px;line-height:1.7;margin:0;color:var(--platform-muted)}
 @media(max-width:700px){#root .platform-route .article-page .related-articles-grid{grid-template-columns:minmax(0,1fr)}#root .platform-route .article-page .related-articles .section-title{font-size:26px}}
+
+/* Topic-matched reading rail: sticky on desktop, below the story on small screens. */
+#root .article-related-rail{margin:32px 0 0;padding:24px 0 0;border-top:1px solid var(--platform-line);min-width:0}
+#root .article-related-rail>h2{font-size:22px;line-height:1.2;margin:0 0 20px;font-weight:600}
+#root .article-rail-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#root .article-rail-card{display:block;min-width:0;color:var(--platform-ink);text-decoration:none;border-bottom:1px solid var(--platform-line);padding-bottom:18px}
+#root .article-rail-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;margin:0 0 14px;border-radius:0}
+#root .article-rail-date{font-size:11px;line-height:1.5;color:var(--platform-muted)}
+#root .article-rail-card h3{font-size:20px;line-height:1.3;font-weight:500;letter-spacing:-.02em;margin:10px 0 0;overflow-wrap:anywhere}
+#root .article-rail-card:hover h3{color:var(--platform-red)}
+#root .article-rail-all{display:inline-block;margin-top:18px;font-size:13px;color:var(--platform-red);border-bottom:1px solid var(--platform-line);padding-bottom:5px}
+#root .article-related-rail a:focus-visible{outline:2px solid var(--platform-red);outline-offset:4px}
+@media(min-width:1200px){
+ #root .platform-route .article-page.has-related-rail{display:grid;grid-template-columns:minmax(0,1fr) 260px;column-gap:44px;row-gap:0;align-items:start}
+ #root .article-page.has-related-rail>*{grid-column:1;min-width:0}
+ #root .article-page.has-related-rail>.article-related-rail{grid-column:2;grid-row:1 / span 20;position:sticky;top:106px;align-self:start;margin:0;padding:0 0 0 22px;border-top:0;border-left:1px solid var(--platform-line);max-height:calc(100svh - 130px);overflow-y:auto;scrollbar-width:thin}
+ #root .article-page.has-related-rail .article-rail-cards{grid-template-columns:minmax(0,1fr);gap:24px}
+ #root .article-page.has-related-rail .article-rail-card h3{font-size:18px}
+ #root .article-page.has-related-rail .material-detail-header h1{font-size:clamp(34px,3.1vw,48px)}
+}
+@media(max-width:600px){#root .article-rail-cards{grid-template-columns:minmax(0,1fr)}}
+
+/* Let the document, rather than a non-scrolling body overflow box, own sticky positioning. */
+@media(min-width:1200px){
+ html:has(.article-page.has-related-rail){overflow-x:clip;overflow-y:visible}
+ body:has(.article-page.has-related-rail){overflow:visible}
+ #root .platform-route .article-page.has-related-rail{overflow:visible}
+}
