@@ -424,6 +424,34 @@
                   "type": "string"
                 }
               ]
+            },
+            {
+              "name": "relatedEvent",
+              "label": "Связанное мероприятие (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -610,14 +638,54 @@
             {
               "name": "gallery",
               "label": "Галерея",
-              "type": "image",
-              "list": true
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись и авторство",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "tags",
               "label": "tags",
               "type": "string",
               "list": true
+            },
+            {
+              "name": "relatedNews",
+              "label": "Связанная новость (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }
@@ -1043,6 +1111,34 @@
                   "type": "string"
                 }
               ]
+            },
+            {
+              "name": "relatedEvent",
+              "label": "Связанное мероприятие (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -1229,14 +1325,54 @@
             {
               "name": "gallery",
               "label": "Галерея",
-              "type": "image",
-              "list": true
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись и авторство",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "tags",
               "label": "tags",
               "type": "string",
               "list": true
+            },
+            {
+              "name": "relatedNews",
+              "label": "Связанная новость (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }
@@ -1662,6 +1798,34 @@
                   "type": "string"
                 }
               ]
+            },
+            {
+              "name": "relatedEvent",
+              "label": "Связанное мероприятие (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -1848,14 +2012,54 @@
             {
               "name": "gallery",
               "label": "Галерея",
-              "type": "image",
-              "list": true
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись и авторство",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "tags",
               "label": "tags",
               "type": "string",
               "list": true
+            },
+            {
+              "name": "relatedNews",
+              "label": "Связанная новость (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }
@@ -2281,6 +2485,34 @@
                   "type": "string"
                 }
               ]
+            },
+            {
+              "name": "relatedEvent",
+              "label": "Связанное мероприятие (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -2467,14 +2699,54 @@
             {
               "name": "gallery",
               "label": "Галерея",
-              "type": "image",
-              "list": true
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись и авторство",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "tags",
               "label": "tags",
               "type": "string",
               "list": true
+            },
+            {
+              "name": "relatedNews",
+              "label": "Связанная новость (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }
@@ -2900,6 +3172,34 @@
                   "type": "string"
                 }
               ]
+            },
+            {
+              "name": "relatedEvent",
+              "label": "Связанное мероприятие (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         },
@@ -3086,14 +3386,54 @@
             {
               "name": "gallery",
               "label": "Галерея",
-              "type": "image",
-              "list": true
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись и авторство",
+                  "type": "text"
+                }
+              ]
             },
             {
               "name": "tags",
               "label": "tags",
               "type": "string",
               "list": true
+            },
+            {
+              "name": "relatedNews",
+              "label": "Связанная новость (slug)",
+              "type": "string"
+            },
+            {
+              "name": "attachments",
+              "label": "Материалы для скачивания",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "url",
+                  "label": "Ссылка на файл",
+                  "type": "string"
+                },
+                {
+                  "name": "title",
+                  "label": "Название",
+                  "type": "string"
+                },
+                {
+                  "name": "meta",
+                  "label": "Формат, языки, размер",
+                  "type": "string"
+                }
+              ]
             }
           ]
         }

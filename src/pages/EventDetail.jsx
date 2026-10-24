@@ -1,8 +1,11 @@
-import { useParams } from 'react-router-dom';
+import MaterialDownloads from '../components/MaterialDownloads';
+import { Link, useParams } from 'react-router-dom';
 import DOMPurify from 'dompurify';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
-import { getEventBySlug } from '../data/materials';
+import RelatedMaterial from '../components/RelatedMaterial';
+import { detailLabels } from '../data/detail-labels';
+import { getEventBySlug, getArticleBySlug } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
 import { formatDateTime, formatLongDate } from '../utils/date';
 
@@ -67,31 +70,30 @@ function EventDetail() {
 
   if (!event) return <p>{labels.notFound}</p>;
 
+  const detail = detailLabels[lang] || detailLabels.en;
+  const relatedNews = event.relatedNews ? getArticleBySlug(lang, event.relatedNews) : null;
   const startDate = new Date(event.date);
   const endDate = event.endDate ? new Date(event.endDate) : null;
 
   return (
     <article className="event-page">
-      <h1>{event.title}</h1>
-
-      {event.image && <img src={getAssetUrl(event.image)} alt={event.title} className="event-main-image" />}
-
-      <p className="event-date">
-        {event.allDay ? formatLongDate(startDate, lang) : formatDateTime(startDate, lang)}
-        {endDate && <> – {event.allDay ? formatLongDate(endDate, lang) : formatDateTime(endDate, lang)}</>}
-        {' '}| {labels.views}: {views}
-      </p>
-
-      {event.location && (
-        <p className="event-location">
-          <a href={event.location.link} target="_blank" rel="noopener noreferrer">
-            {[event.location.name, event.location.city, event.location.country, event.location.room].filter(Boolean).join(', ')}
-          </a>
-        </p>
-      )}
+      <header className="article-hero-header material-detail-header">
+        <Link className="material-back-link" to={'/'+lang+'/events'}>← {detail.events}</Link>
+        <p className="article-kicker">{detail.event}</p>
+        <h1>{event.title}</h1>
+        <div className="article-meta material-detail-meta">
+          <span>{event.allDay ? formatLongDate(startDate, lang) : formatDateTime(startDate, lang)}{endDate && <> – {event.allDay ? formatLongDate(endDate, lang) : formatDateTime(endDate, lang)}</>}</span>
+          {event.location && <a href={event.location.link} target="_blank" rel="noopener noreferrer">{[event.location.name,event.location.city,event.location.country,event.location.room].filter(Boolean).join(', ')}</a>}
+          <span className="article-views">{labels.views}: {views}</span>
+        </div>
+      </header>
+      {event.image && <figure className="material-event-cover"><img src={getAssetUrl(event.image)} alt={event.title} className="event-main-image" /></figure>}
 
       <p className="event-description">{event.description}</p>
       {event.body && <div className="article-body" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(event.body) }} />}
+
+      <MaterialDownloads items={event.attachments}/>
+      {relatedNews && <RelatedMaterial to={'/'+lang+'/news/'+relatedNews.slug} label={detail.report} title={relatedNews.title} image={getAssetUrl(relatedNews.image)}/>}
 
       {event.speakers && event.speakers.length > 0 && (
         <div className="event-speakers">
@@ -128,7 +130,7 @@ function EventDetail() {
       {event.gallery && event.gallery.length > 0 && (
         <div className="event-gallery">
           {event.gallery.map((img, index) => (
-            <img key={`${img}-${index}`} src={getAssetUrl(img)} alt={`gallery ${index + 1}`} />
+            <figure key={`${img}-${index}`}><img src={getAssetUrl(img.src || img)} alt={img.caption || detail.gallery} loading="lazy"/><figcaption>{img.caption || detail.gallery}</figcaption></figure>
           ))}
         </div>
       )}

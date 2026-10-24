@@ -7,8 +7,8 @@
   "date": "2026-10-08",
   "endDate": "2026-10-09",
   "allDay": true,
-  "description": "2026 年 10 月 8 至 9 日，自由白俄羅斯博物館舉辦國際研討會。Andrei Arkhipenka 參與其中一場座談，發表關於臺灣記憶文化的報告。",
-  "body": "<p>2026 年 10 月 8 至 9 日，由自由白俄羅斯博物館主辦的「極權之後：博物館、記憶與白俄羅斯視角」國際研討會在華沙舉行。</p><p>Belarus–Taiwan & East Asia Platform 創辦人暨研究者 Andrei Arkhipenka 參與這場研討會的其中一場座談，發表關於臺灣記憶文化的報告。</p><h2>資料來源</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">主辦單位公告</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">首日報導</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">議程與參與者</a></li></ul>",
+  "description": "探討博物館、迫害記憶與威權遺緒再思考的國際學術與實務研討會。",
+  "body": "<p>會議由自由白俄羅斯博物館主辦，邀集博物館專業人士與研究者，討論歷史記憶與白俄羅斯視角。</p><h2>資料來源</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">主辦單位公告</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">首日報導</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">議程與參與者</a></li></ul>",
   "location": {
     "name": "自由白俄羅斯博物館",
     "city": "華沙",
@@ -30,6 +30,17 @@
   ],
   "image": "/images/events/warsaw-memory-2026/conference-poster.png",
   "gallery": [
-    "/images/events/warsaw-memory-2026/conference-discussion.jpg"
+    {
+      "src": "/images/events/warsaw-memory-2026/conference-discussion.jpg",
+      "caption": "「極權主義之後：博物館、記憶與白羅斯視角」會議的討論現場。 攝影：自由白俄羅斯博物館媒體部門。"
+    }
+  ],
+  "relatedNews": "platform-at-warsaw-memory-conference-2026",
+  "attachments": [
+    {
+      "url": "/documents/taiwan-memory-conference-be-en.pptx",
+      "title": "臺灣政治迫害的記憶文化",
+      "meta": "下載簡報 · PPTX · 白羅斯語 / English · 20 張投影片 · 8.4 MB"
+    }
   ]
 }

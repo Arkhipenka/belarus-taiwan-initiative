@@ -7,8 +7,8 @@
   "date": "2026-10-08",
   "endDate": "2026-10-09",
   "allDay": true,
-  "description": "An international conference at the Free Belarus Museum, 8–9 October 2026. Andrei Arkhipenka took part in one of its panels with a presentation on Taiwan’s memory culture.",
-  "body": "<p>On 8–9 October 2026, Warsaw hosted the international conference “After Totalitarianism: Museum, Memory and the Belarusian Perspective”, organised by the Free Belarus Museum.</p><p>Andrei Arkhipenka, founder of Belarus–Taiwan & East Asia Platform and a researcher, took part in one of the panels at this conference. His presentation focused on Taiwan’s memory culture.</p><h2>Sources</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Organisers’ announcement</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Day-one report</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">Programme and participants</a></li></ul>",
+  "description": "An international academic and practical conference on museums, the memory of repression and the reassessment of authoritarian legacies.",
+  "body": "<p>Organised by the Free Belarus Museum, the conference brought museum professionals and researchers together to discuss historical memory and the Belarusian perspective.</p><h2>Sources</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Organisers’ announcement</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Day-one report</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">Programme and participants</a></li></ul>",
   "location": {
     "name": "Free Belarus Museum",
     "city": "Warsaw",
@@ -30,6 +30,17 @@
   ],
   "image": "/images/events/warsaw-memory-2026/conference-poster.png",
   "gallery": [
-    "/images/events/warsaw-memory-2026/conference-discussion.jpg"
+    {
+      "src": "/images/events/warsaw-memory-2026/conference-discussion.jpg",
+      "caption": "A discussion at “After Totalitarianism: Museum, Memory and the Belarusian Perspective”. Photo: Free Belarus Museum media service."
+    }
+  ],
+  "relatedNews": "platform-at-warsaw-memory-conference-2026",
+  "attachments": [
+    {
+      "url": "/documents/taiwan-memory-conference-be-en.pptx",
+      "title": "Memory Culture and Political Repression in Taiwan",
+      "meta": "Download presentation · PPTX · Belarusian / English · 20 slides · 8.4 MB"
+    }
   ]
 }

@@ -1,10 +1,13 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import MaterialDownloads from '../components/MaterialDownloads';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import DOMPurify from 'dompurify';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import ArticleGallery from '../components/ArticleGallery';
 import ArticleCard from '../components/ArticleCard';
-import { getArticleBySlug, getArticles } from '../data/materials';
+import RelatedMaterial from '../components/RelatedMaterial';
+import { detailLabels } from '../data/detail-labels';
+import { getArticleBySlug, getArticles, getNews, getEventBySlug } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
 import { formatLongDate } from '../utils/date';
 import {
@@ -208,6 +211,9 @@ function ArticlePage() {
 
   if (!article) return <p>Article not found.</p>;
 
+  const detail = detailLabels[lang] || detailLabels.en;
+  const isNews = getNews(lang).some(item => item.slug === slug);
+  const relatedEvent = article.relatedEvent ? getEventBySlug(lang, article.relatedEvent) : null;
   const formattedDate = formatLongDate(article.date, lang);
 
   const categoriesText = article.categories?.length > 0
@@ -216,7 +222,8 @@ function ArticlePage() {
 
   return (
     <article className="article-page">
-      <header className="article-hero-header">
+      <header className="article-hero-header material-detail-header">
+        <Link className="material-back-link" to={'/'+lang+'/'+(isNews?'news':'articles')}>← {isNews?detail.news:labels.allArticles}</Link>
         {categoriesText && (
           <p className="article-kicker">{categoriesText}</p>
         )}
@@ -281,6 +288,8 @@ function ArticlePage() {
           article.content.map((block, index) => renderContentBlock(block, index))}
       </div>
 
+      <MaterialDownloads items={article.attachments}/>
+      {relatedEvent && <RelatedMaterial to={'/'+lang+'/events/'+relatedEvent.slug} label={detail.details} title={relatedEvent.title} image={getAssetUrl(relatedEvent.image)}/>}
       <ArticleGallery gallery={article.gallery} />
 
       <footer className="article-footer">
