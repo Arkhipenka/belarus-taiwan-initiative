@@ -1,0 +1,21 @@
+/* Shared design for the Belarus and Taiwan atlases. */
+:is(.belarus-atlas,.taiwan-page .island-atlas){display:grid;grid-template-columns:.9fr 1.1fr;gap:4%;padding:clamp(24px,4vw,56px);align-items:center;background:var(--platform-mist)!important;border:1px solid var(--platform-line);color:var(--platform-ink);min-height:0}
+:is(#root .belarus-atlas h3,.taiwan-page .atlas-copy h2){font-family:var(--platform-font);font-size:clamp(30px,3.5vw,48px);line-height:1.15;font-weight:600;letter-spacing:-.035em;margin:22px 0 26px;white-space:pre-line}
+.taiwan-page .atlas-copy h2 em{font:inherit}
+:is(.belarus-atlas-copy>p:not(.hub-kicker),.taiwan-page .atlas-copy p){font-family:var(--platform-font);font-size:16px;line-height:1.75;color:var(--platform-muted);max-width:410px}
+:is(.belarus-atlas-copy .belarus-map-hint,.taiwan-page .atlas-caption){font-size:11px!important;line-height:1.6;letter-spacing:.04em;color:var(--platform-muted);margin-top:30px}
+:is(.belarus-map,.taiwan-page .taiwan-outline){width:100%;aspect-ratio:540/470;height:auto;max-height:470px;color:var(--platform-jade)}
+.taiwan-page .island-fill{fill:var(--platform-jade)}
+:is(.belarus-city-panel,.taiwan-page .map-detail){grid-template-columns:1fr 1fr;background:var(--platform-surface);border-color:var(--platform-line)}
+.taiwan-page .map-project-article{grid-column:1/-1;border-top:1px solid var(--platform-line)}
+:is(.belarus-city-list,.taiwan-page .map-city-picker){padding:28px;border-right:1px solid var(--platform-line)}
+:is(.belarus-city-detail,.taiwan-page .map-city-detail){padding:32px;align-self:center}
+:is(#root .belarus-city-detail h3,.taiwan-page .map-city-detail h3){font:600 30px/1.2 var(--platform-font);letter-spacing:-.035em;margin:12px 0}
+:is(.belarus-city-detail p:not(.hub-kicker),.taiwan-page .map-city-detail p){font:15px/1.75 var(--platform-font);color:var(--platform-muted)}
+.taiwan-page .map-city-picker button{min-height:44px;padding:8px 10px;border:1px solid transparent;font-size:14px}
+.taiwan-page .map-city-picker button[aria-pressed=true]{border-color:var(--platform-red);background:var(--platform-mist);font-weight:400}
+.taiwan-page .center-list{max-height:300px}
+:is(.belarus-themes,.taiwan-page .island-explorer){margin-top:32px}
+:is(.belarus-theme-tabs button,.taiwan-page .island-tabs button){border-radius:0;background:var(--platform-surface);color:var(--platform-ink);font-family:var(--platform-font)}
+:is(.belarus-theme-tabs button[aria-selected=true],.taiwan-page .island-tabs button[aria-selected=true]){background:var(--platform-mist);box-shadow:inset 0 -3px var(--platform-red)}
+@media(max-width:700px){:is(.belarus-atlas,.taiwan-page .island-atlas){grid-template-columns:1fr;gap:24px;padding:26px 20px}:is(#root .belarus-atlas h3,.taiwan-page .atlas-copy h2){font-size:32px}:is(.belarus-city-panel,.taiwan-page .map-detail){grid-template-columns:1fr}:is(.belarus-city-list,.taiwan-page .map-city-picker){padding:20px;border-right:0;border-bottom:1px solid var(--platform-line)}:is(.belarus-city-detail,.taiwan-page .map-city-detail){padding:24px}.taiwan-page .map-project-article{grid-column:auto}}

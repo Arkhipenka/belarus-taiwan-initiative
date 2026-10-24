@@ -1,3 +1,4 @@
+import '../styles/country-atlas.css';
 import { useState } from 'react';
 import BelarusExperience from './BelarusExperience';
 import TaiwanExperience from './TaiwanExperience';
