@@ -173,3 +173,16 @@
 @media(max-width:700px){#root .articles-page .articles-materials{grid-template-columns:1fr;gap:36px}#root .articles-page .articles-results{padding-block:30px 48px}}
 
 @media(min-width:701px) and (max-width:1050px){#root .articles-page .articles-materials{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Event detail: readable editorial heading instead of an oversized centred hero. */
+#root .platform-route .event-page .material-detail-header{display:block;position:static;min-height:0;height:auto;max-width:980px;margin:0 0 30px;padding:0 0 28px;text-align:left;background:transparent;box-shadow:none;border:0;border-bottom:1px solid var(--platform-line)}
+#root .platform-route .event-page .material-back-link{margin:0 0 24px;font-size:13px}
+#root .platform-route .event-page .material-detail-header .article-kicker{display:block;margin:0 0 14px;text-align:left}
+#root .platform-route .event-page .material-detail-header h1{font-size:clamp(32px,3.5vw,52px);line-height:1.13;font-weight:600;letter-spacing:-.035em;text-align:left;max-width:980px;margin:0 0 25px;padding:0;text-wrap:balance}
+#root .platform-route .event-page .material-detail-meta{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:baseline;gap:12px 28px;line-height:1.7;font-size:14px;text-align:left;margin:0;padding:0;color:var(--platform-muted)}
+#root .platform-route .event-page .material-detail-meta a{max-width:100%;overflow-wrap:anywhere;color:var(--platform-ink)}
+#root .platform-route .event-page .material-detail-meta .article-views{font-size:12px;color:var(--platform-muted)}
+#root .platform-route .event-page .material-event-cover{max-width:820px;margin:0 0 32px;padding:0 0 28px}
+#root .platform-route .event-page .material-event-cover .event-main-image{width:100%;max-height:580px;margin:0;object-position:left center}
+#root .platform-route .event-page :is(.event-description,.article-body){margin-left:0;text-align:left}
+@media(max-width:700px){#root .platform-route .event-page .material-detail-header h1{font-size:34px;text-wrap:wrap}#root .platform-route .event-page .material-detail-meta{flex-direction:column;gap:10px}#root .platform-route .event-page .material-detail-header{padding-bottom:22px;margin-bottom:24px}}
