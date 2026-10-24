@@ -214,3 +214,5 @@
 #root .platform-route .article-page .article-body>.article-content-block>:last-child{margin-bottom:0}
 #root .platform-route .article-page .article-gallery-container :is(.swiper-button-prev,.swiper-button-next){color:var(--platform-red);background:var(--platform-surface);width:36px;height:44px;border:1px solid var(--platform-line)}
 #root .platform-route .article-page .article-gallery-container :is(.swiper-button-prev,.swiper-button-next)::after{font-size:15px}
+
+#root .platform-route .article-page .article-gallery-container .slide-image{object-position:center center}
