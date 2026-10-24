@@ -34,6 +34,8 @@
       "role": "平台創辦人、研究者"
     }
   ],
-  "image": "/images/events/warsaw-memory-2026/cover-zh.svg",
-  "gallery": []
+  "image": "/images/events/warsaw-memory-2026/conference-poster.png",
+  "gallery": [
+    "/images/events/warsaw-memory-2026/conference-discussion.jpg"
+  ]
 }

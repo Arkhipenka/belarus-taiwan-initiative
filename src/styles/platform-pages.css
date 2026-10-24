@@ -92,3 +92,6 @@
 }
 @media(max-width:520px){.platform-page-description{font-size:16px}#root .platform-route .articles-index-shell{grid-template-columns:1fr}#root .platform-route .articles-index-sidebar{border-top:1px solid var(--platform-line);padding-top:25px}#root .platform-route .author-hero-grid{grid-template-columns:1fr;gap:24px}}
 @media(prefers-reduced-motion:reduce){.platform-route,.platform-page-intro{animation:none!important}.platform-route img{transition:none!important}}
+
+/* Keep the conference poster legible in cards and on its event page. */
+#root .platform-route :is(.hub-material-image,.event-image) img[src$="/conference-poster.png"],#root .platform-route .event-main-image[src$="/conference-poster.png"]{object-fit:contain;background:var(--platform-paper)}

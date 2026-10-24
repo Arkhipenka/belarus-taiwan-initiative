@@ -34,6 +34,8 @@
       "role": "Platform founder and researcher"
     }
   ],
-  "image": "/images/events/warsaw-memory-2026/cover-en.svg",
-  "gallery": []
+  "image": "/images/events/warsaw-memory-2026/conference-poster.png",
+  "gallery": [
+    "/images/events/warsaw-memory-2026/conference-discussion.jpg"
+  ]
 }

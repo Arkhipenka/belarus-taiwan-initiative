@@ -34,6 +34,8 @@
       "role": "Założyciel platformy i badacz"
     }
   ],
-  "image": "/images/events/warsaw-memory-2026/cover-pl.svg",
-  "gallery": []
+  "image": "/images/events/warsaw-memory-2026/conference-poster.png",
+  "gallery": [
+    "/images/events/warsaw-memory-2026/conference-discussion.jpg"
+  ]
 }

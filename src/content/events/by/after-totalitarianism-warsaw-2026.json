@@ -34,6 +34,8 @@
       "role": "Заснавальнік платформы, даследчык"
     }
   ],
-  "image": "/images/events/warsaw-memory-2026/cover-by.svg",
-  "gallery": []
+  "image": "/images/events/warsaw-memory-2026/conference-poster.png",
+  "gallery": [
+    "/images/events/warsaw-memory-2026/conference-discussion.jpg"
+  ]
 }
