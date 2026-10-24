@@ -27,7 +27,32 @@ const coast=new THREE.BufferGeometry();coast.setAttribute('position',new THREE.F
 const water=mesh(new THREE.PlaneGeometry(4.2,5.6),new THREE.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{time:{value:0}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'varying vec2 vUv;uniform float time;void main(){vec2 p=vUv-.5;float d=length(p*vec2(1.1,1.1));float fade=1.-smoothstep(.16,.48,d);float wave=sin(p.y*110.+sin(p.x*25.)*.6+time*.3)*.5+.5;vec3 color=mix(vec3(.65,.75,.77),vec3(.8,.85,.86),wave*.16);gl_FragColor=vec4(color,fade*.38);}'}),g);water.position.z=-.035;g.userData.water=water;g.rotation.set(-.38,-.3,-.06);return g}
 function book(){const g=world('adamovich');g.userData.leaves=[];return g}
 function code(){const g=world('frontend');const panels=[];for(let i=0;i<3;i++){const panel=new THREE.Group();g.add(panel);box(2.7,1.8,.075,i===1?materials.green:materials.ink,panel);const edge=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(2.7,1.8,.08)),new THREE.LineBasicMaterial({color:0x99b6a0,transparent:true,opacity:.5}));panel.add(edge);for(let j=0;j<3;j++){const dot=mesh(new THREE.SphereGeometry(.028,8,8),j===0?materials.copper:materials.ivory,panel);dot.position.set(-1.1+j*.14,.65,.06)}box(2.3,.013,.008,materials.ivory,panel,0,.45,.06);if(i===1){box(.68,.85,.025,materials.copper,panel,-.73,-.1,.07);for(let j=0;j<4;j++)box(1.05-j*.12,.025,.012,materials.ivory,panel,.4,.16-j*.18,.08)}else{for(let j=0;j<4;j++)box(1.8-j*.25,.018,.008,materials.ivory,panel,-.1,.2-j*.22,.06)}panel.position.set((i-1)*.63,(i-1)*.28,(i-1)*-.7);panels.push(panel)}g.userData.panels=panels;g.rotation.set(.1,-.48,-.12);return g}
-function culture(){const g=world('culture');const red=new THREE.MeshStandardMaterial({color:0xaf363b,roughness:.65});const gold=new THREE.MeshStandardMaterial({color:0xc69b60,roughness:.5});for(let i=0;i<3;i++){const lantern=new THREE.Group();g.add(lantern);const body=mesh(new THREE.SphereGeometry(.62,32,24),red,lantern);body.scale.set(1,1.25,1);for(let j=0;j<12;j++){const rib=mesh(new THREE.TorusGeometry(.63,.009,6,64),gold,lantern);rib.rotation.y=j*Math.PI/12;rib.scale.y=1.25;}box(.35,.07,.35,gold,lantern,0,.78,0);box(.35,.07,.35,gold,lantern,0,-.78,0);box(.018,.7,.018,gold,lantern,0,1.16,0);box(.04,.45,.04,gold,lantern,0,-1.03,0);lantern.position.set((i-1)*1.05,(i===1?.6:-.4),(i===1?.3:-.4));}g.rotation.y=-.2;return g}
+function culture(){
+const g=world('culture');
+// Procedural rice-paper grain and pleats keep the light inside the lantern body.
+const paperCanvas=document.createElement('canvas');paperCanvas.width=512;paperCanvas.height=512;
+const ctx=paperCanvas.getContext('2d');ctx.fillStyle='#a82d25';ctx.fillRect(0,0,512,512);
+let seed=42;const random=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};
+for(let i=0;i<18000;i++){ctx.fillStyle=random()>.5?'rgba(255,225,164,.07)':'rgba(45,10,5,.08)';ctx.fillRect(random()*512,random()*512,random()*2+.3,random()*5+.4)}
+for(let y=0;y<512;y+=4){ctx.fillStyle=y%8?'rgba(255,198,119,.1)':'rgba(55,9,5,.12)';ctx.fillRect(0,y,512,1)}
+const texture=new THREE.CanvasTexture(paperCanvas);texture.colorSpace=THREE.SRGBColorSpace;
+const paper=new THREE.MeshPhysicalMaterial({map:texture,bumpMap:texture,bumpScale:.012,color:0xcf5b44,roughness:.9,metalness:0,side:THREE.DoubleSide,emissive:0xf07528,emissiveIntensity:.16});
+const darkWood=new THREE.MeshStandardMaterial({color:0x44221b,roughness:.76});
+const brass=new THREE.MeshStandardMaterial({color:0x926332,metalness:.65,roughness:.48});
+const cord=new THREE.MeshStandardMaterial({color:0x7c3021,roughness:1});
+for(let i=0;i<3;i++){
+ const lantern=new THREE.Group();g.add(lantern);
+ const points=[];for(let j=0;j<=80;j++){const t=j/80;points.push(new THREE.Vector2(.17+.47*Math.pow(Math.sin(Math.PI*t),.64),-.76+t*1.52));}
+ const geo=new THREE.LatheGeometry(points,128);const attr=geo.attributes.position;
+ for(let j=0;j<attr.count;j++){const x=attr.getX(j),z=attr.getZ(j),y=attr.getY(j);const a=Math.atan2(x,z);const pleat=1+.012*Math.cos(a*32)+.003*Math.sin(y*190);attr.setXYZ(j,x*pleat,y,z*pleat)}geo.computeVertexNormals();
+ mesh(geo,paper,lantern);
+ for(const y of [-.77,.77]){const cap=mesh(new THREE.CylinderGeometry(.19,.19,.09,32),darkWood,lantern);cap.position.y=y;const rim=mesh(new THREE.TorusGeometry(.19,.012,8,48),brass,lantern);rim.rotation.x=Math.PI/2;rim.position.y=y+(y>0?.04:-.04);}
+ const topCord=mesh(new THREE.CylinderGeometry(.008,.008,.8,8),cord,lantern);topCord.position.y=1.2;
+ const knot=mesh(new THREE.SphereGeometry(.045,12,10),brass,lantern);knot.position.y=-.87;
+ for(let strand=0;strand<22;strand++){const a=strand/22*Math.PI*2;const thread=mesh(new THREE.CylinderGeometry(.003,.0015,.38+random()*.05,4),cord,lantern);thread.position.set(Math.cos(a)*.035,-1.09,Math.sin(a)*.035);thread.rotation.z=Math.cos(a)*.055;}
+ lantern.position.set((i-1)*1.12,i===1?.62:-.43,i===1?.25:-.45);lantern.rotation.y=i*.6;
+}
+g.rotation.y=-.2;return g}
 function memory(){const g=world('memory');for(let i=0;i<5;i++){const sheet=new THREE.Group();g.add(sheet);box(1.8,2.5,.055,materials.paper,sheet);for(let j=0;j<9;j++)box(j===0?1.1:1.3-(j%3)*.18,.018,.01,j===0?materials.copper:materials.ink,sheet,-.12,.8-j*.18,.04);sheet.position.set((i-2)*.34,(i-2)*.12,-i*.3);sheet.rotation.y=(i-2)*.16;}g.rotation.set(.08,-.22,-.08);return g}
 if(embedHero){island();culture();memory()}else if(isHome){identity();island();book();code()}else if(initial==='taiwan')island();else if(initial==='adamovich')book();else code();
 const orbit=new THREE.Group();scene.add(orbit);for(let i=0;i<3;i++){const ring=new THREE.Mesh(new THREE.TorusGeometry(2.65+i*.38,.006,6,160),new THREE.MeshBasicMaterial({color:0xacc3ac,transparent:true,opacity:.13}));ring.rotation.set(.8+i*.3,.5+i*.2,0);orbit.add(ring)}
