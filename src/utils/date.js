@@ -1,6 +1,7 @@
 const localeFor = lang => ({ by: 'be', zh: 'zh-TW' })[lang] || lang;
 
 export function formatLongDate(date, lang) {
+  if (/^\d{4}$/.test(String(date))) return String(date);
   return date
     ? new Date(date).toLocaleDateString(localeFor(lang), {
       year: 'numeric',
@@ -11,6 +12,7 @@ export function formatLongDate(date, lang) {
 }
 
 export function formatShortDate(date, lang) {
+  if (/^\d{4}$/.test(String(date))) return String(date);
   return date
     ? new Date(date).toLocaleDateString(localeFor(lang), {
       day: 'numeric',

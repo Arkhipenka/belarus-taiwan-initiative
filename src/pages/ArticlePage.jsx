@@ -283,6 +283,8 @@ function ArticlePage() {
         <p className="article-lead article-standfirst">{article.lead}</p>
       )}
 
+      {article.translationNote && <p className="article-lead">{article.translationNote}</p>}
+
       <div className="article-body">
         {Array.isArray(article.content) &&
           article.content.map((block, index) => renderContentBlock(block, index))}
