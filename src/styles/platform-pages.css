@@ -131,3 +131,19 @@
 .material-download:focus-visible{outline:2px solid var(--platform-red);outline-offset:4px}
 #root .platform-route :is(.material-download,.material-related-link){color:var(--platform-ink);text-decoration:none}
 @media(max-width:600px){.material-download{padding:18px;gap:14px}.material-download strong{font-size:18px}.material-file-type{padding:12px 5px;font-size:9px}}
+.material-downloads>button.material-download{width:100%;text-align:left;font-family:inherit;cursor:pointer;border-radius:0}
+.material-download-dialog{position:fixed;inset:0;margin:auto;width:min(560px,calc(100% - 32px));max-height:calc(100svh - 32px);overflow:auto;padding:0;border:1px solid var(--platform-line);border-radius:0;background:var(--platform-surface);color:var(--platform-ink);box-shadow:0 20px 80px #0003}
+.material-download-dialog::backdrop{background:#20252299}
+.download-dialog-content{padding:32px}
+#root .material-download-dialog h2{font-size:30px;font-weight:500;line-height:1.15;letter-spacing:-.03em;margin:0 0 18px}
+.material-download-dialog p{font-size:14px;line-height:1.7;color:var(--platform-muted);margin:0}
+.download-confirm-details{margin:25px 0;padding-block:22px;border-block:1px solid var(--platform-line)}
+.download-confirm-details .material-file-type{display:inline-block;padding:7px 10px;margin-bottom:14px}
+.download-confirm-details strong{display:block;font-size:20px;line-height:1.4;font-weight:500;margin-bottom:12px}
+.download-dialog-actions{display:flex;justify-content:flex-end;gap:12px;flex-wrap:wrap}
+.download-dialog-actions :is(button,a){display:inline-flex;align-items:center;justify-content:center;gap:18px;padding:12px 22px;min-height:46px;border:1px solid var(--platform-line);font-family:inherit;font-size:14px;border-radius:0;background:transparent;color:var(--platform-ink);cursor:pointer;text-decoration:none}
+#root .download-dialog-actions a{background:var(--platform-red);border-color:var(--platform-red);color:white;text-decoration:none}
+.download-dialog-actions button:hover{background:var(--platform-mist)}
+#root .download-dialog-actions a:hover{background:var(--platform-red-hover)}
+.download-dialog-actions :is(button,a):focus-visible{outline:2px solid var(--platform-red);outline-offset:3px}
+@media(max-width:600px){.download-dialog-content{padding:24px}#root .material-download-dialog h2{font-size:27px}.download-dialog-actions :is(button,a){flex:1}}
