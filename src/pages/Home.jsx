@@ -6,6 +6,7 @@ import { getAssetUrl } from '../utils/assets';
 import { getMaterialExcerpt } from '../utils/text';
 import { formatShortDate } from '../utils/date';
 import TaiwanExperience from '../components/TaiwanExperience';
+import CountryExplorer from '../components/CountryExplorer';
 import '../styles/home-hub.css';
 
 function Material({ item, lang, type }) {
@@ -54,10 +55,7 @@ export default function Home() {
 
     <section id="platform" className="hub-section hub-about hub-reveal"><div><p className="hub-kicker">01 / {c.aboutLink}</p><h2>{c.aboutTitle}</h2></div><div className="hub-about-copy"><p>{c.aboutText}</p><Link className="hub-text-link" to={'/'+lang+'/about'}>{c.aboutLink} ↗</Link></div></section>
 
-    <section id="discover" className="hub-discover"><div className="hub-section hub-section-heading hub-reveal"><div><p className="hub-kicker">02 / 臺灣</p><h2>{c.atlasTitle}</h2></div><p>{c.atlasIntro}</p></div>
-      {lang === 'pl' && <p className="hub-language-note">{c.languageNote}</p>}
-      <TaiwanExperience lang={lang} title={c.atlasTitle} />
-    </section>
+    <CountryExplorer lang={lang} copy={c} />
 
     <section id="publications" className="hub-section hub-reveal"><div className="hub-section-heading"><div><p className="hub-kicker">03 / {c.articlesTitle}</p><h2>{c.articlesTitle}</h2><p>{c.articlesIntro}</p></div><Link className="hub-text-link" to={'/'+lang+'/articles'}>{c.allArticles} ↗</Link></div><div className={'hub-materials'+(articles.length === 1 ? ' hub-materials-single' : '')}>{articles.map(item => <Material key={item.slug} item={item} lang={lang} type="articles" />)}</div></section>
 

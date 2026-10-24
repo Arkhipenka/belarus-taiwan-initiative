@@ -82,3 +82,42 @@
 /* Theme tabs are the sole slide control. */
 .hub-hero{padding-bottom:55px}.hub-hero-art{bottom:0}
 @media(max-width:700px){.hub-hero{padding-bottom:38px}}
+
+.country-selector{display:flex;margin:55px 6% 0;border-bottom:1px solid var(--platform-line);gap:30px}
+.country-selector button{display:flex;align-items:center;gap:20px;background:none;border:0;border-bottom:3px solid transparent;padding:15px 0;min-height:48px;font-size:clamp(21px,2.7vw,32px);color:var(--platform-muted);cursor:pointer}
+.country-selector button span{font-size:10px;letter-spacing:.1em;color:var(--platform-red)}
+.country-selector button[aria-selected=true]{border-color:var(--platform-red);color:var(--platform-ink)}
+.hub-discover>[role=tabpanel][hidden]{display:none!important}
+.hub-discover>.hub-section-heading{padding-top:45px}
+.belarus-experience{padding:0 6% 50px;max-width:1600px;margin:auto}
+.belarus-atlas{display:grid;grid-template-columns:.9fr 1.1fr;gap:4%;background:var(--platform-mist);padding:5%;align-items:center;border:1px solid var(--platform-line)}
+#root .belarus-atlas h3{white-space:pre-line;font-size:clamp(32px,4.3vw,65px);font-weight:500;letter-spacing:-.04em;line-height:1.08;margin:25px 0 30px}
+.belarus-atlas-copy>p:not(.hub-kicker){font-size:16px;max-width:410px;color:var(--platform-muted)}
+.belarus-atlas-copy .belarus-map-hint{font-size:11px!important;margin-top:35px;letter-spacing:.04em}
+.belarus-map{position:relative;width:100%;color:var(--platform-jade)}
+.belarus-map svg{width:100%;height:auto;display:block}
+.belarus-map-point{position:absolute;transform:translate(-50%,-50%);width:44px;height:44px;background:none;border:0;display:grid;place-items:center;cursor:pointer;color:var(--platform-ink);padding:0}
+.belarus-map-point>span:first-child{display:grid;place-items:center;width:20px;height:20px;border:2px solid var(--platform-paper);background:var(--platform-red);color:white;font-size:10px;border-radius:50%}
+.belarus-map-point.is-selected>span:first-child{outline:2px solid var(--platform-red);outline-offset:3px}
+.belarus-map-label{position:absolute;top:34px;white-space:nowrap;font-size:11px;background:var(--platform-mist);padding:1px 4px}
+.belarus-city-panel{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--platform-line);border-top:0}
+.belarus-city-list{padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:6px;border-right:1px solid var(--platform-line)}
+.belarus-city-list button{display:flex;gap:15px;align-items:center;text-align:left;background:none;border:1px solid transparent;min-height:48px;padding:8px 10px;color:var(--platform-ink);cursor:pointer;font-size:14px}
+.belarus-city-list button span{font-size:10px;color:var(--platform-red)}
+.belarus-city-list button[aria-pressed=true]{border-color:var(--platform-red);background:var(--platform-mist)}
+.belarus-city-list .belarus-reset{grid-column:1/-1;color:var(--platform-muted);font-size:12px}
+.belarus-city-detail{padding:35px;align-self:center}
+#root .belarus-city-detail h3{font-size:30px;font-weight:500;margin:12px 0}
+.belarus-city-detail p:not(.hub-kicker){font-size:15px;color:var(--platform-muted);max-width:430px}
+.belarus-themes{display:grid;grid-template-columns:1fr 1.4fr;border:1px solid var(--platform-line);margin-top:35px}
+.belarus-theme-tabs{display:flex;flex-direction:column;border-right:1px solid var(--platform-line)}
+.belarus-theme-tabs button{background:none;border:0;border-bottom:1px solid var(--platform-line);min-height:70px;padding:15px 25px;color:var(--platform-ink);font-size:20px;text-align:left;cursor:pointer;display:flex;align-items:center;gap:25px}
+.belarus-theme-tabs button span{font-size:10px;color:var(--platform-red)}
+.belarus-theme-tabs button[aria-selected=true]{background:var(--platform-mist);box-shadow:inset 3px 0 var(--platform-red)}
+#belarus-theme-panel{padding:35px}
+#root #belarus-theme-panel h3{font-size:clamp(25px,3vw,38px);font-weight:500;margin:0 0 20px}
+#belarus-theme-panel p{font-size:15px;color:var(--platform-muted)}
+.belarus-map-credit{font-size:10px;color:var(--platform-muted);margin:20px 0 0}
+.belarus-map-credit a{color:inherit;text-decoration:underline}
+.country-selector button:focus-visible,.belarus-experience button:focus-visible{outline:2px solid var(--platform-red);outline-offset:3px}
+@media(max-width:700px){.country-selector{margin-top:30px;gap:25px}.country-selector button{gap:12px}.belarus-atlas{grid-template-columns:1fr;padding:28px 18px}.belarus-map{margin-top:25px}.belarus-city-panel,.belarus-themes{grid-template-columns:1fr}.belarus-city-list{padding:20px;border-right:0;border-bottom:1px solid var(--platform-line)}.belarus-city-detail,#belarus-theme-panel{padding:25px}.belarus-theme-tabs{flex-direction:row;border-right:0}.belarus-theme-tabs button{flex:1;min-width:0;justify-content:center;padding:15px 5px;font-size:14px;gap:7px;min-height:55px}.belarus-theme-tabs button[aria-selected=true]{box-shadow:inset 0 -3px var(--platform-red)}.belarus-map-label{font-size:9px}}
