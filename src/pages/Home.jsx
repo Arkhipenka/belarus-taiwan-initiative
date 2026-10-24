@@ -50,7 +50,6 @@ export default function Home() {
         <div id="hero-topic-panel" role="tabpanel" aria-labelledby={'hero-topic-'+topic}><p key={topic} className="hub-topic-description">{c.topics[topic].text}</p></div>
       </div>
       <div className="hub-hero-art"><TaiwanExperience lang={lang} view="hero" scene={topic} title="Taiwan terrain" /><span key={topic} className="hub-coordinates hub-slide-copy" aria-hidden="true">0{topic+1} / 03<br/>{c.topics[topic].title}</span></div>
-      <div className="hub-slider-controls"><button type="button" aria-label={c.previousSlide} onClick={() => setTopic((topic+2)%3)}>←</button><span aria-live="polite" aria-atomic="true">0{topic+1} / 03 · {c.topics[topic].title}</span><button type="button" aria-label={c.nextSlide} onClick={() => setTopic((topic+1)%3)}>→</button></div>
     </section>
 
     <section id="platform" className="hub-section hub-about hub-reveal"><div><p className="hub-kicker">01 / {c.aboutLink}</p><h2>{c.aboutTitle}</h2></div><div className="hub-about-copy"><p>{c.aboutText}</p><Link className="hub-text-link" to={'/'+lang+'/about'}>{c.aboutLink} ↗</Link></div></section>

@@ -78,3 +78,7 @@
 .hub-slider-controls button:focus-visible,.hub-topics button:focus-visible{outline:2px solid var(--platform-red);outline-offset:4px}
 @media(max-width:700px){#root .hub-hero h1{font-size:clamp(38px,8.8vw,60px);min-height:0}.hub-hero{padding-bottom:110px}.hub-slider-controls{bottom:18px}.hub-topics button{min-height:44px}.hub-hero-intro{min-height:5em}}
 @media(prefers-reduced-motion:reduce){.hub-slide-copy{animation:none}}
+
+/* Theme tabs are the sole slide control. */
+.hub-hero{padding-bottom:55px}.hub-hero-art{bottom:0}
+@media(max-width:700px){.hub-hero{padding-bottom:38px}}
