@@ -21,7 +21,14 @@ export default function TaiwanExperience({ lang, view = 'explore', title, scene 
   }, [view]);
   const sendScene = () => frame.current?.contentWindow?.postMessage({ type: 'taiwan-hero-scene', scene }, location.origin);
   useEffect(() => {
-    if (view === 'hero') frame.current?.contentWindow?.postMessage({ type: 'taiwan-hero-scene', scene }, location.origin);
+    if (view !== 'hero') return;
+    const sync = () => frame.current?.contentWindow?.postMessage({ type: 'taiwan-hero-scene', scene }, location.origin);
+    const ready = event => {
+      if (event.origin === location.origin && event.source === frame.current?.contentWindow && event.data?.type === 'taiwan-hero-ready') sync();
+    };
+    window.addEventListener('message', ready);
+    sync();
+    return () => window.removeEventListener('message', ready);
   }, [scene, view]);
   return <iframe onLoad={sendScene} ref={frame} key={mapLang} className={'home-experience home-experience-' + view}
     src={'/taiwan-experience/taiwan.html?lang=' + mapLang + '&view=' + view}
