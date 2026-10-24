@@ -10,10 +10,15 @@ import CountryExplorer from '../components/CountryExplorer';
 import '../styles/home-hub.css';
 
 function Material({ item, lang, type }) {
+  const readLabel = { by: 'Чытаць артыкул', ru: 'Читать статью', en: 'Read article', pl: 'Czytaj artykuł', zh: '閱讀文章' }[lang] || 'Read article';
+  const text = <>
+    <div className="hub-material-meta"><span>{formatShortDate(item.date, lang)}</span>{type !== 'articles' && <span aria-hidden="true">↗</span>}</div>
+    <h3>{item.title}</h3><p>{item.description || getMaterialExcerpt(item)}</p>
+    {type === 'articles' && <span className="hub-article-read">{readLabel} <span aria-hidden="true">↗</span></span>}
+  </>;
   return <Link className="hub-material" to={'/' + lang + '/' + type + '/' + item.slug}>
     <div className="hub-material-image">{item.image && <img src={getAssetUrl(item.image)} alt="" loading="lazy" />}</div>
-    <div className="hub-material-meta"><span>{formatShortDate(item.date, lang)}</span><span aria-hidden="true">↗</span></div>
-    <h3>{item.title}</h3><p>{item.description || getMaterialExcerpt(item)}</p>
+    {type === 'articles' ? <div className="hub-article-copy">{text}</div> : text}
   </Link>;
 }
 
