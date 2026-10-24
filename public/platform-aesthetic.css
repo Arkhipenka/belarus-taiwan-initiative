@@ -38,3 +38,12 @@ html{background:var(--platform-paper)}
 html[data-view=hero] body.taiwan-page[data-island-mode]{background:transparent!important}
 html[data-view=explore] .taiwan-page footer{background:var(--platform-paper)}
 @media(max-width:700px){#root .hub-hero{padding-top:52px}.platform-page-intro::before{top:20px}#root .hub-hero::before{top:21px}.taiwan-page .tw-topline{padding-top:15px}}
+
+/* A shared horizontal grid for the header and homepage content. */
+:root{--platform-content-width:1232px;--platform-page-gutter:clamp(20px,6vw,88px);--platform-page-inset:max(var(--platform-page-gutter),calc((100% - var(--platform-content-width))/2))}
+#root .main-nav{width:100%;max-width:none;box-sizing:border-box;padding-inline:var(--platform-page-inset)}
+#root .hub-hero,#root .hub-section{width:100%;max-width:none;box-sizing:border-box;padding-inline:var(--platform-page-inset);margin-inline:0}
+#root .hub-hero::before{left:var(--platform-page-inset)}
+#root .country-selector{margin-inline:var(--platform-page-inset)}
+#root .belarus-experience{max-width:none;box-sizing:border-box;padding-inline:var(--platform-page-inset)}
+@media(min-width:701px){#root .hub-hero-art{right:var(--platform-page-inset);width:calc((100% - 2 * var(--platform-page-inset)) * .48)}#root .hub-coordinates{right:0}}
