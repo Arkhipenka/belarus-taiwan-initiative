@@ -1,11 +1,13 @@
 /* Shared by the React platform and the standalone Taiwan experience. */
 :root {
-  --platform-paper: #f7f5f0;
-  --platform-surface: #ffffff;
-  --platform-ink: #202327;
-  --platform-muted: #62666b;
-  --platform-line: #dcd9d2;
-  --platform-red: #b83238;
-  --platform-red-hover: #94252c;
+  --platform-paper: #f5f2eb;
+  --platform-surface: #fcfaf6;
+  --platform-ink: #282a27;
+  --platform-muted: #686d65;
+  --platform-line: #dedbd1;
+  --platform-red: #af363b;
+  --platform-red-hover: #8f282f;
+  --platform-jade: #536c60;
+  --platform-mist: #e6ebe5;
   --platform-font: Arial, 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
 }

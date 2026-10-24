@@ -1,0 +1,39 @@
+/* Nordic space, Belarus-inspired geometry, Taiwan's mountain and sea palette. */
+html{background:var(--platform-paper)}
+#root .platform-route,#root .home-hub{background:var(--platform-paper)}
+#root .hub-hero,.platform-page-intro{position:relative}
+#root .hub-hero::before,.platform-page-intro::before{content:'';position:absolute;left:6%;top:26px;width:84px;height:12px;background:url('/identity-weave.svg') left center/84px 12px no-repeat;opacity:.8;pointer-events:none}
+#root .hub-hero{background:radial-gradient(ellipse at 83% 52%,#e0e8df75,transparent 43%)}
+#root .home-hub .hub-hero h1,#root .platform-route h1{font-weight:500;letter-spacing:-.045em;color:var(--platform-ink)}
+#root .platform-route h2,#root .home-hub .hub-section-heading h2{font-weight:500;letter-spacing:-.035em}
+#root .platform-page-intro.has-media{background:linear-gradient(110deg,var(--platform-paper) 60%,#e6ebe540)}
+#root .platform-page-media img{filter:saturate(.83);border-color:var(--platform-line)}
+#root .hub-hero-copy>.hub-kicker span{font-family:'LXGW WenKai TC','Noto Serif TC',serif;font-size:25px;font-weight:400;line-height:1.15;border:1px solid var(--platform-red);padding:7px 5px 5px;letter-spacing:.05em;color:var(--platform-red)}
+#root :is(.hub-coordinates,.author-eyebrow){color:var(--platform-jade)}
+#root .hub-events{background:var(--platform-mist);border-color:var(--platform-line)}
+#root .hub-about{position:relative}
+#root .hub-about::after{content:'';position:absolute;left:6%;bottom:0;width:54px;height:3px;background:var(--platform-red)}
+#root :is(.hub-material-meta,.articles-index-meta){color:var(--platform-jade)}
+#root .hub-text-link{font-weight:500;border-bottom-color:#af363b60}
+#root :is(.category-btn,.events-categories button){background:transparent}
+#root :is(.category-btn,.events-categories button):is(.active,:hover){background:var(--platform-red);color:var(--platform-surface)}
+#root :is(input:not([type=checkbox]),textarea,select){background:var(--platform-surface)}
+#root :is(.donate-card,.contact-modal-panel){background:var(--platform-surface)}
+#root .wrapper-footer{position:relative;background:#282d29;border-top:1px solid #586151}
+#root .wrapper-footer::before{content:'';position:absolute;top:-7px;left:6%;width:112px;height:16px;background:var(--platform-paper) url('/identity-weave.svg') center/112px 16px no-repeat;border-inline:12px solid var(--platform-paper)}
+#root .footer-topline{border-color:#ffffff20}
+.taiwan-page .tw-title h1{font-weight:500;letter-spacing:-.045em}
+.taiwan-page .tw-title h1>span{font-family:'Noto Serif TC',serif;color:var(--platform-red)}
+.taiwan-page .tw-topline{position:relative;padding-top:12px}
+.taiwan-page .tw-topline::before{content:'';position:absolute;top:-12px;left:0;width:84px;height:12px;background:url('/identity-weave.svg') left/84px 12px no-repeat;opacity:.8}
+.taiwan-page .island-atlas{background:var(--platform-mist)!important;border-color:var(--platform-line)}
+.taiwan-page .island-fill{fill:var(--platform-jade)}
+.taiwan-page :is(.atlas-stamp,.tw-seal){background:var(--platform-red);border-color:var(--platform-red);color:var(--platform-surface)}
+.taiwan-page .island-tabs button:is(:hover,[aria-selected=true]){background:#eee3dc}
+.taiwan-page .culture-art.mountain{background:#dce5db}
+.taiwan-page .culture-art.temple{background:#e9dac6}
+.taiwan-page .culture-art.market{background:#435c4e}
+.taiwan-page footer{background:#282d29}
+html[data-view=hero] body.taiwan-page[data-island-mode]{background:transparent!important}
+html[data-view=explore] .taiwan-page footer{background:var(--platform-paper)}
+@media(max-width:700px){#root .hub-hero{padding-top:52px}.platform-page-intro::before{top:20px}#root .hub-hero::before{top:21px}.taiwan-page .tw-topline{padding-top:15px}}

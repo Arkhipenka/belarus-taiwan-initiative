@@ -6,6 +6,7 @@ import './styles/header.css'
 import './i18n'
 import './styles/platform-theme.css'
 import './styles/platform-pages.css'
+import './styles/platform-aesthetic.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
