@@ -24,5 +24,5 @@ export function getMaterialExcerpt(item) {
     ? item.content.find(block => getBlockText(block))
     : null;
 
-  return item?.lead || item?.excerpt || getBlockText(firstTextBlock);
+  return item?.lead || item?.excerpt || (item?.body ? stripHtml(item.body).slice(0, 240) : getBlockText(firstTextBlock));
 }

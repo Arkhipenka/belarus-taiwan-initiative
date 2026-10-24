@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
 import LanguageSwitcher from './LanguageSwitcher'
 import { getAssetUrl } from '../utils/assets'
+import { getHomeCopy } from '../data/home'
 import '../styles/main-nav.css'
 
 function MainNav() {
@@ -69,6 +70,9 @@ function MainNav() {
           </NavLink>
           <NavLink to={`/${lang}/contacts`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.contacts')}
+          </NavLink>
+          <NavLink to={`/${lang}/news`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
+            {getHomeCopy(lang).newsTitle}
           </NavLink>
           <NavLink to={`/${lang}/donate`} className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'} onClick={closeMenu}>
             {t('nav.donate')}

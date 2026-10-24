@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { getAssetUrl } from '../utils/assets'
+import { getHomeCopy } from '../data/home'
 
 function Footer() {
   const { t, i18n } = useTranslation()
@@ -12,6 +13,7 @@ function Footer() {
     { to: `/${lang}/about`, label: t('nav.about') },
     { to: `/${lang}/articles`, label: t('nav.articles') },
     { to: `/${lang}/events`, label: t('nav.events') },
+    { to: `/${lang}/news`, label: getHomeCopy(lang).newsTitle },
     { to: `/${lang}/contacts`, label: t('nav.contacts') },
     { to: `/${lang}/donate`, label: t('nav.donate') }
   ]

@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getArticleBySlug, getEventBySlug } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
+import { getHomeCopy } from '../data/home';
 import { getMaterialExcerpt, stripHtml } from '../utils/text';
 
 const siteUrl = 'https://belarus-taiwan.org';
@@ -203,7 +204,7 @@ export default function SeoManager() {
       };
     }
 
-    if (page === 'articles' && slug) {
+    if ((page === 'articles' || page === 'news') && slug) {
       const article = getArticleBySlug(currentLang, slug);
 
       if (article) {
@@ -243,6 +244,11 @@ export default function SeoManager() {
           ]
         };
       }
+    }
+
+    if (page === 'news') {
+      const home = getHomeCopy(currentLang);
+      return { ...base, title: `${home.newsTitle} | ${siteName}`, description: home.newsIntro };
     }
 
     if (page === 'articles') {

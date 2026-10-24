@@ -1,0 +1,45 @@
+{
+  "id": "event-002",
+  "slug": "belarus-cultural-lecture",
+  "title": "白俄羅斯文化講座",
+  "type": "lecture",
+  "description": "面向台灣聽眾的白俄羅斯歷史、語言與當代文化介紹。",
+  "date": "2025-12-26T11:00:00Z",
+  "endDate": "2025-12-26T13:00:00Z",
+  "location": {
+    "name": "National Chung Hsing University",
+    "city": "台中",
+    "country": "台灣",
+    "link": "https://maps.app.goo.gl/55AkuEwtfbKiAtVH7"
+  },
+  "categories": [
+    "文化",
+    "白俄羅斯",
+    "歷史"
+  ],
+  "tags": [
+    "白俄羅斯",
+    "文化",
+    "講座"
+  ],
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "研究者與行動者",
+      "photo": "/images/speakers/arkhipenka.jpg"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Student Government NCHU",
+      "logo": "/images/partners/bhw.png"
+    }
+  ],
+  "image": "/images/events/event001/main.jpg",
+  "gallery": [
+    "/images/events/event001/photo1.jpg",
+    "/images/events/event001/photo2.jpg"
+  ],
+  "registration_url": "https://eventbrite.com/....",
+  "published": true
+}

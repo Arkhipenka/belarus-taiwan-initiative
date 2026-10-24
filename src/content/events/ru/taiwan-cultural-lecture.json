@@ -1,0 +1,45 @@
+{
+  "id": "event-001",
+  "slug": "taiwan-cultural-lecture",
+  "title": "Лекция о культуре Тайваня",
+  "type": "lecture",
+  "description": "Приглашаем на лекцию о культуре, кухне, истории и обществе Тайваня.",
+  "date": "2025-02-20T15:30:00Z",
+  "endDate": "2025-02-20T18:30:00Z",
+  "location": {
+    "name": "European Solidarity Centre",
+    "city": "Гданьск",
+    "country": "Польша",
+    "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
+  },
+  "categories": [
+    "культура",
+    "история",
+    "28 февраля"
+  ],
+  "tags": [
+    "Тайвань",
+    "история",
+    "культура"
+  ],
+  "speakers": [
+    {
+      "name": "Андрей Архипенко",
+      "role": "Исследователь и активист",
+      "photo": "/images/speakers/arkhipenka.jpg"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Belarusian House Warsaw",
+      "logo": "/images/partners/bhw.png"
+    }
+  ],
+  "image": "/images/events/event001/main.jpg",
+  "gallery": [
+    "/images/events/event001/photo1.jpg",
+    "/images/events/event001/photo2.jpg"
+  ],
+  "registration_url": "https://eventbrite.com/....",
+  "published": true
+}

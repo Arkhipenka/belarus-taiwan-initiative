@@ -15,6 +15,23 @@ const eventModules = import.meta.glob('./events/*/*.json', {
   import: 'default'
 });
 
+const cmsModules = import.meta.glob('../content/*/*/*.json', { eager: true, import: 'default' });
+
+function cmsRecords(type, lang) {
+  return Object.entries(cmsModules)
+    .filter(([path]) => path.includes('/' + type + '/' + lang + '/'))
+    .map(([, record]) => ({ ...record, kind: type,
+      content: record.body ? [record.body] : record.content }));
+}
+
+function mergeCms(legacy, records) {
+  const overridden = new Set(records.flatMap(record => [record.id, record.slug]).filter(Boolean));
+  return uniqueMaterials([
+    ...records.filter(record => record.published === true),
+    ...legacy.filter(record => !overridden.has(record.id) && !overridden.has(record.slug))
+  ]).sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
 function recordsForLang(modules, type, lang) {
   return Object.entries(modules)
     .filter(([path]) => path.includes(`/${type}/${lang}/`))
@@ -26,17 +43,20 @@ export function getArticles(lang) {
     .map(article => translateArticle(article, lang))
     .filter(isPublishedArticle);
 
-  return uniqueMaterials(articles)
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  return mergeCms(articles, cmsRecords('articles', lang));
+}
+
+export function getNews(lang) {
+  return mergeCms([], cmsRecords('news', lang));
 }
 
 export function getArticleBySlug(lang, slug) {
-  return getArticles(lang).find(article => article.slug === slug);
+  return [...getArticles(lang), ...getNews(lang)].find(article => article.slug === slug);
 }
 
 export function getEvents(lang) {
-  return recordsForLang(eventModules, 'events', lang)
-    .map(event => translateEvent(event, lang));
+  const legacy = recordsForLang(eventModules, 'events', lang).map(event => translateEvent(event, lang));
+  return mergeCms(legacy, cmsRecords('events', lang));
 }
 
 export function getEventBySlug(lang, slug) {

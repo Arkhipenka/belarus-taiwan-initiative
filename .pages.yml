@@ -1,0 +1,2973 @@
+{
+  "media": {
+    "input": "public/images/uploads",
+    "output": "/images/uploads"
+  },
+  "content": [
+    {
+      "name": "by",
+      "label": "Беларуская",
+      "type": "group",
+      "items": [
+        {
+          "name": "by_home",
+          "label": "Главная",
+          "type": "file",
+          "path": "src/content/home/by.json",
+          "format": "json",
+          "fields": [
+            {
+              "name": "heroTitle",
+              "label": "Заголовок первого экрана",
+              "type": "text"
+            },
+            {
+              "name": "heroIntro",
+              "label": "Введение",
+              "type": "text"
+            },
+            {
+              "name": "explore",
+              "label": "Кнопка карты",
+              "type": "text"
+            },
+            {
+              "name": "aboutTitle",
+              "label": "Заголовок «О нас»",
+              "type": "string"
+            },
+            {
+              "name": "aboutText",
+              "label": "Текст об инициативе",
+              "type": "text"
+            },
+            {
+              "name": "aboutLink",
+              "label": "Кнопка «О нас»",
+              "type": "text"
+            },
+            {
+              "name": "atlasTitle",
+              "label": "Заголовок карты",
+              "type": "string"
+            },
+            {
+              "name": "atlasIntro",
+              "label": "Описание карты",
+              "type": "text"
+            },
+            {
+              "name": "articlesTitle",
+              "label": "Заголовок статей",
+              "type": "string"
+            },
+            {
+              "name": "articlesIntro",
+              "label": "Описание статей",
+              "type": "text"
+            },
+            {
+              "name": "allArticles",
+              "label": "Кнопка всех статей",
+              "type": "text"
+            },
+            {
+              "name": "eventsTitle",
+              "label": "Заголовок мероприятий",
+              "type": "string"
+            },
+            {
+              "name": "eventsIntro",
+              "label": "Описание мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "allEvents",
+              "label": "Кнопка всех мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "newsTitle",
+              "label": "Заголовок новостей",
+              "type": "string"
+            },
+            {
+              "name": "newsIntro",
+              "label": "Описание новостей",
+              "type": "text"
+            },
+            {
+              "name": "newsEmpty",
+              "label": "Текст при отсутствии новостей",
+              "type": "text"
+            },
+            {
+              "name": "allNews",
+              "label": "Кнопка всех новостей",
+              "type": "text"
+            },
+            {
+              "name": "contact",
+              "label": "Кнопка контактов",
+              "type": "text"
+            },
+            {
+              "name": "pastEvents",
+              "label": "Подпись архива",
+              "type": "text"
+            },
+            {
+              "name": "nextEvents",
+              "label": "Подпись будущих событий",
+              "type": "text"
+            },
+            {
+              "name": "scroll",
+              "label": "Подсказка прокрутки",
+              "type": "text"
+            },
+            {
+              "name": "languageNote",
+              "label": "Примечание о языках",
+              "type": "text"
+            },
+            {
+              "name": "topics",
+              "label": "Темы первого экрана",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "title",
+                  "type": "string"
+                },
+                {
+                  "name": "text",
+                  "label": "text",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "by_articles",
+          "label": "Статьи",
+          "type": "collection",
+          "path": "src/content/articles/by",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "by_news",
+          "label": "Новости",
+          "type": "collection",
+          "path": "src/content/news/by",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "by_events",
+          "label": "Мероприятия",
+          "type": "collection",
+          "path": "src/content/events/by",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "description",
+              "label": "Описание",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Подробности",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "endDate",
+              "label": "Окончание",
+              "type": "date",
+              "default": "",
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "type",
+              "label": "Тип мероприятия",
+              "type": "string"
+            },
+            {
+              "name": "location",
+              "label": "Место",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "city",
+                  "label": "city",
+                  "type": "string"
+                },
+                {
+                  "name": "country",
+                  "label": "country",
+                  "type": "string"
+                },
+                {
+                  "name": "room",
+                  "label": "room",
+                  "type": "string"
+                },
+                {
+                  "name": "link",
+                  "label": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "registration_url",
+              "label": "Ссылка на регистрацию",
+              "type": "string"
+            },
+            {
+              "name": "speakers",
+              "label": "Участники",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "role",
+                  "label": "role",
+                  "type": "string"
+                },
+                {
+                  "name": "photo",
+                  "label": "photo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "partners",
+              "label": "Партнёры",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "logo",
+                  "label": "logo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "image",
+              "list": true
+            },
+            {
+              "name": "tags",
+              "label": "tags",
+              "type": "string",
+              "list": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "en",
+      "label": "English",
+      "type": "group",
+      "items": [
+        {
+          "name": "en_home",
+          "label": "Главная",
+          "type": "file",
+          "path": "src/content/home/en.json",
+          "format": "json",
+          "fields": [
+            {
+              "name": "heroTitle",
+              "label": "Заголовок первого экрана",
+              "type": "text"
+            },
+            {
+              "name": "heroIntro",
+              "label": "Введение",
+              "type": "text"
+            },
+            {
+              "name": "explore",
+              "label": "Кнопка карты",
+              "type": "text"
+            },
+            {
+              "name": "aboutTitle",
+              "label": "Заголовок «О нас»",
+              "type": "string"
+            },
+            {
+              "name": "aboutText",
+              "label": "Текст об инициативе",
+              "type": "text"
+            },
+            {
+              "name": "aboutLink",
+              "label": "Кнопка «О нас»",
+              "type": "text"
+            },
+            {
+              "name": "atlasTitle",
+              "label": "Заголовок карты",
+              "type": "string"
+            },
+            {
+              "name": "atlasIntro",
+              "label": "Описание карты",
+              "type": "text"
+            },
+            {
+              "name": "articlesTitle",
+              "label": "Заголовок статей",
+              "type": "string"
+            },
+            {
+              "name": "articlesIntro",
+              "label": "Описание статей",
+              "type": "text"
+            },
+            {
+              "name": "allArticles",
+              "label": "Кнопка всех статей",
+              "type": "text"
+            },
+            {
+              "name": "eventsTitle",
+              "label": "Заголовок мероприятий",
+              "type": "string"
+            },
+            {
+              "name": "eventsIntro",
+              "label": "Описание мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "allEvents",
+              "label": "Кнопка всех мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "newsTitle",
+              "label": "Заголовок новостей",
+              "type": "string"
+            },
+            {
+              "name": "newsIntro",
+              "label": "Описание новостей",
+              "type": "text"
+            },
+            {
+              "name": "newsEmpty",
+              "label": "Текст при отсутствии новостей",
+              "type": "text"
+            },
+            {
+              "name": "allNews",
+              "label": "Кнопка всех новостей",
+              "type": "text"
+            },
+            {
+              "name": "contact",
+              "label": "Кнопка контактов",
+              "type": "text"
+            },
+            {
+              "name": "pastEvents",
+              "label": "Подпись архива",
+              "type": "text"
+            },
+            {
+              "name": "nextEvents",
+              "label": "Подпись будущих событий",
+              "type": "text"
+            },
+            {
+              "name": "scroll",
+              "label": "Подсказка прокрутки",
+              "type": "text"
+            },
+            {
+              "name": "languageNote",
+              "label": "Примечание о языках",
+              "type": "text"
+            },
+            {
+              "name": "topics",
+              "label": "Темы первого экрана",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "title",
+                  "type": "string"
+                },
+                {
+                  "name": "text",
+                  "label": "text",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "en_articles",
+          "label": "Статьи",
+          "type": "collection",
+          "path": "src/content/articles/en",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "en_news",
+          "label": "Новости",
+          "type": "collection",
+          "path": "src/content/news/en",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "en_events",
+          "label": "Мероприятия",
+          "type": "collection",
+          "path": "src/content/events/en",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "description",
+              "label": "Описание",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Подробности",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "endDate",
+              "label": "Окончание",
+              "type": "date",
+              "default": "",
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "type",
+              "label": "Тип мероприятия",
+              "type": "string"
+            },
+            {
+              "name": "location",
+              "label": "Место",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "city",
+                  "label": "city",
+                  "type": "string"
+                },
+                {
+                  "name": "country",
+                  "label": "country",
+                  "type": "string"
+                },
+                {
+                  "name": "room",
+                  "label": "room",
+                  "type": "string"
+                },
+                {
+                  "name": "link",
+                  "label": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "registration_url",
+              "label": "Ссылка на регистрацию",
+              "type": "string"
+            },
+            {
+              "name": "speakers",
+              "label": "Участники",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "role",
+                  "label": "role",
+                  "type": "string"
+                },
+                {
+                  "name": "photo",
+                  "label": "photo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "partners",
+              "label": "Партнёры",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "logo",
+                  "label": "logo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "image",
+              "list": true
+            },
+            {
+              "name": "tags",
+              "label": "tags",
+              "type": "string",
+              "list": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ru",
+      "label": "Русский",
+      "type": "group",
+      "items": [
+        {
+          "name": "ru_home",
+          "label": "Главная",
+          "type": "file",
+          "path": "src/content/home/ru.json",
+          "format": "json",
+          "fields": [
+            {
+              "name": "heroTitle",
+              "label": "Заголовок первого экрана",
+              "type": "text"
+            },
+            {
+              "name": "heroIntro",
+              "label": "Введение",
+              "type": "text"
+            },
+            {
+              "name": "explore",
+              "label": "Кнопка карты",
+              "type": "text"
+            },
+            {
+              "name": "aboutTitle",
+              "label": "Заголовок «О нас»",
+              "type": "string"
+            },
+            {
+              "name": "aboutText",
+              "label": "Текст об инициативе",
+              "type": "text"
+            },
+            {
+              "name": "aboutLink",
+              "label": "Кнопка «О нас»",
+              "type": "text"
+            },
+            {
+              "name": "atlasTitle",
+              "label": "Заголовок карты",
+              "type": "string"
+            },
+            {
+              "name": "atlasIntro",
+              "label": "Описание карты",
+              "type": "text"
+            },
+            {
+              "name": "articlesTitle",
+              "label": "Заголовок статей",
+              "type": "string"
+            },
+            {
+              "name": "articlesIntro",
+              "label": "Описание статей",
+              "type": "text"
+            },
+            {
+              "name": "allArticles",
+              "label": "Кнопка всех статей",
+              "type": "text"
+            },
+            {
+              "name": "eventsTitle",
+              "label": "Заголовок мероприятий",
+              "type": "string"
+            },
+            {
+              "name": "eventsIntro",
+              "label": "Описание мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "allEvents",
+              "label": "Кнопка всех мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "newsTitle",
+              "label": "Заголовок новостей",
+              "type": "string"
+            },
+            {
+              "name": "newsIntro",
+              "label": "Описание новостей",
+              "type": "text"
+            },
+            {
+              "name": "newsEmpty",
+              "label": "Текст при отсутствии новостей",
+              "type": "text"
+            },
+            {
+              "name": "allNews",
+              "label": "Кнопка всех новостей",
+              "type": "text"
+            },
+            {
+              "name": "contact",
+              "label": "Кнопка контактов",
+              "type": "text"
+            },
+            {
+              "name": "pastEvents",
+              "label": "Подпись архива",
+              "type": "text"
+            },
+            {
+              "name": "nextEvents",
+              "label": "Подпись будущих событий",
+              "type": "text"
+            },
+            {
+              "name": "scroll",
+              "label": "Подсказка прокрутки",
+              "type": "text"
+            },
+            {
+              "name": "languageNote",
+              "label": "Примечание о языках",
+              "type": "text"
+            },
+            {
+              "name": "topics",
+              "label": "Темы первого экрана",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "title",
+                  "type": "string"
+                },
+                {
+                  "name": "text",
+                  "label": "text",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ru_articles",
+          "label": "Статьи",
+          "type": "collection",
+          "path": "src/content/articles/ru",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ru_news",
+          "label": "Новости",
+          "type": "collection",
+          "path": "src/content/news/ru",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ru_events",
+          "label": "Мероприятия",
+          "type": "collection",
+          "path": "src/content/events/ru",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "description",
+              "label": "Описание",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Подробности",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "endDate",
+              "label": "Окончание",
+              "type": "date",
+              "default": "",
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "type",
+              "label": "Тип мероприятия",
+              "type": "string"
+            },
+            {
+              "name": "location",
+              "label": "Место",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "city",
+                  "label": "city",
+                  "type": "string"
+                },
+                {
+                  "name": "country",
+                  "label": "country",
+                  "type": "string"
+                },
+                {
+                  "name": "room",
+                  "label": "room",
+                  "type": "string"
+                },
+                {
+                  "name": "link",
+                  "label": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "registration_url",
+              "label": "Ссылка на регистрацию",
+              "type": "string"
+            },
+            {
+              "name": "speakers",
+              "label": "Участники",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "role",
+                  "label": "role",
+                  "type": "string"
+                },
+                {
+                  "name": "photo",
+                  "label": "photo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "partners",
+              "label": "Партнёры",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "logo",
+                  "label": "logo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "image",
+              "list": true
+            },
+            {
+              "name": "tags",
+              "label": "tags",
+              "type": "string",
+              "list": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pl",
+      "label": "Polski",
+      "type": "group",
+      "items": [
+        {
+          "name": "pl_home",
+          "label": "Главная",
+          "type": "file",
+          "path": "src/content/home/pl.json",
+          "format": "json",
+          "fields": [
+            {
+              "name": "heroTitle",
+              "label": "Заголовок первого экрана",
+              "type": "text"
+            },
+            {
+              "name": "heroIntro",
+              "label": "Введение",
+              "type": "text"
+            },
+            {
+              "name": "explore",
+              "label": "Кнопка карты",
+              "type": "text"
+            },
+            {
+              "name": "aboutTitle",
+              "label": "Заголовок «О нас»",
+              "type": "string"
+            },
+            {
+              "name": "aboutText",
+              "label": "Текст об инициативе",
+              "type": "text"
+            },
+            {
+              "name": "aboutLink",
+              "label": "Кнопка «О нас»",
+              "type": "text"
+            },
+            {
+              "name": "atlasTitle",
+              "label": "Заголовок карты",
+              "type": "string"
+            },
+            {
+              "name": "atlasIntro",
+              "label": "Описание карты",
+              "type": "text"
+            },
+            {
+              "name": "articlesTitle",
+              "label": "Заголовок статей",
+              "type": "string"
+            },
+            {
+              "name": "articlesIntro",
+              "label": "Описание статей",
+              "type": "text"
+            },
+            {
+              "name": "allArticles",
+              "label": "Кнопка всех статей",
+              "type": "text"
+            },
+            {
+              "name": "eventsTitle",
+              "label": "Заголовок мероприятий",
+              "type": "string"
+            },
+            {
+              "name": "eventsIntro",
+              "label": "Описание мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "allEvents",
+              "label": "Кнопка всех мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "newsTitle",
+              "label": "Заголовок новостей",
+              "type": "string"
+            },
+            {
+              "name": "newsIntro",
+              "label": "Описание новостей",
+              "type": "text"
+            },
+            {
+              "name": "newsEmpty",
+              "label": "Текст при отсутствии новостей",
+              "type": "text"
+            },
+            {
+              "name": "allNews",
+              "label": "Кнопка всех новостей",
+              "type": "text"
+            },
+            {
+              "name": "contact",
+              "label": "Кнопка контактов",
+              "type": "text"
+            },
+            {
+              "name": "pastEvents",
+              "label": "Подпись архива",
+              "type": "text"
+            },
+            {
+              "name": "nextEvents",
+              "label": "Подпись будущих событий",
+              "type": "text"
+            },
+            {
+              "name": "scroll",
+              "label": "Подсказка прокрутки",
+              "type": "text"
+            },
+            {
+              "name": "languageNote",
+              "label": "Примечание о языках",
+              "type": "text"
+            },
+            {
+              "name": "topics",
+              "label": "Темы первого экрана",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "title",
+                  "type": "string"
+                },
+                {
+                  "name": "text",
+                  "label": "text",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pl_articles",
+          "label": "Статьи",
+          "type": "collection",
+          "path": "src/content/articles/pl",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pl_news",
+          "label": "Новости",
+          "type": "collection",
+          "path": "src/content/news/pl",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pl_events",
+          "label": "Мероприятия",
+          "type": "collection",
+          "path": "src/content/events/pl",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "description",
+              "label": "Описание",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Подробности",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "endDate",
+              "label": "Окончание",
+              "type": "date",
+              "default": "",
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "type",
+              "label": "Тип мероприятия",
+              "type": "string"
+            },
+            {
+              "name": "location",
+              "label": "Место",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "city",
+                  "label": "city",
+                  "type": "string"
+                },
+                {
+                  "name": "country",
+                  "label": "country",
+                  "type": "string"
+                },
+                {
+                  "name": "room",
+                  "label": "room",
+                  "type": "string"
+                },
+                {
+                  "name": "link",
+                  "label": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "registration_url",
+              "label": "Ссылка на регистрацию",
+              "type": "string"
+            },
+            {
+              "name": "speakers",
+              "label": "Участники",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "role",
+                  "label": "role",
+                  "type": "string"
+                },
+                {
+                  "name": "photo",
+                  "label": "photo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "partners",
+              "label": "Партнёры",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "logo",
+                  "label": "logo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "image",
+              "list": true
+            },
+            {
+              "name": "tags",
+              "label": "tags",
+              "type": "string",
+              "list": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "zh",
+      "label": "繁體中文",
+      "type": "group",
+      "items": [
+        {
+          "name": "zh_home",
+          "label": "Главная",
+          "type": "file",
+          "path": "src/content/home/zh.json",
+          "format": "json",
+          "fields": [
+            {
+              "name": "heroTitle",
+              "label": "Заголовок первого экрана",
+              "type": "text"
+            },
+            {
+              "name": "heroIntro",
+              "label": "Введение",
+              "type": "text"
+            },
+            {
+              "name": "explore",
+              "label": "Кнопка карты",
+              "type": "text"
+            },
+            {
+              "name": "aboutTitle",
+              "label": "Заголовок «О нас»",
+              "type": "string"
+            },
+            {
+              "name": "aboutText",
+              "label": "Текст об инициативе",
+              "type": "text"
+            },
+            {
+              "name": "aboutLink",
+              "label": "Кнопка «О нас»",
+              "type": "text"
+            },
+            {
+              "name": "atlasTitle",
+              "label": "Заголовок карты",
+              "type": "string"
+            },
+            {
+              "name": "atlasIntro",
+              "label": "Описание карты",
+              "type": "text"
+            },
+            {
+              "name": "articlesTitle",
+              "label": "Заголовок статей",
+              "type": "string"
+            },
+            {
+              "name": "articlesIntro",
+              "label": "Описание статей",
+              "type": "text"
+            },
+            {
+              "name": "allArticles",
+              "label": "Кнопка всех статей",
+              "type": "text"
+            },
+            {
+              "name": "eventsTitle",
+              "label": "Заголовок мероприятий",
+              "type": "string"
+            },
+            {
+              "name": "eventsIntro",
+              "label": "Описание мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "allEvents",
+              "label": "Кнопка всех мероприятий",
+              "type": "text"
+            },
+            {
+              "name": "newsTitle",
+              "label": "Заголовок новостей",
+              "type": "string"
+            },
+            {
+              "name": "newsIntro",
+              "label": "Описание новостей",
+              "type": "text"
+            },
+            {
+              "name": "newsEmpty",
+              "label": "Текст при отсутствии новостей",
+              "type": "text"
+            },
+            {
+              "name": "allNews",
+              "label": "Кнопка всех новостей",
+              "type": "text"
+            },
+            {
+              "name": "contact",
+              "label": "Кнопка контактов",
+              "type": "text"
+            },
+            {
+              "name": "pastEvents",
+              "label": "Подпись архива",
+              "type": "text"
+            },
+            {
+              "name": "nextEvents",
+              "label": "Подпись будущих событий",
+              "type": "text"
+            },
+            {
+              "name": "scroll",
+              "label": "Подсказка прокрутки",
+              "type": "text"
+            },
+            {
+              "name": "languageNote",
+              "label": "Примечание о языках",
+              "type": "text"
+            },
+            {
+              "name": "topics",
+              "label": "Темы первого экрана",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "title",
+                  "label": "title",
+                  "type": "string"
+                },
+                {
+                  "name": "text",
+                  "label": "text",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "zh_articles",
+          "label": "Статьи",
+          "type": "collection",
+          "path": "src/content/articles/zh",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "zh_news",
+          "label": "Новости",
+          "type": "collection",
+          "path": "src/content/news/zh",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "excerpt",
+              "label": "Краткое описание",
+              "type": "text"
+            },
+            {
+              "name": "author",
+              "label": "Автор",
+              "type": "string"
+            },
+            {
+              "name": "body",
+              "label": "Текст публикации",
+              "type": "rich-text",
+              "required": true,
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "source",
+              "label": "Источник",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "url",
+                  "label": "url",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "src",
+                  "label": "Изображение",
+                  "type": "image"
+                },
+                {
+                  "name": "caption",
+                  "label": "Подпись",
+                  "type": "string"
+                },
+                {
+                  "name": "alt",
+                  "label": "Описание изображения",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "zh_events",
+          "label": "Мероприятия",
+          "type": "collection",
+          "path": "src/content/events/zh",
+          "format": "json",
+          "filename": "{fields.slug}.json",
+          "exclude": [
+            ".gitkeep"
+          ],
+          "view": {
+            "primary": "title",
+            "fields": [
+              "title",
+              "date",
+              "published"
+            ],
+            "sort": "date",
+            "order": "desc"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "id",
+              "type": "string",
+              "hidden": true
+            },
+            {
+              "name": "published",
+              "label": "Опубликовано",
+              "type": "boolean",
+              "default": false
+            },
+            {
+              "name": "slug",
+              "label": "Адрес латиницей (например taiwan-memory)",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "title",
+              "label": "Заголовок",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "date",
+              "label": "Дата",
+              "type": "date",
+              "required": true,
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "image",
+              "label": "Обложка",
+              "type": "image"
+            },
+            {
+              "name": "categories",
+              "label": "Темы",
+              "type": "string",
+              "list": true
+            },
+            {
+              "name": "description",
+              "label": "Описание",
+              "type": "text",
+              "required": true
+            },
+            {
+              "name": "body",
+              "label": "Подробности",
+              "type": "rich-text",
+              "options": {
+                "format": "html",
+                "switcher": false
+              }
+            },
+            {
+              "name": "endDate",
+              "label": "Окончание",
+              "type": "date",
+              "default": "",
+              "options": {
+                "time": true,
+                "format": "yyyy-MM-dd'T'HH:mm:ssXXX"
+              }
+            },
+            {
+              "name": "type",
+              "label": "Тип мероприятия",
+              "type": "string"
+            },
+            {
+              "name": "location",
+              "label": "Место",
+              "type": "object",
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "city",
+                  "label": "city",
+                  "type": "string"
+                },
+                {
+                  "name": "country",
+                  "label": "country",
+                  "type": "string"
+                },
+                {
+                  "name": "room",
+                  "label": "room",
+                  "type": "string"
+                },
+                {
+                  "name": "link",
+                  "label": "link",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "registration_url",
+              "label": "Ссылка на регистрацию",
+              "type": "string"
+            },
+            {
+              "name": "speakers",
+              "label": "Участники",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "role",
+                  "label": "role",
+                  "type": "string"
+                },
+                {
+                  "name": "photo",
+                  "label": "photo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "partners",
+              "label": "Партнёры",
+              "type": "object",
+              "list": true,
+              "fields": [
+                {
+                  "name": "name",
+                  "label": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "logo",
+                  "label": "logo",
+                  "type": "image"
+                }
+              ]
+            },
+            {
+              "name": "gallery",
+              "label": "Галерея",
+              "type": "image",
+              "list": true
+            },
+            {
+              "name": "tags",
+              "label": "tags",
+              "type": "string",
+              "list": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

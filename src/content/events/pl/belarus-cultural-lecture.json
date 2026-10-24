@@ -1,0 +1,45 @@
+{
+  "id": "event-002",
+  "slug": "belarus-cultural-lecture",
+  "title": "Wykład o kulturze białoruskiej",
+  "type": "lecture",
+  "description": "Rozmowa o białoruskiej historii, języku i współczesnej kulturze dla tajwańskiej publiczności.",
+  "date": "2025-12-26T11:00:00Z",
+  "endDate": "2025-12-26T13:00:00Z",
+  "location": {
+    "name": "National Chung Hsing University",
+    "city": "Taichung",
+    "country": "Tajwan",
+    "link": "https://maps.app.goo.gl/55AkuEwtfbKiAtVH7"
+  },
+  "categories": [
+    "kultura",
+    "Białoruś",
+    "historia"
+  ],
+  "tags": [
+    "Białoruś",
+    "kultura",
+    "wykład"
+  ],
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "Badacz i aktywista",
+      "photo": "/images/speakers/arkhipenka.jpg"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Student Government NCHU",
+      "logo": "/images/partners/bhw.png"
+    }
+  ],
+  "image": "/images/events/event001/main.jpg",
+  "gallery": [
+    "/images/events/event001/photo1.jpg",
+    "/images/events/event001/photo2.jpg"
+  ],
+  "registration_url": "https://eventbrite.com/....",
+  "published": true
+}

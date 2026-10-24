@@ -1,0 +1,39 @@
+{
+  "heroTitle": "An island.\nA shared conversation.",
+  "heroIntro": "Belarus, Taiwan and East Asia. Research, culture and civic dialogue — through the people and experiences that connect us.",
+  "explore": "Explore Taiwan",
+  "aboutTitle": "Understanding one another starts with curiosity.",
+  "aboutText": "We are an independent initiative connecting Belarus, Taiwan and East Asia through research, education and cultural exchange. We explore democratic transformation, historical memory and civic participation, making space for dialogue across borders.",
+  "aboutLink": "About the platform",
+  "atlasTitle": "Discover the island.",
+  "atlasIntro": "From mountain landscapes to everyday culture and the ways a society remembers its past.",
+  "articlesTitle": "Articles & research",
+  "articlesIntro": "Long reads, analysis and different perspectives.",
+  "allArticles": "All articles",
+  "eventsTitle": "Meet. Listen. Exchange.",
+  "eventsIntro": "Lectures, discussions and cultural encounters.",
+  "allEvents": "All events",
+  "newsTitle": "News",
+  "newsIntro": "Updates from the platform: activities, publications and new connections.",
+  "newsEmpty": "The next platform updates will appear here.",
+  "allNews": "All news",
+  "contact": "Get in touch",
+  "pastEvents": "From the archive",
+  "nextEvents": "Coming up",
+  "scroll": "Scroll to discover",
+  "languageNote": "The interactive atlas is available in English, Belarusian, Russian and Traditional Chinese.",
+  "topics": [
+    {
+      "title": "Nature",
+      "text": "Mountain ridges, the Pacific coast and cities shaped by the landscape."
+    },
+    {
+      "title": "Culture",
+      "text": "Languages, temples, tea and the many traditions of Taiwan’s communities."
+    },
+    {
+      "title": "Memory",
+      "text": "How society remembers repression and works through an authoritarian legacy."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "heroTitle": "Wyspa.\nPrzestrzeń dialogu.",
+  "heroIntro": "Białoruś, Tajwan i Azja Wschodnia. Badania, kultura i dialog obywatelski — poprzez ludzi i doświadczenia, które nas łączą.",
+  "explore": "Odkryj Tajwan",
+  "aboutTitle": "Zrozumienie zaczyna się od wzajemnej ciekawości.",
+  "aboutText": "Jesteśmy niezależną inicjatywą łączącą Białoruś, Tajwan i Azję Wschodnią poprzez badania, edukację i wymianę kulturalną. Zajmujemy się demokratyzacją, pamięcią historyczną i aktywnością obywatelską, tworząc przestrzeń dialogu ponad granicami.",
+  "aboutLink": "O platformie",
+  "atlasTitle": "Poznaj wyspę.",
+  "atlasIntro": "Od górskich krajobrazów i kultury codzienności po sposoby rozumienia przeszłości.",
+  "articlesTitle": "Artykuły i badania",
+  "articlesIntro": "Analizy, reportaże i różne perspektywy.",
+  "allArticles": "Wszystkie artykuły",
+  "eventsTitle": "Spotkać się. Słuchać. Rozmawiać.",
+  "eventsIntro": "Wykłady, dyskusje i spotkania kulturalne.",
+  "allEvents": "Wszystkie wydarzenia",
+  "newsTitle": "Aktualności",
+  "newsIntro": "Wiadomości z platformy: działania, publikacje i nowe kontakty.",
+  "newsEmpty": "Tutaj pojawią się kolejne aktualności platformy.",
+  "allNews": "Wszystkie aktualności",
+  "contact": "Skontaktuj się z nami",
+  "pastEvents": "Z archiwum",
+  "nextEvents": "Wkrótce",
+  "scroll": "Przewiń i odkrywaj",
+  "languageNote": "Interaktywny atlas jest dostępny po angielsku, białorusku, rosyjsku i w tradycyjnym języku chińskim.",
+  "topics": [
+    {
+      "title": "Natura",
+      "text": "Górskie grzbiety, Pacyfik i miasta kształtowane przez krajobraz."
+    },
+    {
+      "title": "Kultura",
+      "text": "Języki, świątynie, herbata i różnorodne tradycje społeczności Tajwanu."
+    },
+    {
+      "title": "Pamięć",
+      "text": "Jak społeczeństwo pamięta represje i rozlicza autorytarną przeszłość."
+    }
+  ]
+}

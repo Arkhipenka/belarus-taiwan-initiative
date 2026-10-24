@@ -1,0 +1,45 @@
+{
+  "id": "event-001",
+  "slug": "taiwan-cultural-lecture",
+  "title": "台灣文化講座",
+  "type": "lecture",
+  "description": "一場介紹台灣文化、飲食、歷史與社會的講座。",
+  "date": "2025-02-20T15:30:00Z",
+  "endDate": "2025-02-20T18:30:00Z",
+  "location": {
+    "name": "European Solidarity Centre",
+    "city": "格但斯克",
+    "country": "波蘭",
+    "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
+  },
+  "categories": [
+    "文化",
+    "歷史",
+    "二二八"
+  ],
+  "tags": [
+    "台灣",
+    "歷史",
+    "文化"
+  ],
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "研究者與行動者",
+      "photo": "/images/speakers/arkhipenka.jpg"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Belarusian House Warsaw",
+      "logo": "/images/partners/bhw.png"
+    }
+  ],
+  "image": "/images/events/event001/main.jpg",
+  "gallery": [
+    "/images/events/event001/photo1.jpg",
+    "/images/events/event001/photo2.jpg"
+  ],
+  "registration_url": "https://eventbrite.com/....",
+  "published": true
+}

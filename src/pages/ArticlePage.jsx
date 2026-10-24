@@ -1,4 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import ArticleGallery from '../components/ArticleGallery';
@@ -159,7 +160,7 @@ function ArticlePage() {
         <div
           key={index}
           className="article-content-block"
-          dangerouslySetInnerHTML={{ __html: block }}
+          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(block) }}
         />
       );
     }

@@ -11,6 +11,7 @@
     "preview": "npm run build && wrangler dev"
   },
   "dependencies": {
+    "dompurify": "^3.4.17",
     "i18next": "^25.8.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

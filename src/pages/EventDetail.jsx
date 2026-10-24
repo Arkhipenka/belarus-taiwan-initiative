@@ -1,4 +1,5 @@
 import { useParams } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useMemo, useState } from 'react';
 import { getEventBySlug } from '../data/materials';
@@ -90,6 +91,7 @@ function EventDetail() {
       )}
 
       <p className="event-description">{event.description}</p>
+      {event.body && <div className="article-body" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(event.body) }} />}
 
       {event.speakers && event.speakers.length > 0 && (
         <div className="event-speakers">

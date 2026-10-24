@@ -1,0 +1,45 @@
+{
+  "id": "event-001",
+  "slug": "taiwan-cultural-lecture",
+  "title": "Wykład o kulturze Tajwanu",
+  "type": "lecture",
+  "description": "Wykład o kulturze, kuchni, historii i społeczeństwie Tajwanu.",
+  "date": "2025-02-20T15:30:00Z",
+  "endDate": "2025-02-20T18:30:00Z",
+  "location": {
+    "name": "European Solidarity Centre",
+    "city": "Gdańsk",
+    "country": "Polska",
+    "link": "https://maps.app.goo.gl/MCdL4f4Y8EaVBAXG7"
+  },
+  "categories": [
+    "kultura",
+    "historia",
+    "28 lutego"
+  ],
+  "tags": [
+    "Tajwan",
+    "historia",
+    "kultura"
+  ],
+  "speakers": [
+    {
+      "name": "Andrei Arkhipenka",
+      "role": "Badacz i aktywista",
+      "photo": "/images/speakers/arkhipenka.jpg"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Belarusian House Warsaw",
+      "logo": "/images/partners/bhw.png"
+    }
+  ],
+  "image": "/images/events/event001/main.jpg",
+  "gallery": [
+    "/images/events/event001/photo1.jpg",
+    "/images/events/event001/photo2.jpg"
+  ],
+  "registration_url": "https://eventbrite.com/....",
+  "published": true
+}

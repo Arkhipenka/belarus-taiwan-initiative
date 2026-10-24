@@ -1,0 +1,45 @@
+{
+  "id": "event-002",
+  "slug": "belarus-cultural-lecture",
+  "title": "Лекция о белорусской культуре",
+  "type": "lecture",
+  "description": "Разговор о белорусской истории, языке и современной культуре для тайваньской аудитории.",
+  "date": "2025-12-26T11:00:00Z",
+  "endDate": "2025-12-26T13:00:00Z",
+  "location": {
+    "name": "National Chung Hsing University",
+    "city": "Тайчжун",
+    "country": "Тайвань",
+    "link": "https://maps.app.goo.gl/55AkuEwtfbKiAtVH7"
+  },
+  "categories": [
+    "культура",
+    "Беларусь",
+    "история"
+  ],
+  "tags": [
+    "Беларусь",
+    "культура",
+    "лекция"
+  ],
+  "speakers": [
+    {
+      "name": "Андрей Архипенко",
+      "role": "Исследователь и активист",
+      "photo": "/images/speakers/arkhipenka.jpg"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Student Government NCHU",
+      "logo": "/images/partners/bhw.png"
+    }
+  ],
+  "image": "/images/events/event001/main.jpg",
+  "gallery": [
+    "/images/events/event001/photo1.jpg",
+    "/images/events/event001/photo2.jpg"
+  ],
+  "registration_url": "https://eventbrite.com/....",
+  "published": true
+}

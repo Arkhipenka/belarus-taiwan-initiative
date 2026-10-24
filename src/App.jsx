@@ -2,6 +2,7 @@ import TaiwanExplore from './pages/TaiwanExplore'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LanguageLayout from './layouts/LanguageLayout'
 import Home from './pages/Home'
+import News from './pages/News'
 import About from './pages/About'
 import Articles from './pages/Articles'
 import Footer from './components/Footer'
@@ -36,6 +37,8 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="taiwan" element={<TaiwanExplore />} />
           <Route path="articles" element={<Articles />} />
+          <Route path="news" element={<News />} />
+          <Route path="news/:slug" element={<ArticlePage />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="articles/:slug" element={<ArticlePage />} />
           <Route path="events" element={<Events />} />
