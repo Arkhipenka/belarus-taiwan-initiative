@@ -5,9 +5,9 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { getArticles } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
 import { getBlockText, getMaterialExcerpt } from '../utils/text';
-import { formatLongDate, formatShortDate } from '../utils/date';
+import { formatLongDate } from '../utils/date';
 
-function ArticleIndexCard({ article, lang, variant = 'grid' }) {
+function ArticleIndexCard({ article, lang }) {
   const categoriesText = Array.isArray(article.categories)
     ? article.categories.join(' / ')
     : '';
@@ -18,11 +18,11 @@ function ArticleIndexCard({ article, lang, variant = 'grid' }) {
   return (
     <Link
       to={`/${lang}/articles/${article.slug}`}
-      className={`articles-index-card articles-index-card-${variant}`}
+      className="hub-material articles-material"
     >
-      <img src={getAssetUrl(article.image)} alt={article.title} />
-      <div className="articles-index-card-body">
-        <div className="articles-index-meta">
+      {article.image && <div className="hub-material-image"><img src={getAssetUrl(article.image)} alt="" loading="lazy" /></div>}
+      <div className="articles-material-body">
+        <div className="hub-material-meta">
           <span>{categoriesText}</span>
           <span>{formattedDate}</span>
         </div>
@@ -76,14 +76,6 @@ function Articles() {
   }, [allArticles, category, search]);
 
   const visibleArticles = filteredArticles.slice(0, visibleCount);
-  const hasEditorialLayout = visibleArticles.length >= 3;
-  const leadArticle = hasEditorialLayout ? visibleArticles[0] : null;
-  const sideArticles = hasEditorialLayout ? visibleArticles.slice(1, 3) : [];
-  const secondaryArticles = hasEditorialLayout ? visibleArticles.slice(3) : visibleArticles;
-  const latestArticles = allArticles
-    .filter(article => article.slug !== leadArticle?.slug)
-    .slice(0, 5);
-
   const applySearch = () => {
     const nextSearch = searchInput.trim();
     setSearch(nextSearch);
@@ -97,14 +89,15 @@ function Articles() {
   };
 
   return (
-    <div className="articles-page">
+    <div className="articles-page home-hub">
       <PageIntro title={t('articles.title')} description={t('articles.subtitle')} />
 
       <section className="articles-controls content-filter-panel">
         <div className="content-filter-top">
           <div className="articles-search-box">
             <input
-              type="text"
+              type="search"
+              aria-label={t('articles.search')}
               placeholder={t('articles.search')}
               value={searchInput}
               onChange={(event) => setSearchInput(event.target.value)}
@@ -129,6 +122,7 @@ function Articles() {
               <button
                 key={cat}
                 className={`category-btn ${cat === category ? 'active' : ''}`}
+                aria-pressed={cat === category}
                 onClick={() => selectCategory(cat)}
               >
                 {t(`articles.categories.${cat}`, cat)}
@@ -138,68 +132,16 @@ function Articles() {
         </div>
       </section>
 
-      <div className="articles-index-shell">
-        <main className="articles-index-main">
-          {hasEditorialLayout && leadArticle && (
-            <section className="articles-index-featured">
-              <ArticleIndexCard
-                article={leadArticle}
-                lang={lang}
-                variant="lead"
-              />
-
-              {sideArticles.length > 0 && (
-                <div className="articles-index-side">
-                  {sideArticles.map(article => (
-                    <ArticleIndexCard
-                      key={article.slug || article.id}
-                      article={article}
-                      lang={lang}
-                      variant="side"
-                    />
-                  ))}
-                </div>
-              )}
-            </section>
-          )}
-
-          {secondaryArticles.length > 0 && (
-            <section className="articles-index-grid">
-              {secondaryArticles.map(article => (
-                <ArticleIndexCard
-                  key={article.slug || article.id}
-                  article={article}
-                  lang={lang}
-                  variant="grid"
-                />
-              ))}
-            </section>
-          )}
-        </main>
-
-        {latestArticles.length > 0 && (
-          <aside className="articles-index-sidebar">
-            <h2>{t('articles.latestTitle')}</h2>
-            <div className="articles-latest-list">
-              {latestArticles.map(article => (
-                <Link
-                  key={article.slug || article.id}
-                  to={`/${lang}/articles/${article.slug}`}
-                  className="articles-latest-link"
-                >
-                  <span>{formatShortDate(article.date, lang)}</span>
-                  <strong>{article.title}</strong>
-                </Link>
-              ))}
-            </div>
-          </aside>
-        )}
-      </div>
+      <section className="hub-section articles-results" aria-live="polite">
+        <div className="hub-materials articles-materials">
+          {visibleArticles.map(article => (
+            <ArticleIndexCard key={article.slug || article.id} article={article} lang={lang} />
+          ))}
+        </div>
 
       {visibleCount < filteredArticles.length && (
         <button
           className="search-button"
-          style={{ marginBottom: '40px' }}
           onClick={() => setVisibleCount(prev => prev + 6)}
         >
           {t('articles.showMore')}
@@ -209,6 +151,7 @@ function Articles() {
       {filteredArticles.length === 0 && (
         <p className="no-results">{t('articles.noResults')}</p>
       )}
+      </section>
     </div>
   );
 }
