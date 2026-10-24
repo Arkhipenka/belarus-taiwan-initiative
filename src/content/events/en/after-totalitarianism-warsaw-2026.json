@@ -7,8 +7,8 @@
   "date": "2026-10-08",
   "endDate": "2026-10-09",
   "allDay": true,
-  "description": "An international academic and practical conference at the Free Belarus Museum, 8–9 October 2026. Andrei Arkhipenka represented the platform with a presentation on Taiwan’s memory culture.",
-  "body": "<p>On 8–9 October 2026, Warsaw hosted the international conference “After Totalitarianism: Museum, Memory and the Belarusian Perspective”, organised by the Free Belarus Museum.</p><p>Belarus–Taiwan & East Asia Platform was represented by its founder and researcher Andrei Arkhipenka. His presentation focused on Taiwan’s memory culture.</p><h2>Sources</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Organisers’ announcement</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Day-one report</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">Programme and participants</a></li></ul>",
+  "description": "A public international conference at the Free Belarus Museum, 8–9 October 2026. Andrei Arkhipenka took part in one of its panels with a presentation on Taiwan’s memory culture.",
+  "body": "<p>On 8–9 October 2026, Warsaw hosted the international conference “After Totalitarianism: Museum, Memory and the Belarusian Perspective”, organised by the Free Belarus Museum.</p><p>Andrei Arkhipenka, founder of Belarus–Taiwan & East Asia Platform and a researcher, took part in one of the panels at this public conference. His presentation focused on Taiwan’s memory culture.</p><h2>Sources</h2><ul><li><a href=\"https://freebelarus.museum/news/paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Organisers’ announcement</a></li><li><a href=\"https://freebelarus.museum/news/pershy-dzen-mizhnarodnay-kanferencyi-paslya-tatalitaryzmu-muzey-pamyac-i-belaruskaya-perspektyva\" target=\"_blank\" rel=\"noopener noreferrer\">Day-one report</a></li><li><a href=\"https://budzma.org/news/paslya-tatalitaryzmu.html\" target=\"_blank\" rel=\"noopener noreferrer\">Programme and participants</a></li></ul>",
   "location": {
     "name": "Free Belarus Museum",
     "city": "Warsaw",
@@ -27,12 +27,6 @@
     "historical memory",
     "Taiwan",
     "Belarus"
-  ],
-  "speakers": [
-    {
-      "name": "Andrei Arkhipenka",
-      "role": "Platform founder and researcher"
-    }
   ],
   "image": "/images/events/warsaw-memory-2026/conference-poster.png",
   "gallery": [
