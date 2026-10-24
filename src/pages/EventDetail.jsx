@@ -93,7 +93,7 @@ function EventDetail() {
       {event.body && <div className="article-body" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(event.body) }} />}
 
       <MaterialDownloads items={event.attachments}/>
-      {relatedNews && <RelatedMaterial to={'/'+lang+'/news/'+relatedNews.slug} label={detail.report} title={relatedNews.title} image={getAssetUrl(relatedNews.image)}/>}
+      {relatedNews && <RelatedMaterial to={'/'+lang+'/news/'+relatedNews.slug} label={detail.report} title={relatedNews.title}/>}
 
       {event.speakers && event.speakers.length > 0 && (
         <div className="event-speakers">
