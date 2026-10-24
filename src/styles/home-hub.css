@@ -133,3 +133,9 @@
 #root #publications .hub-materials-single p{display:block;overflow:visible;margin:0;font-size:16px;line-height:1.75}
 .hub-article-read{display:inline-flex;align-items:center;gap:24px;align-self:flex-start;margin-top:26px;padding-bottom:7px;border-bottom:1px solid var(--platform-red);color:var(--platform-red);font-size:15px}
 @media(max-width:700px){#root #publications{padding-block:32px}#root #publications .hub-materials-single .hub-material{display:block}#root #publications .hub-article-copy{padding:22px 0 0}#root #publications .hub-materials-single h3{font-size:29px}#root #publications .hub-materials-single .hub-material-meta{margin-bottom:14px}}
+
+/* Bound the image to its grid track even when translated copy is taller. */
+#root #publications .hub-materials-single .hub-material-image{width:100%;min-width:0;max-width:100%;height:auto;align-self:center;overflow:hidden;box-sizing:border-box}
+#root #publications .hub-materials-single .hub-material-image img{width:100%;max-width:100%;min-width:0;height:100%;object-fit:cover}
+#root #publications .hub-article-copy{width:100%;max-width:100%;min-width:0;overflow-wrap:anywhere;box-sizing:border-box}
+@media(max-width:950px){#root #publications .hub-materials-single .hub-material{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}#root #publications .hub-article-copy{padding:0}#root #publications .hub-materials-single h3{font-size:clamp(27px,4vw,36px)}#root #publications .hub-materials-single .hub-material-image{aspect-ratio:1.5}}
