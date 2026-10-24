@@ -8,5 +8,5 @@ function Illustration({ index }) {
 
 export default function BelarusCulture({ lang }) {
  const [kicker,title,intro,titles,texts] = getBelarusCulture(lang);
- return <section className="belarus-culture"><div className="belarus-culture-heading"><div><p className="hub-kicker">01 — {kicker}</p><h2>{title}</h2></div><p>{intro}</p></div><div className="belarus-culture-grid">{titles.map((heading,index)=><article key={heading}><div className="belarus-culture-art"><Illustration index={index}/></div><p className="hub-kicker">0{index+1} / {heading}</p><h3>{heading}</h3><p>{texts[index]}</p></article>)}</div></section>;
+ return <section className="belarus-culture"><div className="belarus-culture-heading"><div><p className="hub-kicker">{kicker}</p><h2>{title}</h2></div><p>{intro}</p></div><div className="belarus-culture-grid">{titles.map((heading,index)=><article key={heading}><div className="belarus-culture-art"><Illustration index={index}/></div><p className="hub-kicker">0{index+1} / {heading}</p><h3>{heading}</h3><p>{texts[index]}</p></article>)}</div></section>;
 }

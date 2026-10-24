@@ -31,3 +31,14 @@ if (window.parent !== window) {
   document.fonts.ready.then(reportHeight);
   reportHeight();
 }
+
+// Culture is a subsection of the country explorer, not page section 01.
+function removeCultureSectionNumber(){
+ const eyebrow=document.querySelector('#island-culture .section-top .eyebrow');
+ if(!eyebrow)return;
+ const clean=eyebrow.textContent.replace(/^\s*01\s*[—–-]\s*/, '');
+ if(clean!==eyebrow.textContent)eyebrow.textContent=clean;
+}
+removeCultureSectionNumber();
+const cultureEyebrow=document.querySelector('#island-culture .section-top .eyebrow');
+if(cultureEyebrow)new MutationObserver(removeCultureSectionNumber).observe(cultureEyebrow,{childList:true,characterData:true,subtree:true});
