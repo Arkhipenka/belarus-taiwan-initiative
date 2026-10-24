@@ -59,3 +59,4 @@ html[data-view=explore] .taiwan-page footer{background:var(--platform-paper)}
 #root :is(.hub-language-note,.taiwan-language-note){padding-inline:var(--platform-page-inset)}
 .taiwan-page .tw-hero,.taiwan-page main>.section{width:100%;max-width:none;box-sizing:border-box;margin-inline:0;padding-inline:var(--platform-page-inset)}
 html[data-view=explore] .taiwan-page footer{padding-inline:var(--platform-page-inset)}
+#root .platform-route .donate-options-single{grid-template-columns:minmax(0,700px)}

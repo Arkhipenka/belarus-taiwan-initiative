@@ -60,6 +60,7 @@ function Footer() {
             <ul>
               <li><a href="mailto:belarus.taiwan.platform@gmail.com">belarus.taiwan.platform@gmail.com</a></li>
               <li><Link to={`/${lang}/donate`}>{t('nav.donate')}</Link></li>
+              <li><a href="https://www.patreon.com/c/u113967523" target="_blank" rel="noopener noreferrer">Patreon</a></li>
             </ul>
           </div>
         </div>
