@@ -1,0 +1,23 @@
+/* Compact footer, using the site's existing page gutters. */
+#root .compact-footer-wrap{background:#202327;border-top:1px solid #ffffff20}
+#root .site-footer.compact-footer{display:block;min-height:0;padding-top:30px;padding-bottom:18px;max-width:none;width:100%;margin:0;color:#f5f2eb;font-family:var(--platform-font)}
+#root .compact-footer-main{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:0;margin:0}
+#root .compact-footer-brand{display:flex;align-items:center;gap:24px;min-width:0}
+#root .compact-footer-brand>a{display:block;flex:0 0 auto}
+#root .compact-footer-brand img{display:block;width:92px;height:auto;filter:grayscale(1) invert(1);mix-blend-mode:screen}
+#root .compact-footer-brand p{margin:0;max-width:220px;font-size:13px;line-height:1.6;color:#c1c3c5;text-align:left}
+#root .compact-footer-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:12px 24px;margin:0;padding:0}
+#root .compact-footer :is(a,button){font-family:inherit;text-decoration:none;transition:color .2s;color:#f5f2eb}
+#root .compact-footer-nav a{font-size:14px;line-height:1.5;padding-block:8px}
+#root .compact-footer :is(a,button):hover{color:#e8a4a8}
+#root .compact-footer :is(a,button):focus-visible{outline:2px solid #e8a4a8;outline-offset:5px}
+#root .compact-footer-connect{display:flex;justify-content:space-between;align-items:center;gap:16px 30px;margin:22px 0 0;padding:0 0 22px;border-bottom:1px solid #ffffff26}
+#root .compact-footer-email{font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+#root .compact-footer-support{display:inline-flex;gap:20px;align-items:center;font-size:13px;line-height:1.6}
+#root .compact-footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0;padding-top:15px}
+#root .compact-footer-bottom p{margin:0;font-size:11px;line-height:1.6;color:#aeb1b4;text-align:left}
+#root .compact-footer-bottom button{display:inline-flex;gap:12px;align-items:center;border:0;background:none;padding:5px 0;font-size:12px;white-space:nowrap;cursor:pointer}
+@media(max-width:1000px){#root .compact-footer-main{align-items:flex-start}#root .compact-footer-brand{align-items:flex-start;flex-direction:column;gap:12px}#root .compact-footer-nav{max-width:55%;gap:10px 20px}}
+@media(max-width:600px){#root .site-footer.compact-footer{padding-top:26px;padding-bottom:18px}#root .compact-footer-main{display:block}#root .compact-footer-brand{flex-direction:row;align-items:center;gap:20px}#root .compact-footer-brand img{width:82px}#root .compact-footer-brand p{font-size:12px}#root .compact-footer-nav{max-width:none;justify-content:flex-start;gap:6px 22px;margin-top:20px}#root .compact-footer-nav a{font-size:13px}#root .compact-footer-connect{align-items:flex-start;flex-direction:column;gap:12px;margin-top:16px;padding-bottom:18px}#root .compact-footer-email{font-size:13px}#root .compact-footer-bottom{align-items:flex-start}#root .compact-footer-bottom p{max-width:75%;font-size:10px}#root .compact-footer-bottom p span{display:block}}
+
+#root .compact-footer-wrap::before,#root .compact-footer-wrap::after,#root .compact-footer::before,#root .compact-footer::after{display:none}
