@@ -10,14 +10,7 @@ import { detailLabels } from '../data/detail-labels';
 import { getArticleBySlug, getArticles, getNews, getEventBySlug } from '../data/materials';
 import { getAssetUrl } from '../utils/assets';
 import { formatLongDate } from '../utils/date';
-import {
-  fetchArticleReactions,
-  readSelectedReaction,
-  readLocalReactions,
-  toggleArticleReaction,
-  toggleLocalReaction,
-  writeSelectedReaction
-} from '../utils/reactions';
+
 
 const articleLabels = {
   by: {
@@ -96,66 +89,15 @@ function ArticlePage() {
   }, [lang, slug]);
 
   const [views, setViews] = useState(0);
-  const [reactions, setReactions] = useState({
-    like: 0,
-    love: 0,
-    fire: 0
-  });
-  const [selectedReaction, setSelectedReaction] = useState(null);
-  const [reactionStatus, setReactionStatus] = useState('idle');
-
   useEffect(() => {
     if (!article) return;
-
     const viewKey = `views-${lang}-${slug}`;
     const storedViews = Number.parseInt(localStorage.getItem(viewKey), 10);
     const newViews = Number.isNaN(storedViews) ? 1 : storedViews + 1;
-    const storedReactions = readLocalReactions(slug, lang);
-
     localStorage.setItem(viewKey, String(newViews));
-    const timer = window.setTimeout(() => {
-      setViews(newViews);
-      setReactions(storedReactions);
-      setSelectedReaction(readSelectedReaction(slug));
-    }, 0);
-
-    fetchArticleReactions(slug)
-      .then(({ reactions: serverReactions, selected }) => {
-        setReactions(serverReactions);
-        setSelectedReaction(selected);
-        setReactionStatus('idle');
-      })
-      .catch(() => {
-        setReactionStatus('offline');
-      });
-
+    const timer = window.setTimeout(() => setViews(newViews), 0);
     return () => window.clearTimeout(timer);
   }, [article, lang, slug]);
-
-  async function addReaction(type) {
-    if (reactionStatus === 'saving') return;
-
-    const previousReactions = reactions;
-    const previousSelectedReaction = selectedReaction;
-    const optimistic = toggleLocalReaction(reactions, selectedReaction, type);
-
-    setReactions(optimistic.reactions);
-    setSelectedReaction(optimistic.selected);
-    setReactionStatus('saving');
-    writeSelectedReaction(slug, optimistic.selected);
-
-    try {
-      const result = await toggleArticleReaction(slug, type);
-      setReactions(result.reactions);
-      setSelectedReaction(result.selected);
-      setReactionStatus(result.action);
-    } catch {
-      setReactions(previousReactions);
-      setSelectedReaction(previousSelectedReaction);
-      writeSelectedReaction(slug, previousSelectedReaction);
-      setReactionStatus('offline');
-    }
-  }
 
   function renderContentBlock(block, index) {
     if (typeof block === 'string') {
@@ -295,38 +237,6 @@ function ArticlePage() {
       <ArticleGallery gallery={article.gallery} />
 
       <footer className="article-footer">
-        <div className="article-reactions">
-          <button
-            className={`reaction-button reaction-like ${selectedReaction === 'like' ? 'is-active' : ''}`}
-            onClick={() => addReaction('like')}
-            aria-label="Like"
-            aria-pressed={selectedReaction === 'like'}
-          >
-            <span className="reaction-icon" aria-hidden="true">+</span>
-            <span className="reaction-count">{reactions.like}</span>
-          </button>
-
-          <button
-            className={`reaction-button reaction-love ${selectedReaction === 'love' ? 'is-active' : ''}`}
-            onClick={() => addReaction('love')}
-            aria-label="Love"
-            aria-pressed={selectedReaction === 'love'}
-          >
-            <span className="reaction-icon" aria-hidden="true">{'\u2665'}</span>
-            <span className="reaction-count">{reactions.love}</span>
-          </button>
-
-          <button
-            className={`reaction-button reaction-fire ${selectedReaction === 'fire' ? 'is-active' : ''}`}
-            onClick={() => addReaction('fire')}
-            aria-label="Fire"
-            aria-pressed={selectedReaction === 'fire'}
-          >
-            <span className="reaction-icon" aria-hidden="true">*</span>
-            <span className="reaction-count">{reactions.fire}</span>
-          </button>
-        </div>
-
         {article.source && article.source.url && (
           <p className="article-source">
             Source:{' '}
