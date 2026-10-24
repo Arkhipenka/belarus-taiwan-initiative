@@ -29,30 +29,34 @@ function book(){const g=world('adamovich');g.userData.leaves=[];return g}
 function code(){const g=world('frontend');const panels=[];for(let i=0;i<3;i++){const panel=new THREE.Group();g.add(panel);box(2.7,1.8,.075,i===1?materials.green:materials.ink,panel);const edge=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(2.7,1.8,.08)),new THREE.LineBasicMaterial({color:0x99b6a0,transparent:true,opacity:.5}));panel.add(edge);for(let j=0;j<3;j++){const dot=mesh(new THREE.SphereGeometry(.028,8,8),j===0?materials.copper:materials.ivory,panel);dot.position.set(-1.1+j*.14,.65,.06)}box(2.3,.013,.008,materials.ivory,panel,0,.45,.06);if(i===1){box(.68,.85,.025,materials.copper,panel,-.73,-.1,.07);for(let j=0;j<4;j++)box(1.05-j*.12,.025,.012,materials.ivory,panel,.4,.16-j*.18,.08)}else{for(let j=0;j<4;j++)box(1.8-j*.25,.018,.008,materials.ivory,panel,-.1,.2-j*.22,.06)}panel.position.set((i-1)*.63,(i-1)*.28,(i-1)*-.7);panels.push(panel)}g.userData.panels=panels;g.rotation.set(.1,-.48,-.12);return g}
 function culture(){
 const g=world('culture');
-// Procedural rice-paper grain and pleats keep the light inside the lantern body.
-const paperCanvas=document.createElement('canvas');paperCanvas.width=512;paperCanvas.height=512;
-const ctx=paperCanvas.getContext('2d');ctx.fillStyle='#a82d25';ctx.fillRect(0,0,512,512);
+const brass=new THREE.MeshStandardMaterial({color:0xd1a52e,metalness:.78,roughness:.3});
+const cord=new THREE.MeshStandardMaterial({color:0x92261b,roughness:1});
 let seed=42;const random=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};
-for(let i=0;i<18000;i++){ctx.fillStyle=random()>.5?'rgba(255,225,164,.07)':'rgba(45,10,5,.08)';ctx.fillRect(random()*512,random()*512,random()*2+.3,random()*5+.4)}
-for(let y=0;y<512;y+=4){ctx.fillStyle=y%8?'rgba(255,198,119,.1)':'rgba(55,9,5,.12)';ctx.fillRect(0,y,512,1)}
-const texture=new THREE.CanvasTexture(paperCanvas);texture.colorSpace=THREE.SRGBColorSpace;
-const paper=new THREE.MeshPhysicalMaterial({map:texture,bumpMap:texture,bumpScale:.012,color:0xcf5b44,roughness:.9,metalness:0,side:THREE.DoubleSide,emissive:0xf07528,emissiveIntensity:.16});
-const darkWood=new THREE.MeshStandardMaterial({color:0x44221b,roughness:.76});
-const brass=new THREE.MeshStandardMaterial({color:0x926332,metalness:.65,roughness:.48});
-const cord=new THREE.MeshStandardMaterial({color:0x7c3021,roughness:1});
-for(let i=0;i<3;i++){
+for(let i=0;i<2;i++){
  const lantern=new THREE.Group();g.add(lantern);
- const points=[];for(let j=0;j<=80;j++){const t=j/80;points.push(new THREE.Vector2(.17+.47*Math.pow(Math.sin(Math.PI*t),.64),-.76+t*1.52));}
- const geo=new THREE.LatheGeometry(points,128);const attr=geo.attributes.position;
- for(let j=0;j<attr.count;j++){const x=attr.getX(j),z=attr.getZ(j),y=attr.getY(j);const a=Math.atan2(x,z);const pleat=1+.012*Math.cos(a*32)+.003*Math.sin(y*190);attr.setXYZ(j,x*pleat,y,z*pleat)}geo.computeVertexNormals();
- mesh(geo,paper,lantern);
- for(const y of [-.77,.77]){const cap=mesh(new THREE.CylinderGeometry(.19,.19,.09,32),darkWood,lantern);cap.position.y=y;const rim=mesh(new THREE.TorusGeometry(.19,.012,8,48),brass,lantern);rim.rotation.x=Math.PI/2;rim.position.y=y+(y>0?.04:-.04);}
- const topCord=mesh(new THREE.CylinderGeometry(.008,.008,.8,8),cord,lantern);topCord.position.y=1.2;
- const knot=mesh(new THREE.SphereGeometry(.045,12,10),brass,lantern);knot.position.y=-.87;
- for(let strand=0;strand<22;strand++){const a=strand/22*Math.PI*2;const thread=mesh(new THREE.CylinderGeometry(.003,.0015,.38+random()*.05,4),cord,lantern);thread.position.set(Math.cos(a)*.035,-1.09,Math.sin(a)*.035);thread.rotation.z=Math.cos(a)*.055;}
- lantern.position.set((i-1)*1.12,i===1?.62:-.43,i===1?.25:-.45);lantern.rotation.y=i*.6;
+ const c=document.createElement('canvas');c.width=1024;c.height=1024;const ctx=c.getContext('2d');
+ const glow=ctx.createLinearGradient(0,0,0,1024);glow.addColorStop(0,'#b70e08');glow.addColorStop(.2,'#ed2e0b');glow.addColorStop(.5,'#ff7020');glow.addColorStop(.8,'#ed2e0b');glow.addColorStop(1,'#b70e08');ctx.fillStyle=glow;ctx.fillRect(0,0,1024,1024);
+ for(let j=0;j<32000;j++){ctx.fillStyle=random()>.5?'rgba(255,225,164,.07)':'rgba(45,10,5,.06)';ctx.fillRect(random()*1024,random()*1024,random()*3+.3,random()*5+.4)}
+ for(let y=0;y<1024;y+=32){ctx.fillStyle='rgba(98,15,4,.4)';ctx.fillRect(0,y,1024,3);ctx.fillStyle='rgba(255,192,90,.3)';ctx.fillRect(0,y+3,1024,2)}
+ for(let x=0;x<1024;x+=128){const stripe=ctx.createLinearGradient(x-12,0,x+12,0);stripe.addColorStop(0,'rgba(115,8,3,0)');stripe.addColorStop(.5,'rgba(115,8,3,.24)');stripe.addColorStop(1,'rgba(115,8,3,0)');ctx.fillStyle=stripe;ctx.fillRect(x-12,0,24,1024)}
+ ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#25150e';ctx.font='bold 120px KaiTi, DFKai-SB, BiauKai, serif';
+ const words=i===0?'花好月圓':'福滿中秋';for(let j=0;j<4;j++){ctx.save();ctx.translate(512+(j%2?7:-5),260+j*154);ctx.rotate((j%2?.035:-.025));ctx.fillText(words[j],0,0);ctx.restore();}
+ ctx.strokeStyle='#e9b458';ctx.lineWidth=4;ctx.strokeRect(480,835,64,62);ctx.font='28px KaiTi, serif';ctx.fillStyle='#f4ca71';ctx.fillText('平安',512,867);
+ const texture=new THREE.CanvasTexture(c);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=renderer.capabilities.getMaxAnisotropy();
+ const paper=new THREE.MeshPhysicalMaterial({map:texture,bumpMap:texture,bumpScale:.008,color:0xffffff,roughness:.84,metalness:0,side:THREE.DoubleSide,emissiveMap:texture,emissive:0xffbc55,emissiveIntensity:.65});
+ const tall=i===1,half=tall?1.02:.79,radius=tall?.64:.76,neck=.23;
+ const profile=t=>neck+(radius-neck)*Math.pow(Math.sin(Math.PI*t),tall?.28:.66);
+ const points=[];for(let j=0;j<=128;j++){const t=j/128;points.push(new THREE.Vector2(profile(t)*(1+.004*Math.cos(t*Math.PI*64)),-half+t*half*2));}
+ const geo=new THREE.LatheGeometry(points,128);geo.rotateY(Math.PI);mesh(geo,paper,lantern);
+ for(const y of [-half-.025,half+.025]){const cap=mesh(new THREE.CylinderGeometry(neck+.02,neck+.02,.115,48),brass,lantern);cap.position.y=y;}
+ const handle=mesh(new THREE.TorusGeometry(.23,.014,8,64,Math.PI),brass,lantern);handle.position.y=half+.09;
+ const hangingCord=mesh(new THREE.CylinderGeometry(.007,.007,.48,8),cord,lantern);hangingCord.position.y=half+.56;
+ const knot=mesh(new THREE.SphereGeometry(.034,12,10),brass,lantern);knot.position.y=-half-.13;
+ const pendant=mesh(new THREE.CylinderGeometry(.009,.009,.23,8),cord,lantern);pendant.position.y=-half-.25;
+ for(let strand=0;strand<28;strand++){const a=strand/28*Math.PI*2;const thread=mesh(new THREE.CylinderGeometry(.003,.001,.28+random()*.03,4),cord,lantern);thread.position.set(Math.cos(a)*.026,-half-.49,Math.sin(a)*.026);thread.rotation.z=Math.cos(a)*.045;}
+ lantern.position.set(i===0?-.87:.72,i===0?-.28:.33,i===0?.1:-.1);lantern.rotation.y=i===0?.08:-.1;
 }
-g.rotation.y=-.2;return g}
+g.rotation.y=-.05;return g}
 function memory(){const g=world('memory');for(let i=0;i<5;i++){const sheet=new THREE.Group();g.add(sheet);box(1.8,2.5,.055,materials.paper,sheet);for(let j=0;j<9;j++)box(j===0?1.1:1.3-(j%3)*.18,.018,.01,j===0?materials.copper:materials.ink,sheet,-.12,.8-j*.18,.04);sheet.position.set((i-2)*.34,(i-2)*.12,-i*.3);sheet.rotation.y=(i-2)*.16;}g.rotation.set(.08,-.22,-.08);return g}
 if(embedHero){island();culture();memory()}else if(isHome){identity();island();book();code()}else if(initial==='taiwan')island();else if(initial==='adamovich')book();else code();
 const orbit=new THREE.Group();scene.add(orbit);for(let i=0;i<3;i++){const ring=new THREE.Mesh(new THREE.TorusGeometry(2.65+i*.38,.006,6,160),new THREE.MeshBasicMaterial({color:0xacc3ac,transparent:true,opacity:.13}));ring.rotation.set(.8+i*.3,.5+i*.2,0);orbit.add(ring)}
