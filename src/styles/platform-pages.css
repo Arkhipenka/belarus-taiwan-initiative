@@ -186,3 +186,19 @@
 #root .platform-route .event-page .material-event-cover .event-main-image{width:100%;max-height:580px;margin:0;object-position:left center}
 #root .platform-route .event-page :is(.event-description,.article-body){margin-left:0;text-align:left}
 @media(max-width:700px){#root .platform-route .event-page .material-detail-header h1{font-size:34px;text-wrap:wrap}#root .platform-route .event-page .material-detail-meta{flex-direction:column;gap:10px}#root .platform-route .event-page .material-detail-header{padding-bottom:22px;margin-bottom:24px}}
+
+/* Article and report detail pages share the event page's editorial rhythm. */
+#root .platform-route .article-page .material-detail-header{display:block;position:static;min-height:0;height:auto;max-width:980px;margin:0 0 28px;padding:0 0 26px;text-align:left;background:transparent;box-shadow:none;border:0;border-bottom:1px solid var(--platform-line)}
+#root .platform-route .article-page .material-back-link{color:var(--platform-muted);font-size:13px;margin:0 0 24px}
+#root .platform-route .article-page .material-detail-header h1{font-size:clamp(32px,3.5vw,52px);line-height:1.13;letter-spacing:-.035em;font-weight:600;max-width:980px;margin:0 0 24px;text-align:left;text-wrap:balance}
+#root .platform-route .article-page .article-meta-stack{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;align-items:baseline;gap:10px 24px;margin:0;padding:0;color:var(--platform-muted);font-size:13px;line-height:1.7;font-weight:400;text-transform:none}
+#root .platform-route .article-page .article-meta-stack>span::after{display:none}
+#root .platform-route .article-page .article-author{font-weight:500;margin-left:4px;color:var(--platform-ink);text-decoration:underline;text-underline-offset:3px}
+#root .platform-route .article-page .article-meta-stack .article-views{display:none}
+#root .platform-route .article-page .article-cover-block{width:100%;max-width:820px;margin:0 0 28px;padding:0;border:0;float:none}
+#root .platform-route .article-page .article-cover-frame{width:100%;height:auto;aspect-ratio:auto;max-width:100%;max-height:none;margin:0;border-radius:0;overflow:hidden}
+#root .platform-route .article-page .article-main-image{display:block;position:static;width:100%;height:auto;max-height:none;object-fit:contain;transform:none;border-radius:0}
+#root .platform-route .article-page :is(.article-standfirst,.article-lead,.article-body,.material-downloads,.material-related-link,.article-footer){width:100%;max-width:820px;margin-left:0;margin-right:0;text-align:left}
+#root .platform-route .article-page .article-standfirst{font-size:21px;line-height:1.6;margin-top:0;margin-bottom:26px}
+#root .platform-route .article-page .article-body{font-size:18px;line-height:1.85}
+@media(max-width:700px){#root .platform-route .article-page .material-detail-header h1{font-size:34px;text-wrap:wrap}#root .platform-route .article-page .article-meta-stack{gap:8px 18px;font-size:12px}#root .platform-route .article-page .article-standfirst{font-size:18px}}
