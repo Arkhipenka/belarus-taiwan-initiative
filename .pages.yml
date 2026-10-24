@@ -146,8 +146,28 @@
                   "name": "text",
                   "label": "text",
                   "type": "text"
+                },
+                {
+                  "name": "headline",
+                  "label": "Заголовок слайда",
+                  "type": "text"
+                },
+                {
+                  "name": "intro",
+                  "label": "Текст слайда",
+                  "type": "text"
                 }
               ]
+            },
+            {
+              "name": "previousSlide",
+              "label": "Предыдущий слайд",
+              "type": "string"
+            },
+            {
+              "name": "nextSlide",
+              "label": "Следующий слайд",
+              "type": "string"
             }
           ]
         },
@@ -745,8 +765,28 @@
                   "name": "text",
                   "label": "text",
                   "type": "text"
+                },
+                {
+                  "name": "headline",
+                  "label": "Заголовок слайда",
+                  "type": "text"
+                },
+                {
+                  "name": "intro",
+                  "label": "Текст слайда",
+                  "type": "text"
                 }
               ]
+            },
+            {
+              "name": "previousSlide",
+              "label": "Предыдущий слайд",
+              "type": "string"
+            },
+            {
+              "name": "nextSlide",
+              "label": "Следующий слайд",
+              "type": "string"
             }
           ]
         },
@@ -1344,8 +1384,28 @@
                   "name": "text",
                   "label": "text",
                   "type": "text"
+                },
+                {
+                  "name": "headline",
+                  "label": "Заголовок слайда",
+                  "type": "text"
+                },
+                {
+                  "name": "intro",
+                  "label": "Текст слайда",
+                  "type": "text"
                 }
               ]
+            },
+            {
+              "name": "previousSlide",
+              "label": "Предыдущий слайд",
+              "type": "string"
+            },
+            {
+              "name": "nextSlide",
+              "label": "Следующий слайд",
+              "type": "string"
             }
           ]
         },
@@ -1943,8 +2003,28 @@
                   "name": "text",
                   "label": "text",
                   "type": "text"
+                },
+                {
+                  "name": "headline",
+                  "label": "Заголовок слайда",
+                  "type": "text"
+                },
+                {
+                  "name": "intro",
+                  "label": "Текст слайда",
+                  "type": "text"
                 }
               ]
+            },
+            {
+              "name": "previousSlide",
+              "label": "Предыдущий слайд",
+              "type": "string"
+            },
+            {
+              "name": "nextSlide",
+              "label": "Следующий слайд",
+              "type": "string"
             }
           ]
         },
@@ -2542,8 +2622,28 @@
                   "name": "text",
                   "label": "text",
                   "type": "text"
+                },
+                {
+                  "name": "headline",
+                  "label": "Заголовок слайда",
+                  "type": "text"
+                },
+                {
+                  "name": "intro",
+                  "label": "Текст слайда",
+                  "type": "text"
                 }
               ]
+            },
+            {
+              "name": "previousSlide",
+              "label": "Предыдущий слайд",
+              "type": "string"
+            },
+            {
+              "name": "nextSlide",
+              "label": "Следующий слайд",
+              "type": "string"
             }
           ]
         },

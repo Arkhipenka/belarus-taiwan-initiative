@@ -1,6 +1,6 @@
 {
-  "heroTitle": "Wyspa.\nPrzestrzeń dialogu.",
-  "heroIntro": "Białoruś, Tajwan i Azja Wschodnia. Badania, kultura i dialog obywatelski — poprzez ludzi i doświadczenia, które nas łączą.",
+  "heroTitle": "Łączymy Białoruś,\nTajwan i Azję Wschodnią.",
+  "heroIntro": "Poprzez badania, edukację i dialog obywatelski pomagamy ludziom lepiej się rozumieć ponad granicami.",
   "explore": "Odkryj Tajwan",
   "aboutTitle": "Zrozumienie zaczyna się od wzajemnej ciekawości.",
   "aboutText": "Jesteśmy niezależną inicjatywą łączącą Białoruś, Tajwan i Azję Wschodnią poprzez badania, edukację i wymianę kulturalną. Zajmujemy się demokratyzacją, pamięcią historyczną i aktywnością obywatelską, tworząc przestrzeń dialogu ponad granicami.",
@@ -25,15 +25,23 @@
   "topics": [
     {
       "title": "Natura",
-      "text": "Górskie grzbiety, Pacyfik i miasta kształtowane przez krajobraz."
+      "text": "Górskie grzbiety, Pacyfik i miasta kształtowane przez krajobraz.",
+      "headline": "Łączymy Białoruś,\nTajwan i Azję Wschodnią.",
+      "intro": "Poprzez badania, edukację i dialog obywatelski pomagamy ludziom lepiej się rozumieć ponad granicami."
     },
     {
       "title": "Kultura",
-      "text": "Języki, świątynie, herbata i różnorodne tradycje społeczności Tajwanu."
+      "text": "Języki, świątynie, herbata i różnorodne tradycje społeczności Tajwanu.",
+      "headline": "Poznajemy się\npoprzez kulturę.",
+      "intro": "Języki, codzienność i spotkania kulturalne otwierają dialog między naszymi społeczeństwami."
     },
     {
       "title": "Pamięć",
-      "text": "Jak społeczeństwo pamięta represje i rozlicza autorytarną przeszłość."
+      "text": "Jak społeczeństwo pamięta represje i rozlicza autorytarną przeszłość.",
+      "headline": "Badamy pamięć.\nDzielimy się doświadczeniem.",
+      "intro": "Badamy przemiany demokratyczne i pamięć historyczną, zestawiając doświadczenia Tajwanu i Białorusi."
     }
-  ]
+  ],
+  "previousSlide": "Poprzedni slajd",
+  "nextSlide": "Następny slajd"
 }

@@ -67,3 +67,14 @@
  #hero-topic-panel{order:7}
  .hub-coordinates{bottom:5px;font-size:7px}
 }
+
+/* One set of controls drives both the editorial copy and the 3D scene. */
+#root .hub-hero h1{font-size:clamp(44px,4.6vw,72px);min-height:3.15em}
+.hub-slide-copy{animation:hub-topic-in .55s ease both}
+.hub-slider-controls{position:absolute;bottom:20px;left:6%;right:6%;display:flex;align-items:center;gap:20px;border-top:1px solid var(--platform-line);padding-top:12px;z-index:3}
+.hub-slider-controls button{width:46px;height:44px;border:1px solid var(--platform-line);background:transparent;color:var(--platform-ink);cursor:pointer;font-size:22px}
+.hub-slider-controls button:hover{background:var(--platform-mist)}
+.hub-slider-controls span{font-size:11px;letter-spacing:.08em;color:var(--platform-muted);min-width:130px}
+.hub-slider-controls button:focus-visible,.hub-topics button:focus-visible{outline:2px solid var(--platform-red);outline-offset:4px}
+@media(max-width:700px){#root .hub-hero h1{font-size:clamp(38px,8.8vw,60px);min-height:0}.hub-hero{padding-bottom:110px}.hub-slider-controls{bottom:18px}.hub-topics button{min-height:44px}.hub-hero-intro{min-height:5em}}
+@media(prefers-reduced-motion:reduce){.hub-slide-copy{animation:none}}

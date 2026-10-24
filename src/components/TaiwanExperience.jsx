@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-export default function TaiwanExperience({ lang, view = 'explore', title }) {
+export default function TaiwanExperience({ lang, view = 'explore', title, scene = 0 }) {
   const frame = useRef(null);
   const [height, setHeight] = useState(900);
   const mapLang = ({ by: 'be', zh: 'zh-Hant', pl: 'en' })[lang] || lang;
@@ -19,7 +19,11 @@ export default function TaiwanExperience({ lang, view = 'explore', title }) {
     window.addEventListener('message', resize);
     return () => window.removeEventListener('message', resize);
   }, [view]);
-  return <iframe ref={frame} key={mapLang} className={'home-experience home-experience-' + view}
+  const sendScene = () => frame.current?.contentWindow?.postMessage({ type: 'taiwan-hero-scene', scene }, location.origin);
+  useEffect(() => {
+    if (view === 'hero') frame.current?.contentWindow?.postMessage({ type: 'taiwan-hero-scene', scene }, location.origin);
+  }, [scene, view]);
+  return <iframe onLoad={sendScene} ref={frame} key={mapLang} className={'home-experience home-experience-' + view}
     src={'/taiwan-experience/taiwan.html?lang=' + mapLang + '&view=' + view}
     title={title} loading={view === 'hero' ? 'eager' : 'lazy'}
     style={view === 'explore' ? { height } : undefined} tabIndex={view === 'hero' ? -1 : undefined}

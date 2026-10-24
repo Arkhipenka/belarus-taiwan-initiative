@@ -41,7 +41,7 @@ export default function Home() {
   return <main ref={root} className="home-hub">
     <section className="hub-hero" aria-labelledby="hub-title">
       <div className="hub-hero-copy"><p className="hub-kicker">Belarus–Taiwan & East Asia Platform <span lang="zh-Hant">臺灣</span></p>
-        <h1 id="hub-title">{c.heroTitle}</h1><p className="hub-hero-intro">{c.heroIntro}</p>
+        <h1 id="hub-title" key={"title-"+topic} className="hub-slide-copy">{c.topics[topic].headline || c.heroTitle}</h1><p key={"intro-"+topic} className="hub-hero-intro hub-slide-copy">{c.topics[topic].intro || c.heroIntro}</p>
         <a className="hub-primary" href="#discover">{c.explore} <span aria-hidden="true">↓</span></a>
         <div className="hub-topics" role="tablist" aria-label={c.explore}>{c.topics.map((item,index) => <button key={item.title} id={'hero-topic-'+index} role="tab" aria-selected={topic === index} aria-controls="hero-topic-panel" tabIndex={topic === index ? 0 : -1} onClick={() => setTopic(index)} onKeyDown={event => {
           const next = event.key === 'ArrowRight' ? (index+1)%3 : event.key === 'ArrowLeft' ? (index+2)%3 : event.key === 'Home' ? 0 : event.key === 'End' ? 2 : null;
@@ -49,8 +49,8 @@ export default function Home() {
         }}>{item.title}</button>)}</div>
         <div id="hero-topic-panel" role="tabpanel" aria-labelledby={'hero-topic-'+topic}><p key={topic} className="hub-topic-description">{c.topics[topic].text}</p></div>
       </div>
-      <div className="hub-hero-art"><TaiwanExperience lang={lang} view="hero" title="Taiwan terrain" /><span className="hub-coordinates" aria-hidden="true">23°41′ N · 120°57′ E<br/>山海之間 / TAIWAN</span></div>
-      <a className="hub-scroll" href="#platform"><span>01 — {c.scroll}</span><span aria-hidden="true">↓</span></a>
+      <div className="hub-hero-art"><TaiwanExperience lang={lang} view="hero" scene={topic} title="Taiwan terrain" /><span key={topic} className="hub-coordinates hub-slide-copy" aria-hidden="true">0{topic+1} / 03<br/>{c.topics[topic].title}</span></div>
+      <div className="hub-slider-controls"><button type="button" aria-label={c.previousSlide} onClick={() => setTopic((topic+2)%3)}>←</button><span aria-live="polite" aria-atomic="true">0{topic+1} / 03 · {c.topics[topic].title}</span><button type="button" aria-label={c.nextSlide} onClick={() => setTopic((topic+1)%3)}>→</button></div>
     </section>
 
     <section id="platform" className="hub-section hub-about hub-reveal"><div><p className="hub-kicker">01 / {c.aboutLink}</p><h2>{c.aboutTitle}</h2></div><div className="hub-about-copy"><p>{c.aboutText}</p><Link className="hub-text-link" to={'/'+lang+'/about'}>{c.aboutLink} ↗</Link></div></section>

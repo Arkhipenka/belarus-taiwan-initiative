@@ -1,6 +1,6 @@
 {
-  "heroTitle": "An island.\nA shared conversation.",
-  "heroIntro": "Belarus, Taiwan and East Asia. Research, culture and civic dialogue — through the people and experiences that connect us.",
+  "heroTitle": "Connecting Belarus,\nTaiwan & East Asia.",
+  "heroIntro": "Through research, education and civic dialogue, we help people understand one another across borders.",
   "explore": "Explore Taiwan",
   "aboutTitle": "Understanding one another starts with curiosity.",
   "aboutText": "We are an independent initiative connecting Belarus, Taiwan and East Asia through research, education and cultural exchange. We explore democratic transformation, historical memory and civic participation, making space for dialogue across borders.",
@@ -25,15 +25,23 @@
   "topics": [
     {
       "title": "Nature",
-      "text": "Mountain ridges, the Pacific coast and cities shaped by the landscape."
+      "text": "Mountain ridges, the Pacific coast and cities shaped by the landscape.",
+      "headline": "Connecting Belarus,\nTaiwan & East Asia.",
+      "intro": "Through research, education and civic dialogue, we help people understand one another across borders."
     },
     {
       "title": "Culture",
-      "text": "Languages, temples, tea and the many traditions of Taiwan’s communities."
+      "text": "Languages, temples, tea and the many traditions of Taiwan’s communities.",
+      "headline": "Learning through\ncultural exchange.",
+      "intro": "Languages, everyday life and cultural encounters open a conversation between our societies."
     },
     {
       "title": "Memory",
-      "text": "How society remembers repression and works through an authoritarian legacy."
+      "text": "How society remembers repression and works through an authoritarian legacy.",
+      "headline": "Understanding memory.\nSharing experience.",
+      "intro": "We study democratic transformation and historical memory, bringing Taiwan’s experience into dialogue with Belarus."
     }
-  ]
+  ],
+  "previousSlide": "Previous slide",
+  "nextSlide": "Next slide"
 }
