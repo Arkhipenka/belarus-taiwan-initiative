@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://belarus-taiwan.org/</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://belarus-taiwan.org/en"/>
+    <loc>https://belarus-taiwan.org/en</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en"/>
     <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru"/>
@@ -14,303 +9,595 @@
     <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh"/>
   </url>
   <url>
-    <loc>https://belarus-taiwan.org/en</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/by</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://belarus-taiwan.org/en/about</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/about"/>
   </url>
   <url>
-    <loc>https://belarus-taiwan.org/by/about</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/about</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/about</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/about</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://belarus-taiwan.org/en/taiwan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/taiwan"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/en/articles</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles"/>
   </url>
   <url>
-    <loc>https://belarus-taiwan.org/by/articles</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/articles</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/articles</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/articles</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/by/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
-    <lastmod>2025-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://belarus-taiwan.org/en/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/en/events</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/by/events</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/events</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/events</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/events</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/en/events/taiwan-cultural-lecture</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/by/events/taiwan-cultural-lecture</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/events/taiwan-cultural-lecture</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/events/taiwan-cultural-lecture</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/events/taiwan-cultural-lecture</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/en/events/belarus-cultural-lecture</loc>
-    <lastmod>2025-12-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/by/events/belarus-cultural-lecture</loc>
-    <lastmod>2025-12-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/events/belarus-cultural-lecture</loc>
-    <lastmod>2025-12-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/events/belarus-cultural-lecture</loc>
-    <lastmod>2025-12-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/events/belarus-cultural-lecture</loc>
-    <lastmod>2025-12-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/en/events/taiwan-lecture-ecs</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/by/events/taiwan-lecture-ecs</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/events/taiwan-lecture-ecs</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/events/taiwan-lecture-ecs</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/events/taiwan-lecture-ecs</loc>
-    <lastmod>2026-04-26</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/en/contacts</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/by/contacts</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/ru/contacts</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/pl/contacts</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://belarus-taiwan.org/zh/contacts</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/contacts"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/contacts"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/contacts"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/contacts"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/en/donate</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/donate"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/donate"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/donate"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/donate"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/donate"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/en/articles/incident-228-white-terror-taiwan-2025</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/incident-228-white-terror-taiwan-2025"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/en/news/platform-at-warsaw-memory-conference-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news/platform-at-warsaw-memory-conference-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/en/events/after-totalitarianism-warsaw-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/after-totalitarianism-warsaw-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/en/events/taiwan-lecture-ecs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-lecture-ecs"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/en/events/belarus-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/belarus-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/en/events/taiwan-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/about"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/taiwan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/taiwan"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/articles</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/contacts"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/contacts"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/contacts"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/contacts"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/by/donate</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/donate"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/donate"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/donate"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/donate"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/donate"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/articles/incident-228-white-terror-taiwan-2025</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/incident-228-white-terror-taiwan-2025"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/news/platform-at-warsaw-memory-conference-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news/platform-at-warsaw-memory-conference-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/events/after-totalitarianism-warsaw-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/after-totalitarianism-warsaw-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/events/taiwan-lecture-ecs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-lecture-ecs"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/events/belarus-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/belarus-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/by/events/taiwan-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/about"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/taiwan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/taiwan"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/articles</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/contacts"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/contacts"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/contacts"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/contacts"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/ru/donate</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/donate"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/donate"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/donate"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/donate"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/donate"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/articles/incident-228-white-terror-taiwan-2025</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/incident-228-white-terror-taiwan-2025"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/news/platform-at-warsaw-memory-conference-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news/platform-at-warsaw-memory-conference-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/events/after-totalitarianism-warsaw-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/after-totalitarianism-warsaw-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/events/taiwan-lecture-ecs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-lecture-ecs"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/events/belarus-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/belarus-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/ru/events/taiwan-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/about"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/taiwan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/taiwan"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/articles</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/contacts"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/contacts"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/contacts"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/contacts"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/pl/donate</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/donate"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/donate"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/donate"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/donate"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/donate"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/articles/incident-228-white-terror-taiwan-2025</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/incident-228-white-terror-taiwan-2025"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/news/platform-at-warsaw-memory-conference-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news/platform-at-warsaw-memory-conference-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/events/after-totalitarianism-warsaw-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/after-totalitarianism-warsaw-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/events/taiwan-lecture-ecs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-lecture-ecs"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/events/belarus-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/belarus-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/pl/events/taiwan-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/about"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/about"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/about"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/about"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/about"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/taiwan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/taiwan"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/taiwan"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/articles</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/events</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/contacts</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/contacts"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/contacts"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/contacts"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/contacts"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/contacts"/>
   </url>
   <url>
     <loc>https://belarus-taiwan.org/zh/donate</loc>
-    <lastmod>2026-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/donate"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/donate"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/donate"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/donate"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/donate"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/articles/incident-228-white-terror-taiwan-2025</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/articles/incident-228-white-terror-taiwan-2025"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/articles/incident-228-white-terror-taiwan-2025"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/news/platform-at-warsaw-memory-conference-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/news/platform-at-warsaw-memory-conference-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/news/platform-at-warsaw-memory-conference-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/events/after-totalitarianism-warsaw-2026</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/after-totalitarianism-warsaw-2026"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/after-totalitarianism-warsaw-2026"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/events/taiwan-lecture-ecs</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-lecture-ecs"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-lecture-ecs"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/events/belarus-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/belarus-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/belarus-cultural-lecture"/>
+  </url>
+  <url>
+    <loc>https://belarus-taiwan.org/zh/events/taiwan-cultural-lecture</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://belarus-taiwan.org/en/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="be" href="https://belarus-taiwan.org/by/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://belarus-taiwan.org/ru/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://belarus-taiwan.org/pl/events/taiwan-cultural-lecture"/>
+    <xhtml:link rel="alternate" hreflang="zh-TW" href="https://belarus-taiwan.org/zh/events/taiwan-cultural-lecture"/>
   </url>
 </urlset>

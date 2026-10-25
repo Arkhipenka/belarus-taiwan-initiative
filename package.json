@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-seo.mjs",
     "deploy": "npm run build && wrangler deploy",
     "lint": "eslint .",
     "preview": "npm run build && wrangler dev"
