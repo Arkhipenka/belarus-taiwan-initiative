@@ -55,7 +55,7 @@ export default function Home() {
         }}>{item.title}</button>)}</div>
         <div id="hero-topic-panel" role="tabpanel" aria-labelledby={'hero-topic-'+topic}><p key={topic} className="hub-topic-description">{c.topics[topic].text}</p></div>
       </div>
-      <div className="hub-hero-art"><TaiwanExperience lang={lang} view="hero" scene={topic} title="Taiwan terrain" /><span key={topic} className="hub-coordinates hub-slide-copy" aria-hidden="true">0{topic+1} / 03<br/>{c.topics[topic].title}</span></div>
+      <div className="hub-hero-art"><TaiwanExperience key={lang} lang={lang} view="hero" scene={topic} title="Taiwan terrain" /><span key={topic} className="hub-coordinates hub-slide-copy" aria-hidden="true">0{topic+1} / 03<br/>{c.topics[topic].title}</span></div>
     </section>
 
     <section id="platform" className="hub-section hub-about hub-reveal"><div><p className="hub-kicker">01 / {c.aboutLink}</p><h2>{c.aboutTitle}</h2></div><div className="hub-about-copy"><p>{c.aboutText}</p><Link className="hub-text-link" to={'/'+lang+'/about'}>{c.aboutLink} ↗</Link></div></section>

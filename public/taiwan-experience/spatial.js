@@ -2,7 +2,7 @@ import * as THREE from './vendor/three.module.js';
 import {terrain} from './taiwan-terrain.js';
 const embedHero=new URLSearchParams(location.search).get('view')==='hero';
 const canvas=document.querySelector('.spatial-canvas');
-if(canvas){try{initScene()}catch(error){canvas.closest('.spatial-stage').classList.add('spatial-unavailable');console.warn('3D scene unavailable; static artwork retained.',error)}}
+if(canvas){try{initScene()}catch(error){if(embedHero)window.parent.postMessage({type:'taiwan-hero-error'},location.origin);canvas.closest('.spatial-stage').classList.add('spatial-unavailable');console.warn('3D scene unavailable; static artwork retained.',error)}}
 function initScene(){
 const layoutStage=canvas.closest('.spatial-stage'),experience=layoutStage.closest('.spatial-experience'),initial=canvas.dataset.world||'identity',isHome=initial==='identity',reduced=matchMedia('(prefers-reduced-motion: reduce)');
 const stage=document.createElement('div');stage.className='spatial-stage world-backdrop';stage.setAttribute('aria-hidden','true');document.body.prepend(stage);stage.append(canvas);const fallback=layoutStage.querySelector('.spatial-fallback');if(fallback)stage.append(fallback);document.body.classList.add('immersive-world');
