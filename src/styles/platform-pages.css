@@ -163,7 +163,7 @@
 #root .articles-page .hub-material-image{aspect-ratio:16/9}
 #root .articles-page .hub-material-image img{width:100%;height:100%;object-fit:cover;display:block}
 #root .articles-page .hub-material-meta{gap:20px;align-items:flex-start;line-height:1.6;flex-wrap:wrap;margin:20px 0 12px}
-#root .articles-page .hub-material h2{font-size:clamp(25px,2.5vw,35px);line-height:1.2;overflow-wrap:anywhere}
+#root .articles-page .hub-material h2{font-size:clamp(24px,2.1vw,30px);line-height:1.25;overflow-wrap:anywhere}
 #root .articles-page .hub-material p{margin:16px 0 0;font-size:16px;line-height:1.75;color:var(--platform-muted)}
 #root .articles-page .hub-material:hover h2{color:var(--platform-red)}
 #root .articles-page :is(a,button,input):focus-visible{outline:2px solid var(--platform-red);outline-offset:4px}

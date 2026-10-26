@@ -26,7 +26,7 @@ function ArticleIndexCard({ article, lang }) {
           <span>{categoriesText}</span>
           <span>{formattedDate}</span>
         </div>
-        <h2>{article.title}</h2>
+        <h2>{article.shortTitle || article.title}</h2>
         <p>{excerptText}</p>
       </div>
     </Link>
@@ -67,6 +67,7 @@ function Articles() {
 
       const searchableText = [
         article.title,
+        article.shortTitle,
         article.lead,
         articleText
       ].filter(Boolean).join(' ').toLowerCase();

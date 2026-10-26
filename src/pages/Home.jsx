@@ -13,7 +13,7 @@ function Material({ item, lang, type }) {
   const readLabel = { by: 'Чытаць артыкул', ru: 'Читать статью', en: 'Read article', pl: 'Czytaj artykuł', zh: '閱讀文章' }[lang] || 'Read article';
   const text = <>
     <div className="hub-material-meta"><span>{formatShortDate(item.date, lang)}</span>{type !== 'articles' && <span aria-hidden="true">↗</span>}</div>
-    <h3>{item.title}</h3><p>{item.description || getMaterialExcerpt(item)}</p>
+    <h3>{item.shortTitle || item.title}</h3><p>{item.description || getMaterialExcerpt(item)}</p>
     {type === 'articles' && <span className="hub-article-read">{readLabel} <span aria-hidden="true">↗</span></span>}
   </>;
   return <Link className="hub-material" to={'/' + lang + '/' + type + '/' + item.slug}>

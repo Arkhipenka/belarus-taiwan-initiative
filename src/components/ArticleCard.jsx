@@ -46,7 +46,7 @@ function ArticleCard({ article, featured, compact }) {
 
       {featured ? (
         <div className="article-overlay">
-          <h3>{article.title}</h3>
+          <h3>{article.shortTitle || article.title}</h3>
           <div className="article-meta">
             <span className="article-category">{categoriesText}</span>
             <span className="article-date">{formattedDate}</span>
@@ -55,7 +55,7 @@ function ArticleCard({ article, featured, compact }) {
         </div>
       ) : (
         <div className="article-text">
-          <h3>{article.title}</h3>
+          <h3>{article.shortTitle || article.title}</h3>
           <div className="article-meta">
             <span className="article-category">{categoriesText}</span>
             <span className="article-date">{formattedDate}</span>

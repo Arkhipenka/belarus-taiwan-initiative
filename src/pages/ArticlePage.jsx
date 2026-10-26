@@ -262,7 +262,7 @@ function ArticlePage() {
         <div className="article-rail-cards">{relatedArticles.map(item=><Link className="article-rail-card" key={item.slug} to={'/'+lang+'/'+(item.kind==='news'?'news':'articles')+'/'+item.slug}>
           {item.image && <img src={getAssetUrl(item.image)} alt="" loading="lazy"/>}
           <span className="article-rail-date">{formatLongDate(item.date,lang)}</span>
-          <h3>{item.title}</h3>
+          <h3>{item.shortTitle || item.title}</h3>
         </Link>)}</div>
         <Link className="article-rail-all" to={'/'+lang+'/articles'}>{labels.allArticles} ↗</Link>
       </aside>}
