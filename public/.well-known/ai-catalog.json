@@ -1,0 +1,12 @@
+{
+  "specVersion": "1.0",
+  "entries": [
+    {
+      "identifier": "urn:air:belarus-taiwan.org:document:overview",
+      "displayName": "Belarus–Taiwan & East Asia Platform overview",
+      "type": "text/markdown",
+      "url": "https://belarus-taiwan.org/about-platform.md",
+      "description": "Project mission, publication types, languages and contact information."
+    }
+  ]
+}

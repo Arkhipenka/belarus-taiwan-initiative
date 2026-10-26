@@ -1,0 +1,33 @@
+# Belarus–Taiwan & East Asia Platform
+
+> An independent initiative connecting Belarus, Taiwan and East Asia through research, education, cultural exchange and civic dialogue.
+
+The website publishes articles, research summaries, news and event information in English, Belarusian, Russian, Polish and Traditional Chinese. Language paths are /en, /by, /ru, /pl and /zh. Belarusian uses the language code be and the URL path /by.
+
+Some translated pages contain summaries of Russian-language publications. The language of a linked full text is stated on its article page. Conference reports describe participation in a panel; the platform is not necessarily the event organiser. Dates on event pages refer to the event, while dates on news pages refer to the report.
+
+## Project
+
+- [Platform overview](https://belarus-taiwan.org/about-platform.md): Plain-text project description, languages and contact details.
+- [About the platform](https://belarus-taiwan.org/en/about): Mission and activities.
+- [Contact](https://belarus-taiwan.org/en/contacts): Cooperation and publication enquiries.
+
+## Publications and activities
+
+- [Articles](https://belarus-taiwan.org/en/articles): Research, analysis and guides.
+- [News](https://belarus-taiwan.org/en/news): Reports and platform updates.
+- [Events](https://belarus-taiwan.org/en/events): Lectures, discussions and conferences.
+- [Taiwan’s White Terror](https://belarus-taiwan.org/en/articles/incident-228-white-terror-taiwan-2025): Summary of a 2025 research article; the linked full text is in Russian.
+- [Taiwan’s anti-nuclear movement](https://belarus-taiwan.org/en/articles/pobeda-nad-aes-spustya-sorok-let-protestov-i-takoe-vozmozhno1): An article published on September 15, 2025.
+
+## Languages
+
+- [English](https://belarus-taiwan.org/en): English version.
+- [Беларуская](https://belarus-taiwan.org/by): Belarusian version.
+- [Русский](https://belarus-taiwan.org/ru): Russian version.
+- [Polski](https://belarus-taiwan.org/pl): Polish version.
+- [繁體中文](https://belarus-taiwan.org/zh): Traditional Chinese version.
+
+## Optional
+
+- [Sitemap](https://belarus-taiwan.org/sitemap.xml): Current published page URLs, generated during each build.

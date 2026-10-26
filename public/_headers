@@ -11,3 +11,12 @@
 
 /taiwan-experience/*
   X-Robots-Tag: noindex, follow
+
+/.well-known/ai-catalog.json
+  Content-Type: application/ai-catalog+json; charset=utf-8
+
+/.well-known/ard.json
+  Content-Type: application/ai-catalog+json; charset=utf-8
+
+/about-platform.md
+  Content-Type: text/markdown; charset=utf-8
